@@ -1,0 +1,100 @@
+.hidden{
+    display:none;
+}
+
+.boxHelper{
+    background-color:#cc0000;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Trivia Animation */
+
+.triviaAnimation {
+  text-align: center;
+  margin-top:1em;
+
+ 
+}
+
+.triviaAnimation b{
+  font: 11vh 'Rock Salt', cursive;
+  letter-spacing: 4px;
+  color: #fff;
+  text-shadow: 0 -40px 300px, 0 0 2px, 0 0 1em #f4f4f4, 0 0 0.5em #f4f4f4, 0 0 0.1em #f4f4f4, 0 10px 3px #000;
+}
+.triviaAnimation b span{
+  animation: blink linear infinite 2s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+/*glow animation*/
+.glow{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a87c0b 0 0 40px #a87c0b, 0 0 50px #a87c0b, 0 0 60px #a87c0b, 0 0 70px #a87c0b;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #f3b823, 0 0 40px #f3b823, 0 0 50px #f3b823, 0 0 60px #f3b823, 0 0 70px #f3b823, 0 0 80px #f3b823;
+    }
+  }
+
+.mainContainer{
+    background: #112 url(http://i66.tinypic.com/p87r4.jpg) top center no-repeat;
+  background-size:cover;
+  height:100vh;
+}
+
+.rules{
+    margin:1em;
+}
+
+.playGame{
+    margin:1em;
+}
+
+.button{
+    border-radius:50%;
+}
