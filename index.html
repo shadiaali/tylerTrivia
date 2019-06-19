@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin|Rock+Salt&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2ce5f1a851.js"></script>
 
     <link rel="stylesheet" href="css/app.css">
@@ -17,35 +17,41 @@
     <div class="grid-container full">
       <div class="grid-x mainContainer">
 
-        <div data-wow-duration="15s" class="large-12 cell wow heartBeat triviaAnimation">
+        <div data-wow-duration="4s" class="wow fadeIn large-12 cell triviaAnimation">
            <b><span>Trivia Night</span></b><br>
         </div>
 
+
+        <div class="small-12 cell">
+          <center>
+             <a class="glow rules button warning wow slideInRight" href="rules.html">Rules</a>
+            <a data-wow-duration="5s" class=" wow slideInRightglow playGame button warning" href="index.php?filter=One"><i class="fas fa-play wow slideInRight"></i> PLAY GAME</a>
+            </center>
+                </div>
+
 <div class="small-4 cell"></div>
-        <div class="small-2 cell wow slideInRight glow">
-            <img src="outBackShackLogoGlow.png" >
+        <div class="small-2 cell glow wow slideInRight">
+            <img class="wow slideInRight" src="outBackShackLogoGlow.png" alt="outback shack logo">
             </div>
             <div class="small-2 cell wow slideInRight">
-            <img src="pubLogoGlow.png">
+            <img src="pubLogoGlow.png" alt="pub trivia logo" class="wow slideInRight">
             </div>
             <div class="small-4 cell"></div>
 
             
-            <div class="small-12 cell">
-              <center>
-                 <a class="glow rules button warning clear" href="#">Rules</a>
-                <a data-wow-duration="5s" class="glow playGame button warning wow heartBeat" href="#"><i class="fas fa-play"></i></a>
-                </center>
-                    </div>
+            
                  
 
-
+            <a href="admin/index.php"><button class="warning button wow fadeInRight"><h4 class="wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.1s">Admin</h4></button></a>
               
             </div>
+            
+
+           
  </div>
 
 
-</div>
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
