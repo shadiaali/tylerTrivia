@@ -1,6 +1,6 @@
 <?php
 
-function addQuestion($pic, $title, $question, $answer, $cat) {
+function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $cat) {
     try {
         include 'connect.php';
 
@@ -9,8 +9,11 @@ function addQuestion($pic, $title, $question, $answer, $cat) {
         $target_path = '../images/' . $pic['name'];
         !move_uploaded_file($pic['tmp_name'], $target_path); 
 
-        $insert_prod_query = 'INSERT INTO tbl_questions(q_img, q_title, q_question, q_answer)';
-        $insert_prod_query .= ' VALUES(:pic, :title, :question, :answer)';
+        $target_path2 = '../images/' . $vid['name'];
+        !move_uploaded_file($vid['tmp_name'], $target_path2); 
+
+        $insert_prod_query = 'INSERT INTO tbl_questions(q_img, q_title, q_question, q_answer,q_op1, q_op2, q_op3, q_op4, q_op5, q_clipanswer, q_vid)';
+        $insert_prod_query .= ' VALUES(:pic, :title, :question, :answer, :op1, :op2, :op3, :op4, :op5, :clipanswer, :vid)';
          $insert_prod   = $pdo->prepare($insert_prod_query);
         $insert_result = $insert_prod->execute(
             array(
@@ -18,6 +21,13 @@ function addQuestion($pic, $title, $question, $answer, $cat) {
                 ':title'      => $title,
                 ':question'      => $question,
                 ':answer'      => $answer,
+                ':op1'      => $op1,
+                ':op2'      => $op2,
+                ':op3'      => $op3,
+                ':op4'      => $op4,
+                ':op5'      => $op5,
+                ':clipanswer'      => $clipanswer,
+                ':vid'       => $vid['name'],
                 
             )
         );

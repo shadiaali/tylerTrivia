@@ -10,11 +10,18 @@ if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $question = $_POST['question'];
     $answer = $_POST['answer'];
+    $op1 = $_POST['op1'];
+    $op2 = $_POST['op2'];
+    $op3 = $_POST['op3'];
+    $op4 = $_POST['op4'];
+    $op5 = $_POST['op5'];
+    $clipanswer = $_POST['clipanswer'];
+    $vid = $_FILES['vid'];
     
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($pic, $title, $question, $answer, $cat);        
+        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $cat);        
         $message = $result;
     }
 
@@ -172,8 +179,22 @@ $(function() {
   </div>
 
 
-  <div id="yellow" class="colors" style="display:none">
-yellow
+  <div id="yellow" class="colors" style="display:none"><br><i>Options will only show if they're filled in.</i><br>
+  <input type="text" id="op1" name="op1" class="form-control" placeholder="Option 1">
+  <input type="text" id="op2" name="op2" class="form-control" placeholder="Option 2">
+  <input type="text" id="op3" name="op3" class="form-control" placeholder="Option 3">
+  <input type="text" id="op4" name="op4" class="form-control" placeholder="Option 4">
+  <input type="text" id="op5" name="op5" class="form-control" placeholder="Option 5">
+
+  <input type="text" id="clipanswer" name="clipanswer" class="form-control" placeholder="Answer">
+
+  <div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>Choose a video </span><br>
+        <input type="file" name="vid" id="vid">
+    </div>
+</div>
+
   </div>
 
   
