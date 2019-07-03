@@ -13,13 +13,11 @@ if (isset($_POST['submit'])) {
     
     $cat     = $_POST['catList'];
 
-    if(empty($pic) || empty($title) || empty($question) || empty($answer) ||  empty($cat)){
-        $message = 'all fields required';
-    }else{
+   
         $result  = addQuestion($pic, $title, $question, $answer, $cat);        
         $message = $result;
     }
-}
+
 
 ?>
 
@@ -121,7 +119,9 @@ if (isset($_POST['submit'])) {
    
 
     <div class="card">
-
+    <?php if (!empty($message)): ?>
+        <p><?php echo $message; ?></p>
+    <?php endif; ?>
 <h5 class="card-header mdb-color white-text text-center py-4">
     <strong>Add a Question</strong>
 </h5>

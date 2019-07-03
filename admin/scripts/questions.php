@@ -4,16 +4,10 @@ function addQuestion($pic, $title, $question, $answer, $cat) {
     try {
         include 'connect.php';
 
-        $file_type      = pathinfo($pic['name'], PATHINFO_EXTENSION);
-        $accepted_types = array('gif', 'jpg', 'jpeg', 'png');
-        if (!in_array($file_type, $accepted_types)) {
-            throw new Exception('Wrong file type!');
-        }
+        
 
         $target_path = '../images/' . $pic['name'];
-        if (!move_uploaded_file($pic['tmp_name'], $target_path)) {
-            throw new Exception('Failed to upload');
-        }
+        !move_uploaded_file($pic['tmp_name'], $target_path); 
 
         $insert_prod_query = 'INSERT INTO tbl_questions(q_img, q_title, q_question, q_answer)';
         $insert_prod_query .= ' VALUES(:pic, :title, :question, :answer)';

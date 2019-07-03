@@ -182,9 +182,7 @@
 
 <div class="card-body px-lg-5 pt-0">
 
-<?php if(!empty($message)):?>
-		<p><?php echo $message;?></p>
-	<?php endif;?>
+
 
 	<?php if($row = $update_set->fetch(PDO::FETCH_ASSOC)):?>
 <form  method="post"  class="md-form" style="color: #757575;">
