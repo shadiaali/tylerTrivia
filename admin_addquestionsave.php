@@ -67,17 +67,6 @@ if (isset($_POST['submit'])) {
     }
 
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.js" integrity="sha256-lcAjyA3+DTAwTFgkSHiZUGH4eAGmbapda/TyUSvg5vk=" crossorigin="anonymous"></script>
-
-  <script>
-
-$(function() {
-        $('.colorselector').change(function(){
-            $('.colors').hide();
-            $('#' + $(this).val()).show();
-        });
-    });
-    </script>
 </head>
 
 <body>
@@ -142,19 +131,8 @@ $(function() {
 <form  action="admin_addquestion.php" method="post" enctype="multipart/form-data" class="md-form" style="color: #757575;">
 
 
-<Select class="colorselector">
-   <option value="none">select</option>
 
-   <option value="red">Category One - Mixed bag</option>
-   <option value="yellow">Category Two - Have you seen the scene?</option>
-   <option value="blue">Blue</option>
-</Select>
-<hr>
-<input type="text" name="title"  id="title" class="form-control" placeholder="Title of Question (will show on question round list)">
-<hr>
-
-
-<div id="red" class="colors" style="display:none">
+<input type="text" name="title"  id="title" class="form-control" placeholder="title">
 
 <input type="text" name="question"  id="question" class="form-control" placeholder="question">
 
@@ -162,27 +140,9 @@ $(function() {
 <input type="text" id="answer" name="answer" class="form-control" placeholder="answer">
 
 
-    <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>Choose an image(png, jpeg, jpg or gif) <br>No spaces, periods, commas or strange characters in filename.  </span><br>
-        <input type="file" name="pic" id="fileInput pic">
-    </div>
-</div>
 
-  </div>
-
-
-  <div id="yellow" class="colors" style="display:none">
-yellow
-  </div>
-
-  
-  <div id="blue" class="colors" style="display:none">
-  blue
-  </div>
-
-  <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
-        <option value="" disabled selected>Insert into Category...</option>
+<select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
+        <option value="" disabled selected>Product Category</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
 <option value="<?php echo $product_category['cat_id']; ?>">
     <?php echo $product_category['cat_name']; ?>
@@ -190,15 +150,22 @@ yellow
 <?php endwhile; ?>
     </select>
 
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>Choose an image(png, jpeg, jpg or gif) <br>No spaces, dashes, underscores, periods, commas or strange characters in filename.</span><br>
+        <input type="file" name="pic" id="fileInput pic">
+    </div>
+   
+
+</div>
+
+
+
 <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="submit">Submit</button>
 
 </form>
 </div>
 </div>
-
-
-
-
 
 <a href="../admin/index.php"><button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect">Back</button></a>
 

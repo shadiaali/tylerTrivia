@@ -4,7 +4,7 @@ function addQuestion($pic, $title, $question, $answer, $cat) {
     try {
         include 'connect.php';
 
-        
+       
 
         $target_path = '../images/' . $pic['name'];
         !move_uploaded_file($pic['tmp_name'], $target_path); 
