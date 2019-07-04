@@ -17,12 +17,35 @@ if (isset($_POST['submit'])) {
     $op5 = $_POST['op5'];
     $clipanswer = $_POST['clipanswer'];
     $vid = $_POST['vid'];
+    $mq1 = $_POST['mq1'];
+    $mq2 = $_POST['mq2'];
+    $mq3 = $_POST['mq3'];
+    $mq4 = $_POST['mq4'];
+    $mq5 = $_POST['mq5'];
+    $ma1 = $_POST['ma1'];
+    $ma2 = $_POST['ma2'];
+    $ma3 = $_POST['ma3'];
+    $ma4 = $_POST['ma4'];
+    $ma5 = $_POST['ma5'];
+    $mia1 = $_POST['mia1'];
+    $mia2 = $_POST['mia2'];
+    $mia3 = $_POST['mia3'];
+    $mia4 = $_POST['mia4'];
+    $mia5 = $_POST['mia5'];
+    $mia6 = $_POST['mia6'];
+    $mia7 = $_POST['mia7'];
+    $songhint = $_POST['songhint'];
+    $song = $_FILES['song'];
+    $songanswer = $_POST['songanswer'];
+
+
+    
 
     
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $cat);        
+        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $cat);        
         $message = $result;
     }
 
@@ -153,9 +176,11 @@ $(function() {
 <Select class="colorselector">
    <option value="none">select</option>
 
-   <option value="red">Category One - Mixed bag</option>
-   <option value="yellow">Category Two - Have you seen the scene?</option>
-   <option value="blue">Blue</option>
+   <option value="red">Round One - Mixed bag</option>
+   <option value="yellow">Round Two - Have you seen the scene?</option>
+   <option value="blue">Round Three - Match Game</option>
+   <option value="four">Round Four - Name that Tune</option>
+
 </Select>
 <hr>
 <input type="text" name="title"  id="title" class="form-control" placeholder="Title of Question (will show on question round list)">
@@ -196,7 +221,43 @@ $(function() {
 
   
   <div id="blue" class="colors" style="display:none">
-  blue
+  <input type="text" id="mq1" name="mq1" class="form-control" placeholder="question 1">
+  <input type="text" id="mq2" name="mq2" class="form-control" placeholder="question 2">
+  <input type="text" id="mq3" name="mq3" class="form-control" placeholder="question 3">
+  <input type="text" id="mq4" name="mq4" class="form-control" placeholder="question 4">
+  <input type="text" id="mq5" name="mq5" class="form-control" placeholder="question 5">
+  <br><br>
+  <input type="text" id="ma1" name="ma1" class="form-control" placeholder="answer 1">
+  <input type="text" id="ma2" name="ma2" class="form-control" placeholder="answer 2">
+  <input type="text" id="ma3" name="ma3" class="form-control" placeholder="answer 3">
+  <input type="text" id="ma4" name="ma4" class="form-control" placeholder="answer 4">
+  <input type="text" id="ma5" name="ma5" class="form-control" placeholder="answer 5">
+  <br>
+  <input type="text" id="mia1" name="mia1" class="form-control" placeholder="incorrect answer 1">
+  <input type="text" id="mia2" name="mia2" class="form-control" placeholder="incorrect answer 2">
+  <input type="text" id="mia3" name="mia3" class="form-control" placeholder="incorrect answer 3">
+  <input type="text" id="mia4" name="mia4" class="form-control" placeholder="incorrect answer 4">
+  <input type="text" id="mia5" name="mia5" class="form-control" placeholder="incorrect answer 5">
+  <input type="text" id="mia6" name="mia6" class="form-control" placeholder="incorrect answer 5">
+  <input type="text" id="mia7" name="mia7" class="form-control" placeholder="incorrect answer 5">
+  
+
+
+  </div>
+
+  <div id="four" class="colors" style="display:none">
+
+  <input type="text" id="songhint" name="songhint" class="form-control" placeholder="song hint or year">
+
+  <div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>mp3 </span><br>
+        <input type="file" name="song" id="song">
+    </div>
+</div>
+
+<input type="text" id="songanswer" name="songanswer" class="form-control" placeholder="song answer">
+
   </div>
 
   <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
