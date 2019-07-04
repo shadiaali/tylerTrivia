@@ -16,7 +16,8 @@ if (isset($_POST['submit'])) {
     $op4 = $_POST['op4'];
     $op5 = $_POST['op5'];
     $clipanswer = $_POST['clipanswer'];
-    $vid = $_FILES['vid'];
+    $vid = $_POST['vid'];
+
     
     $cat     = $_POST['catList'];
 
@@ -188,12 +189,8 @@ $(function() {
 
   <input type="text" id="clipanswer" name="clipanswer" class="form-control" placeholder="Answer">
 
-  <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>Choose a video </span><br>
-        <input type="file" name="vid" id="vid">
-    </div>
-</div>
+  <input type="text" id="vid" name="vid" class="form-control" placeholder="MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4">
+
 
   </div>
 

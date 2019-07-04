@@ -36,29 +36,34 @@ if(isset($_GET['id'])){
 
     <?php if($row['q_img']):?>
     <img class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s" src="images/<?php echo $row['q_img']; ?>">
-    <?php endif; ?>
-<br><Br>
+    <br><Br><?php endif; ?>
+
 
 <?php if($row['q_question']):?>
 		<button class="secondary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">QUESTION: <?php echo $row['q_question'] ?>
-<?php endif; ?></h3></button><br>
+</h3></button><br><?php endif; ?>
 
     <?php if($row['q_answer']):?>
     <button class="alert button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">ANSWER: 
 <?php echo $row['q_answer'] ?>
-<?php endif; ?></h1></button><br>
-<hr>
+</h1></button><br>
+<hr><?php endif; ?>
 
 <?php if($row['q_vid']):?>
 <video width="320" height="240" controls>
-  <source src="images/<?php echo $row['q_vid']; ?>" type="video/mp4">
-</video>
+  <source src="images/<?php echo $row['q_vid']; ?>.mp4" type="video/mp4">
+</video><br>
 <?php endif; ?>
     
+<?php if($row['q_clipanswer']):?>
+    <button class="alert button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"> 
+<?php echo $row['q_clipanswer'] ?>
+</h1></button>
+<?php endif; ?>
 
 
-
-
+<!--bottom-->
+<hr>
 <button class="warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"
                         onclick="goBack()">
                         <h3>Go Back</h3>

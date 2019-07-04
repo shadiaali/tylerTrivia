@@ -36,15 +36,47 @@ if(isset($_GET['id'])){
 		<h1 class="wow fadeIn" style="font-family:Pangolin;"><?php echo $row['q_title'];?></h1><hr>
 
     <?php if($row['q_img']):?>
-            <img style="width:480px;" src="images/<?php echo $row['q_img'];?>" alt="img02"/>
-<?php endif; ?>
-<br><Br>
+    <img class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s" src="images/<?php echo $row['q_img']; ?>">
+    <br><Br><?php endif; ?>
+
 		
 
-		<button class="success button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">QUESTION: <?php echo $row['q_question'];?></h1></button><br>
+<?php if($row['q_question']):?>
+    <button class="success button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">QUESTION: <?php echo $row['q_question'];?></h1></button>
+    <br><?php endif; ?>
+
+
+    <?php if($row['q_vid']):?>
+<video width="320" height="240" controls>
+  <source src="images/<?php echo $row['q_vid']; ?>.mp4" type="video/mp4">
+</video><br>
+<?php endif; ?>
 
 
 
+<?php if($row['q_op1']):?>
+		<button class="primary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">1. <?php echo $row['q_op1'] ?>
+</h3></button><?php endif; ?><br>
+
+<?php if($row['q_op2']):?>
+		<button class="secondary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">2. <?php echo $row['q_op2'] ?>
+</h3></button><?php endif; ?><br>
+
+<?php if($row['q_op3']):?>
+		<button class="success button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">3. <?php echo $row['q_op3'] ?>
+</h3></button><?php endif; ?><br>
+
+<?php if($row['q_op4']):?>
+		<button class="alert button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">4. <?php echo $row['q_op4'] ?>
+</h3></button><?php endif; ?><br>
+
+<?php if($row['q_op5']):?>
+		<button class="warning button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">5. <?php echo $row['q_op5'] ?>
+</h3></button><?php endif; ?><br>
+
+
+<!--bottom-->
+<hr>
 <button class="warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"
                         onclick="goBack()">
                         <h3>Go Back</h3>
