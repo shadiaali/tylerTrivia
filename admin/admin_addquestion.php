@@ -37,6 +37,12 @@ if (isset($_POST['submit'])) {
     $songhint = $_POST['songhint'];
     $song = $_FILES['song'];
     $songanswer = $_POST['songanswer'];
+    $jepcat = $_POST['jepcat'];
+    $jepq1 = $_POST['jepq1'];
+    $jepa1 = $_POST['jepa1'];
+
+
+
 
 
     
@@ -45,7 +51,7 @@ if (isset($_POST['submit'])) {
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $cat);        
+        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $cat);        
         $message = $result;
     }
 
@@ -180,6 +186,7 @@ $(function() {
    <option value="yellow">Round Two - Have you seen the scene?</option>
    <option value="blue">Round Three - Match Game</option>
    <option value="four">Round Four - Name that Tune</option>
+   <option value="five">Round Five - Jeopardy</option>
 
 </Select>
 <hr>
@@ -257,6 +264,21 @@ $(function() {
 </div>
 
 <input type="text" id="songanswer" name="songanswer" class="form-control" placeholder="song answer">
+
+  </div>
+
+
+  <div id="five" class="colors" style="display:none">
+  
+  <input type="text" id="jepcat" name="jepcat" class="form-control" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
+
+
+
+  
+  <input type="text" id="jepq1" name="jepq1" class="form-control" placeholder="Jeopardy question one">
+
+  <input type="text" id="jepa1" name="jepa1" class="form-control" placeholder="Jeopardy answer one">
+
 
   </div>
 
