@@ -40,6 +40,15 @@ if (isset($_POST['submit'])) {
     $jepcat = $_POST['jepcat'];
     $jepq1 = $_POST['jepq1'];
     $jepa1 = $_POST['jepa1'];
+    $jepq2 = $_POST['jepq2'];
+    $jepa2 = $_POST['jepa2'];
+    $jepsong = $_FILES['jepsong'];
+    $jepq3 = $_POST['jepq3'];
+    $jepa3 = $_POST['jepa3'];
+    $jepimg = $_FILES['jepimg'];
+
+
+
 
 
 
@@ -51,7 +60,7 @@ if (isset($_POST['submit'])) {
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $cat);        
+        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $cat);        
         $message = $result;
     }
 
@@ -114,6 +123,15 @@ $(function() {
             $('#' + $(this).val()).show();
         });
     });
+
+    $(document).ready(function() {
+    $("input[name$='qs']").click(function() {
+        var test = $(this).val();
+
+        $("div.desc").hide();
+        $("#Qs" + test).show();
+    });
+});
     </script>
 </head>
 
@@ -272,15 +290,46 @@ $(function() {
   
   <input type="text" id="jepcat" name="jepcat" class="form-control" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
 
+  <input type="radio" name="qs"  value="1"/> Question Type 1 - Open Ended Question + Answer<br>
+<input type="radio" name="qs"  value="2"/> Question Type 2 - Question/Hint + Song clip + Answer <br>
+<input type="radio" name="qs" value="3"/> Question Type 3 - Question/Hint + Image/Gif + Answer
+
+ <div id="Qs1" class="desc" style="display: none;">
+ <input type="text" id="jepq1" name="jepq1" class="form-control" placeholder="Jeopardy question one">
+
+<input type="text" id="jepa1" name="jepa1" class="form-control" placeholder="Jeopardy answer one">
+</div>
 
 
-  
-  <input type="text" id="jepq1" name="jepq1" class="form-control" placeholder="Jeopardy question one">
+<div id="Qs2" class="desc" style="display: none;">
+<input type="text" id="jepq2" name="jepq2" class="form-control" placeholder="Jeopardy question one">
 
-  <input type="text" id="jepa1" name="jepa1" class="form-control" placeholder="Jeopardy answer one">
+<input type="text" id="jepa2" name="jepa2" class="form-control" placeholder="Jeopardy answer one"> 
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>mp3 </span><br>
+        <input type="file" name="jepsong" id="jepsong">
+    </div>
+</div>
+</div>
 
 
+<div id="Qs3" class="desc" style="display: none;">
+<input type="text" id="jepq3" name="jepq3" class="form-control" placeholder="Jeopardy question one">
+
+<input type="text" id="jepa3" name="jepa3" class="form-control" placeholder="Jeopardy answer one"> 
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jepimg" id="jepimg">
+    </div>
+</div> 
+</div>
   </div>
+
+
 
   <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
         <option value="" disabled selected>Insert into Category...</option>

@@ -1,6 +1,6 @@
 <?php
 
-function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1,$cat) {
+function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $cat) {
     try {
         include 'connect.php';
 
@@ -12,9 +12,15 @@ function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $
         $target_path2 = '../images/' . $song['name'];
         !move_uploaded_file($song['tmp_name'], $target_path2); 
 
+        $target_path3 = '../images/' . $jepsong['name'];
+        !move_uploaded_file($jepsong['tmp_name'], $target_path3); 
+
+        $target_path4 = '../images/' . $jepimg['name'];
+        !move_uploaded_file($jepimg['tmp_name'], $target_path4); 
+
        
-        $insert_prod_query = 'INSERT INTO tbl_questions(q_img, q_title, q_question, q_answer,q_op1, q_op2, q_op3, q_op4, q_op5, q_clipanswer, q_vid, q_mq1, q_mq2, q_mq3, q_mq4, q_mq5, q_ma1, q_ma2, q_ma3, q_ma4, q_ma5, q_mia1, q_mia2, q_mia3, q_mia4, q_mia5, q_mia6, q_mia7, q_songhint, q_song, q_songanswer, q_jepcat, q_jepq1, q_jepa1)';
-        $insert_prod_query .= ' VALUES(:pic, :title, :question, :answer, :op1, :op2, :op3, :op4, :op5, :clipanswer, :vid, :mq1, :mq2, :mq3, :mq4, :mq5, :ma1, :ma2, :ma3, :ma4, :ma5, :mia1, :mia2, :mia3, :mia4, :mia5, :mia6, :mia7, :songhint, :song, :songanswer, :jepcat, :jepq1, :jepa1)';
+        $insert_prod_query = 'INSERT INTO tbl_questions(q_img, q_title, q_question, q_answer,q_op1, q_op2, q_op3, q_op4, q_op5, q_clipanswer, q_vid, q_mq1, q_mq2, q_mq3, q_mq4, q_mq5, q_ma1, q_ma2, q_ma3, q_ma4, q_ma5, q_mia1, q_mia2, q_mia3, q_mia4, q_mia5, q_mia6, q_mia7, q_songhint, q_song, q_songanswer, q_jepcat, q_jepq1, q_jepa1, q_jepq2, q_jepa2, q_jepsong, q_jepq3, q_jepa3, q_jepimg)';
+        $insert_prod_query .= ' VALUES(:pic, :title, :question, :answer, :op1, :op2, :op3, :op4, :op5, :clipanswer, :vid, :mq1, :mq2, :mq3, :mq4, :mq5, :ma1, :ma2, :ma3, :ma4, :ma5, :mia1, :mia2, :mia3, :mia4, :mia5, :mia6, :mia7, :songhint, :song, :songanswer, :jepcat, :jepq1, :jepa1, :jepq2, :jepa2, :jepsong, :jepq3, :jepa3, :jepimg)';
          $insert_prod   = $pdo->prepare($insert_prod_query);
         $insert_result = $insert_prod->execute(
             array(
@@ -52,6 +58,15 @@ function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $
                 ':jepcat'      => $jepcat,
                 ':jepq1'      => $jepq1,
                 ':jepa1'      => $jepa1,
+                ':jepq2'      => $jepq2,
+                ':jepa2'      => $jepa2,
+                ':jepsong'       => $jepsong['name'],
+                ':jepq3'      => $jepq3,
+                ':jepa3'      => $jepa3,
+                ':jepimg'       => $jepimg['name'],
+
+
+
 
 
 
