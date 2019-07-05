@@ -46,6 +46,25 @@ if (isset($_POST['submit'])) {
     $jepq3 = $_POST['jepq3'];
     $jepa3 = $_POST['jepa3'];
     $jepimg = $_FILES['jepimg'];
+    $fq = $_POST['fq'];
+    $fqa = $_POST['fqa'];
+    $fop1 = $_POST['fop1'];
+    $fop2 = $_POST['fop2'];
+    $fop3 = $_POST['fop3'];
+    $fop4 = $_POST['fop4'];
+    $fop5 = $_POST['fop5'];
+    $fanswer = $_POST['fanswer'];
+    $fvid = $_POST['fvid'];
+    $faq = $_POST['faq'];
+    $faudio = $_FILES['faudio'];
+    $faanswer = $_POST['faanswer'];
+
+
+
+
+
+
+
 
 
 
@@ -60,7 +79,7 @@ if (isset($_POST['submit'])) {
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $cat);        
+        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $cat);        
         $message = $result;
     }
 
@@ -132,6 +151,16 @@ $(function() {
         $("#Qs" + test).show();
     });
 });
+
+$(document).ready(function() {
+    $("input[name$='q1s']").click(function() {
+        var test = $(this).val();
+
+        $("div.desc1").hide();
+        $("#Q1s" + test).show();
+    });
+});
+
     </script>
 </head>
 
@@ -205,6 +234,7 @@ $(function() {
    <option value="blue">Round Three - Match Game</option>
    <option value="four">Round Four - Name that Tune</option>
    <option value="five">Round Five - Jeopardy</option>
+   <option value="six">Final Round</option>
 
 </Select>
 <hr>
@@ -272,7 +302,7 @@ $(function() {
 
   <div id="four" class="colors" style="display:none">
 
-  <input type="text" id="songhint" name="songhint" class="form-control" placeholder="song hint or year">
+  <input type="text" id="songhint" name="songhint" class="form-control" placeholder="Song question/hint">
 
   <div class="file-field">
     <div class="btn btn-primary float-center ">
@@ -329,7 +359,48 @@ $(function() {
 </div>
   </div>
 
+  <div id="six" class="colors" style="display:none">
 
+  <input type="radio" name="q1s" value="1"/> Type 1 - Open Ended Question + Answer<br>
+  <input type="radio" name="q1s" value="2"/> Type 2 - Multiple Options + Video + Answer<br>
+  <input type="radio" name="q1s" value="3"/> Type 3 - Audio + Question/hint + answer <br>
+
+
+<div id="Q1s1" class="desc1" style="display: none;">
+<input type="text" id="fq" name="fq" class="form-control" placeholder="question one">
+
+<input type="text" id="fqa" name="fqa" class="form-control" placeholder="answer one">
+</div>
+
+<div id="Q1s2" class="desc1" style="display: none;">
+<br><i>Options will only show if they're filled in.</i><br>
+  <input type="text" id="fop1" name="fop1" class="form-control" placeholder="Option 1">
+  <input type="text" id="fop2" name="fop2" class="form-control" placeholder="Option 2">
+  <input type="text" id="fop3" name="fop3" class="form-control" placeholder="Option 3">
+  <input type="text" id="fop4" name="fop4" class="form-control" placeholder="Option 4">
+  <input type="text" id="fop5" name="fop5" class="form-control" placeholder="Option 5">
+
+  <input type="text" id="fanswer" name="fanswer" class="form-control" placeholder="Answer">
+
+  <input type="text" id="fvid" name="fvid" class="form-control" placeholder="MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4">
+
+</div>
+
+<div id="Q1s3" class="desc1" style="display: none;">
+<input type="text" id="faq" name="faq" class="form-control" placeholder="question">
+
+<input type="text" id="faanswer" name="faanswer" class="form-control" placeholder="answer"> 
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>mp3 </span><br>
+        <input type="file" name="faudio" id="faudio">
+    </div>
+</div>
+</div>
+
+
+</div>
 
   <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
         <option value="" disabled selected>Insert into Category...</option>
