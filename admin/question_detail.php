@@ -25,12 +25,11 @@
 	$product_categories = getAll($cat_tbl);
 
 	if(isset($_REQUEST['update_prod'])){
-		$pic   = $_FILES['pic'];
 		$question  	= trim($_POST['question']);
 		$ansr   = trim($_POST['ansr']);
 		$title   = trim($_POST['title']);
 		$category = trim($_POST['catList']);
-		$result = editQuestion($pic, $title, $question, $ansr, $category);
+		$result = editQuestion($title, $question, $ansr, $category);
 		$message = $result;
 	}
 ?>
@@ -175,7 +174,9 @@
 
 
 <div class="card">
-
+<?php if (!empty($message)): ?>
+        <p><?php echo $message; ?></p>
+    <?php endif; ?>
 <h5 class="card-header mdb-color white-text text-center py-4">
     <strong>Add a Product</strong>
 </h5>

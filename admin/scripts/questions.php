@@ -122,7 +122,7 @@ function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $
     }
 }
 
-function editQuestion($pic, $title, $question, $ansr, $category) {
+function editQuestion($title, $question, $ansr, $category) {
       
       try {
           include 'connect.php';
@@ -131,39 +131,7 @@ function editQuestion($pic, $title, $question, $ansr, $category) {
           $edit_cat = $_GET['update_id'];
         }
 
-        if($pic){
-            $question_image_type = $pic['type'];
-
-            $file_type      = pathinfo($pic['name'], PATHINFO_EXTENSION);
-            $accepted_types = array('gif', 'jpg', 'jpeg', 'png');
-            if (!in_array($file_type, $accepted_types)) {
-                throw new Exception('File type not supported');
-            }
-
-            $target_path = '../images/' . $pic['name'];
-            if (!move_uploaded_file($pic['tmp_name'], $target_path)) {
-                throw new Exception('Failed to upload');
-            }
-
-            $query = "UPDATE tbl_questions SET q_title = :title, q_question = :question, q_img = :question_image, q_answer = :question_answer; WHERE q_id = :question_id";
-
-            $edit_product = $pdo->prepare($query);
-            $edit_product->execute(
-            array(
-                ':question_image' => $pic,
-                ':question' => $question,
-                ':title' => $title,
-                ':question_answer' => $ansr,
-                ':question_id' => $edit_cat,
-            )
-            );
-
-
-            if (!$edit_product) {
-            throw new Exception('Failed to update');
-            }
-
-        } else {
+        
             $query = "UPDATE tbl_questions SET q_title = :title, q_question = :question, q_answer = :question_answer WHERE q_id = :question_id";
 
             $edit_product = $pdo->prepare($query);
@@ -176,7 +144,7 @@ function editQuestion($pic, $title, $question, $ansr, $category) {
             )
             );
 
-        }
+        
 
     if($category){
 
