@@ -81,23 +81,7 @@ function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $
                 ':faudio'       => $faudio['name'],
                 ':faanswer'      => $faanswer,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-                
+ 
             )
         );
 
@@ -122,7 +106,7 @@ function addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $
     }
 }
 
-function editQuestion($title, $question, $ansr, $category) {
+function editQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $category) {
       
       try {
           include 'connect.php';
@@ -132,14 +116,63 @@ function editQuestion($title, $question, $ansr, $category) {
         }
 
         
-            $query = "UPDATE tbl_questions SET q_title = :title, q_question = :question, q_answer = :question_answer WHERE q_id = :question_id";
+            $query = "UPDATE tbl_questions SET q_title = :title, q_img = :pic, q_question = :question, q_answer = :answer, q_op1 = :op1, q_op2 = :op2, q_op3 = :op3, q_op4 = :op4, q_op5 = :op5, q_clipanswer = :clipanswer, q_vid = :vid, q_mq1 = :mq1, q_mq2 = :mq2, q_mq3 = :mq3, q_mq4 = :mq4, q_mq5 = :mq5, q_ma1 = :ma1, q_ma2 = :ma2, q_ma3 = :ma3, q_ma4 = :ma4, q_ma5 = :ma5, q_mia1 = :mia1, q_mia2 = :mia2, q_mia3 = :mia3, q_mia4 = :mia4, q_mia5 = :mia5, q_mia6 = :mia6, q_mia7 = :mia7, q_songhint = :songhint, q_song = :song, q_songanswer = :songanswer, q_jepcat = :jepcat, q_jepq1 = :jepq1, q_jepa1 = :jepa1, q_jepq2 = :jepq2, q_jepa2 = :jepa2, q_jepsong = :jepsong, q_jepq3 = :jepq3, q_jepa3 = :jepa3, q_jepimg = :jepimg, q_fq = :fq, q_fqa = :fqa, q_fop1 = :fop1, q_fop2 = :fop2, q_fop3 = :fop3, q_fop4 = :fop4, q_fop5 = :fop5, q_fanswer = :fanswer, q_fvid = :fvid, q_faq = :faq, q_faudio = :faudio, q_faanswer = :faanswer WHERE q_id = :question_id";
 
             $edit_product = $pdo->prepare($query);
             $edit_product->execute(
             array(
-                ':question' => $question,
-                ':title' => $title,
-                ':question_answer' => $ansr,
+                ':pic'       => $pic,
+                ':title'      => $title,
+                ':question'      => $question,
+                ':answer'      => $answer,
+                ':op1'      => $op1,
+                ':op2'      => $op2,
+                ':op3'      => $op3,
+                ':op4'      => $op4,
+                ':op5'      => $op5,
+                ':clipanswer'      => $clipanswer,
+                ':vid'      => $vid,
+                ':mq1'      => $mq1,
+                ':mq2'      => $mq2,
+                ':mq3'      => $mq3,
+                ':mq4'      => $mq4,
+                ':mq5'      => $mq5,
+                ':ma1'      => $ma1,
+                ':ma2'      => $ma2,
+                ':ma3'      => $ma3,
+                ':ma4'      => $ma4,
+                ':ma5'      => $ma5,
+                ':mia1'      => $mia1,
+                ':mia2'      => $mia2,
+                ':mia3'      => $mia3,
+                ':mia4'      => $mia4,
+                ':mia5'      => $mia5,
+                ':mia6'      => $mia6,
+                ':mia7'      => $mia7,
+                ':songhint'      => $songhint,
+                ':song'       => $song,
+                ':songanswer'      => $songanswer,
+                ':jepcat'      => $jepcat,
+                ':jepq1'      => $jepq1,
+                ':jepa1'      => $jepa1,
+                ':jepq2'      => $jepq2,
+                ':jepa2'      => $jepa2,
+                ':jepsong'       => $jepsong,
+                ':jepq3'      => $jepq3,
+                ':jepa3'      => $jepa3,
+                ':jepimg'       => $jepimg,
+                ':fq'      => $fq,
+                ':fqa'      => $fqa,
+                ':fop1'      => $fop1,
+                ':fop2'      => $fop2,
+                ':fop3'      => $fop3,
+                ':fop4'      => $fop4,
+                ':fop5'      => $fop5,
+                ':fanswer'      => $fanswer,
+                ':fvid'      => $fvid,
+                ':faq'      => $faq,
+                ':faudio'       => $faudio,
+                ':faanswer'      => $faanswer,
                 ':question_id' => $edit_cat,
             )
             );

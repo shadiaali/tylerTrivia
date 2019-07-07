@@ -25,11 +25,65 @@
 	$product_categories = getAll($cat_tbl);
 
 	if(isset($_REQUEST['update_prod'])){
-		$question  	= trim($_POST['question']);
-		$ansr   = trim($_POST['ansr']);
-		$title   = trim($_POST['title']);
+    $pic = trim($_POST['pic']);
+    $title   = trim($_POST['title']);
+    $question  	= trim($_POST['question']);
+    $answer = trim($_POST['answer']);
+    $op1 = trim($_POST['op1']);
+    $op2 = trim($_POST['op2']);
+    $op3 = trim($_POST['op3']);
+    $op4 = trim($_POST['op4']);
+    $op5 = trim($_POST['op5']);
+    $clipanswer = trim($_POST['clipanswer']);
+    $vid = trim($_POST['vid']);
+    $mq1 = trim($_POST['mq1']);
+    $mq2 = trim($_POST['mq2']);
+    $mq3 = trim($_POST['mq3']);
+    $mq4 = trim($_POST['mq4']);
+    $mq5 = trim($_POST['mq5']);
+    $ma1 = trim($_POST['ma1']);
+    $ma2 = trim($_POST['ma2']);
+    $ma3 = trim($_POST['ma3']);
+    $ma4 = trim($_POST['ma4']);
+    $ma5 = trim($_POST['ma5']);
+    $mia1 = trim($_POST['mia1']);
+    $mia2 = trim($_POST['mia2']);
+    $mia3 = trim($_POST['mia3']);
+    $mia4 = trim($_POST['mia4']);
+    $mia5 = trim($_POST['mia5']);
+    $mia6 = trim($_POST['mia6']);
+    $mia7 = trim($_POST['mia7']);
+    $songhint = trim($_POST['songhint']);
+    $song = trim($_POST['song']);
+    $songanswer = trim($_POST['songanswer']);
+    $jepcat = trim($_POST['jepcat']);
+    $jepq1 = trim($_POST['jepq1']);
+    $jepa1 = trim($_POST['jepa1']);
+    $jepq2 = trim($_POST['jepq2']);
+    $jepa2 = trim($_POST['jepa2']);
+    $jepsong = trim($_POST['jepsong']);
+    $jepq3 = trim($_POST['jepq3']);
+    $jepa3 = trim($_POST['jepa3']);
+    $jepimg = trim($_POST['jepimg']);
+    $fq = trim($_POST['fq']);
+    $fqa = trim($_POST['fqa']);
+    $fop1 = trim($_POST['fop1']);
+    $fop2 = trim($_POST['fop2']);
+    $fop3 = trim($_POST['fop3']);
+    $fop4 = trim($_POST['fop4']);
+    $fop5 = trim($_POST['fop5']);
+    $fanswer = trim($_POST['fanswer']);
+    $fvid = trim($_POST['fvid']);
+    $faq = trim($_POST['faq']);
+    $faudio = trim($_POST['faudio']);
+    $faanswer = trim($_POST['faanswer']);
+
+
+
+
+
 		$category = trim($_POST['catList']);
-		$result = editQuestion($title, $question, $ansr, $category);
+		$result = editQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $category);
 		$message = $result;
 	}
 ?>
@@ -194,7 +248,7 @@
 <input type="text" name="question"  value="<?php echo $row['q_question'];?>" id="question" class="form-control">
 
 
-<input type="text" id="ansr" name="ansr" class="form-control" value="<?php echo $row['q_answer'];?>">
+<input type="text" id="answer" name="answer" class="form-control" value="<?php echo $row['q_answer'];?>">
 
 
 <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
@@ -206,12 +260,8 @@
 <?php endwhile; ?>
     </select>
 
-<div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>Choose an image(png, jpeg, jpg or gif) <br>No spaces, dashes, underscores, periods, commas or strange characters in filename.</span><br>
-		<input type="file" name="pic" id="pic" value="<?php echo $row['q_img'];?>"><br>
-		<img src="../images/<?php echo $row['q_img']; ?>" height="100" width="100" />
-    </div>
+<label for="pic">Product Image:</label>
+        <input type="file" id="pic" name="pic" value="<?php echo $row['q_img'];?>"><br><br>
    
 
 </div>
