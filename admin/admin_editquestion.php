@@ -100,9 +100,7 @@
 	<table class="table table-striped table-responsive-md btn-table">
         <thead>
             <tr>
-                
-				<th scope="row">Image</th>
-				<th scope="row">Question Title</th>
+       	<th scope="row">Question Title</th>
 				<th scope="row">Question</th>
         <th scope="row">Answer</th>
 				<th scope="row">Edit</th>
@@ -113,10 +111,101 @@
         <tbody>
 			<?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
             <tr>
-                <td class="wow fadeIn"><img src="../images/<?php echo $row['q_img']; ?>" alt="<?php echo $row['q_question'];?>" width="100px" height="60px"></td>
                 <td class="wow fadeIn"><?php echo $row['q_title'];?></td>
-				<td class="wow fadeIn"><?php echo $row['q_question'];?></td>
-				<td class="wow fadeIn"><?php echo $row['q_answer'];?></td>
+
+
+        <td class="wow fadeIn">
+
+        <?php if($row['q_question']):?>
+        <?php echo $row['q_question'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_clipquestion']):?>
+        <?php echo $row['q_clipquestion'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_mainq']):?>
+        <?php echo $row['q_mainq'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_songhint']):?>
+        <?php echo $row['q_songhint'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_jepq1']):?>
+        <?php echo $row['q_jepq1'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_jepq2']):?>
+        <?php echo $row['q_jepq2'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_jepq3']):?>
+        <?php echo $row['q_jepq3'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_fq']):?>
+        <?php echo $row['q_fq'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_finalq']):?>
+        <?php echo $row['q_finalq'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_faq']):?>
+        <?php echo $row['q_faq'];?>
+        <?php endif; ?>
+
+        </td>
+        
+
+				<td class="wow fadeIn">
+
+        <?php if($row['q_answer']):?>
+        <?php echo $row['q_answer'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_clipanswer']):?>
+        <?php echo $row['q_clipanswer'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_ma1']):?>
+        <?php echo $row['q_ma1'];?>,
+        <?php echo $row['q_ma2'];?>,
+        <?php echo $row['q_ma3'];?>,
+        <?php echo $row['q_ma4'];?>,
+        <?php echo $row['q_ma5'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_songanswer']):?>
+        <?php echo $row['q_songanswer'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_jepa1']):?>
+        <?php echo $row['q_jepa1'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_jepa2']):?>
+        <?php echo $row['q_jepa2'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_jepa3']):?>
+        <?php echo $row['q_jepa3'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_fqa']):?>
+        <?php echo $row['q_fqa'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_fanswer']):?>
+        <?php echo $row['q_fanswer'];?>
+        <?php endif; ?>
+
+        <?php if($row['q_faanswer']):?>
+        <?php echo $row['q_faanswer'];?>
+        <?php endif; ?>
+        
+        </td>
         
 				<td class="wow fadeIn"><a href="question_detail.php?update_id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></a></td>
 				<td class="wow fadeIn"><a href="scripts/caller.php?caller_id=erase&id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-red btn-sm m-0">Delete</button></a></td>

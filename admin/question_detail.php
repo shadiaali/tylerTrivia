@@ -76,13 +76,17 @@
     $faq = trim($_POST['faq']);
     $faudio = trim($_POST['faudio']);
     $faanswer = trim($_POST['faanswer']);
+    $clipquestion = trim($_POST['clipquestion']);
+    $mainq = trim($_POST['mainq']);
+    $finalq = trim($_POST['finalq']);
+
 
 
 
 
 
 		$category = trim($_POST['catList']);
-		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $category);
+		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $category);
 		$message = $result;
 	}
 ?>
@@ -189,7 +193,9 @@
 <?php endif; ?>
 
 
-<?php if($row['q_op1']):?>
+<?php if($row['q_clipquestion']):?>
+<b>Question/hint</b><br>
+  <input type="text" id="clipquestion" name="clipquestion" class="form-control" value="<?php echo $row['q_clipquestion'];?>">
 
 <br><i>Options will only show if they're filled in. For fewer options/choices, leave blank.</i><br><br>
 
@@ -217,7 +223,10 @@
 
 
 
-<?php if($row['q_mq1']):?>
+<?php if($row['q_mainq']):?>
+
+<b>Main question/instructions</b><br>
+<input type="text" id="mainq" name="mainq" class="form-control" value="<?php echo $row['q_mainq'];?>"><br>
 
 <b>Question/choice 1</b><br>
 <input type="text" id="mq1" name="mq1" class="form-control" value="<?php echo $row['q_mq1'];?>">
@@ -354,8 +363,9 @@
 <?php endif; ?>
 
 
-<?php if($row['q_fanswer']):?>
-
+<?php if($row['q_finalq']):?>
+<b>Overall question/hint/instructions</b><br>
+<input type="text" id="finalq" name="finalq" class="form-control" value="<?php echo $row['q_finalq'];?>"><br>
 <br><i>Options will only show if they're filled in.</i><br>
   <input type="text" id="fop1" name="fop1" class="form-control" value="<?php echo $row['q_fop1'];?>">
   <input type="text" id="fop2" name="fop2" class="form-control" value="<?php echo $row['q_fop2'];?>">

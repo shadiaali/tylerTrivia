@@ -50,16 +50,21 @@ if(isset($_GET['filter'])){
                <a href="round1/round-1-rules.html">Rules</a>
 
              </div>
-             <div class="small-4 cell round"><a href="index.php?filter=Two">Round 2</a></div>
-             <div class="small-4 cell round"><img src="cell.png" style="height:100px"></div>
+             <div class="small-4 cell round"> <a href="index.php?filter=Two">Round 2</a><Br>
+               <a href="round1/round-1-rules.html">Rules</a></div>
+             <div class="small-4 cell round"> <a href="index.php?filter=Three">Round 3</a><Br>
+               <a href="round1/round-1-rules.html">Rules</a></div>
           
     </div>
 
     <div class="grid-x grid-margin-x grid-margin-y">
 
-<div class="small-4 cell round"><img src="cell.png" style="height:100px"></div>
-<div class="small-4 cell round"><img src="cell.png" style="height:100px"></div>
-<div class="small-4 cell round"><img src="cell.png" style="height:100px"></div>
+<div class="small-4 cell round"> <a href="index.php?filter=Four">Round 4</a><Br>
+               <a href="round1/round-1-rules.html">Rules</a></div>
+<div class="small-4 cell round"> <a href="index.php?filter=Jeopardy">Jeopardy</a><Br>
+               <a href="round1/round-1-rules.html">Rules</a></div>
+<div class="small-4 cell round"> <a href="index.php?filter=Final">Final</a><Br>
+               <a href="round1/round-1-rules.html">Rules</a></div>
 
 </div>
 
@@ -90,7 +95,12 @@ if(isset($_GET['filter'])){
             
             
 						<figcaption>
-							<h2><Span><?php echo $row['q_title'];?></span></h2>
+              <h2><Span><?php echo $row['q_title'];?>
+              <?php if($row['q_jepcat']):?>
+        <?php echo $row['q_jepcat'];?>
+        <?php endif; ?>
+            
+            </span></h2>
               
                <p>
                <a class="button primary wow fadeIn" href="details.php?id=<?php echo $row['q_id'];?>" >QUESTION</a>
