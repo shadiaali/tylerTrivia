@@ -227,7 +227,7 @@ $(document).ready(function() {
 
 
 <Select class="colorselector">
-   <option value="none">select</option>
+   <option value="none">Select a Question Type</option>
 
    <option value="red">Round One - Mixed bag</option>
    <option value="yellow">Round Two - Have you seen the scene?</option>
@@ -237,9 +237,16 @@ $(document).ready(function() {
    <option value="six">Final Round</option>
 
 </Select>
-<hr>
-<input type="text" name="title"  id="title" class="form-control" placeholder="Title of Question (will show on question round list)">
-<hr>
+
+<input type="text" name="title"  id="title" class="form-control" placeholder="Title/round number of Question (shows on question round list)">
+
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+    <span>Choose an image for the question background (will show on question list) <br>No spaces, dashes, underscores, periods, commas or strange characters in filename.</span><br>Giving all the questions in a round the same background will help you identify them easier.<br>
+        <input type="file" name="pic" id="fileInput pic">
+    </div>
+</div> <hr><br>
 
 
 <div id="red" class="colors" style="display:none">
@@ -249,13 +256,6 @@ $(document).ready(function() {
 
 <input type="text" id="answer" name="answer" class="form-control" placeholder="answer">
 
-
-    <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>Choose an image(png, jpeg, jpg or gif) <br>No spaces, periods, commas or strange characters in filename.  </span><br>
-        <input type="file" name="pic" id="fileInput pic">
-    </div>
-</div>
 
   </div>
 

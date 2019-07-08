@@ -96,7 +96,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Product Details</title>
+  <title>Edit a Question</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -138,86 +138,8 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-    <div class="container">
+  
 
-      <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="../index.php">
-        <img src="../images/logo.png" style="height:50px;padding:5px;margin-right:10px;">
-      </a>
-
-      <!-- Collapse -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons ml-auto">
-         
-          
-          <li class="nav-item">
-            <a href="scripts/caller.php?caller_id=logout" class="nav-link border border-light rounded waves-effect">
-              <i class="far fa-id-badge mr-2"></i>Logout
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-  </nav>
-  <!-- Navbar -->
-
-  <!--Carousel Wrapper-->
-  <div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
-
-
-
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-
-      <!--First slide-->
-      <div class="carousel-item active">
-        <div class="view" style="background-image: url('../images/top.png'); background-repeat: no-repeat; background-size: cover;">
-
-          <!-- Mask & flexbox options-->
-          <div class="mask rgba-white-strong d-flex justify-content-center align-items-center">
-
-            <!-- Content -->
-            <div class="text-center black-text mx-5 wow fadeIn">
-              
-                <center><img src="../images/logo.png" style="height:140px;margin-top:2em;"><br></center>
-              
-
-              <h1 class="mb-4">
-                <strong>Administrator Panel</strong>
-              </h1>
-
-            </div>
-            <!-- Content -->
-
-          </div>
-          <!-- Mask & flexbox options-->
-
-        </div>
-      </div>
-      <!--/First slide-->
-
-      
-    </div>
-    <!--/.Slides-->
-
-    
-
-  </div>
-  <!--/.Carousel Wrapper-->
 
   <!--Main layout-->
   <main>
@@ -232,7 +154,7 @@
         <p><?php echo $message; ?></p>
     <?php endif; ?>
 <h5 class="card-header mdb-color white-text text-center py-4">
-    <strong>Add a Product</strong>
+    <strong>Edit a Question</strong>
 </h5>
 
 <div class="card-body px-lg-5 pt-0">
@@ -242,15 +164,10 @@
 	<?php if($row = $update_set->fetch(PDO::FETCH_ASSOC)):?>
 <form  method="post"  class="md-form" style="color: #757575;">
 
+<b>Question Title <i>(shown on question list)</i></b><br>
+<input type="text" name="title"  value="<?php echo $row['q_title'];?>" id="title" class="form-control"><br>
 
-<input type="text" name="title"  value="<?php echo $row['q_title'];?>" id="title" class="form-control">
-       
-<input type="text" name="question"  value="<?php echo $row['q_question'];?>" id="question" class="form-control">
-
-
-<input type="text" id="answer" name="answer" class="form-control" value="<?php echo $row['q_answer'];?>">
-
-
+<b>Insert into what round?</b><br>
 <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
         <option value="" disabled selected>Product Category</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
@@ -258,11 +175,55 @@
     <?php echo $product_category['cat_name']; ?>
 </option>
 <?php endwhile; ?>
-    </select>
+    </select><br>
 
-<label for="pic">Product Image:</label>
-        <input type="file" id="pic" name="pic" value="<?php echo $row['q_img'];?>"><br><br>
-   
+    <b>Question Title image background (<i>shown on question list</i>)</b><Br>
+    <div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>Choose an image for the question background<br>No spaces, periods, commas or strange characters in filename.</span><br>Giving all the questions in a round the same background will help you identify them easier.<br>
+		<input type="file" name="pic" id="pic" value="<?php echo $row['q_img'];?>"><br>
+		<img src="../images/<?php echo $row['q_img']; ?>" height="100" width="100" />
+    </div>
+</div>
+
+    <hr><br><br>
+
+    <?php if($row['q_question']):?>
+
+    <b>Question</b><br>
+    <input type="text" name="question"  id="question" class="form-control" value="<?php echo $row['q_question'];?>">
+<b>Answer</b><br>
+<input type="text" id="answer" name="answer" class="form-control" value="<?php echo $row['q_answer'];?>">
+<?php endif; ?>
+
+
+<?php if($row['q_op1']):?>
+
+<br><i>Options will only show if they're filled in. For fewer options/choices, leave blank.</i><br><br>
+
+<b>Answer choice 1</b><br>
+  <input type="text" id="op1" name="op1" class="form-control" value="<?php echo $row['q_op1'];?>">
+
+  <b>Answer choice 2</b><br>
+  <input type="text" id="op2" name="op2" class="form-control" value="<?php echo $row['q_op2'];?>">
+
+  <b>Answer choice 3</b><br>
+  <input type="text" id="op3" name="op3" class="form-control" value="<?php echo $row['q_op3'];?>">
+
+  <b>Answer choice 4</b><br>
+  <input type="text" id="op4" name="op4" class="form-control" value="<?php echo $row['q_op4'];?>">
+
+  <b>Answer choice 5</b><br>
+  <input type="text" id="op5" name="op5" class="form-control" value="<?php echo $row['q_op5'];?>">
+
+  <b>Correct Answer</b><br>
+  <input type="text" id="clipanswer" name="clipanswer" class="form-control" value="<?php echo $row['q_clipanswer'];?>">
+
+  <b>Video (mp4) file name. Do not include extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4</b><br>
+  <input type="text" id="vid" name="vid" class="form-control" value="<?php echo $row['q_vid'];?>">
+<?php endif; ?>
+
+
 
 </div>
 
@@ -284,28 +245,6 @@
   </main>
   <!--Main layout-->
 
-  <!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-   
-
-    <hr class="my-4">
-
-    <!-- Social icons -->
-    <div class="pb-4">
-      
-    </div>
-    <!-- Social icons -->
-
-    <!--Copyright-->
-    <div class="footer-copyright py-3">
-      © 2019 Copyright
-      Sportchek
-    </div>
-    <!--/.Copyright-->
-
-  </footer>
-  <!--/.Footer-->
   <!-- SCRIPTS -->
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
