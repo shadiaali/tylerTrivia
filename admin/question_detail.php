@@ -351,6 +351,52 @@
 <?php endif; ?>
 
 
+<?php if($row['q_fq']):?>
+
+<b>open ended Question/hint</b><br>
+<input type="text" id="fq" name="fq" class="form-control" value="<?php echo $row['q_fq'];?>"><br>
+
+<b>open ended answer</b><br>
+<input type="text" id="fqa" name="fqa" class="form-control" value="<?php echo $row['q_fqa'];?>"> <br>
+
+<?php endif; ?>
+
+
+<?php if($row['q_fanswer']):?>
+
+<br><i>Options will only show if they're filled in.</i><br>
+  <input type="text" id="fop1" name="fop1" class="form-control" value="<?php echo $row['q_fop1'];?>">
+  <input type="text" id="fop2" name="fop2" class="form-control" value="<?php echo $row['q_fop2'];?>">
+  <input type="text" id="fop3" name="fop3" class="form-control" value="<?php echo $row['q_fop3'];?>">
+  <input type="text" id="fop4" name="fop4" class="form-control" value="<?php echo $row['q_fop4'];?>">
+  <input type="text" id="fop5" name="fop5" class="form-control" value="<?php echo $row['q_fop5'];?>">
+
+  <B>answer</b><Br>
+  <input type="text" id="fanswer" name="fanswer" class="form-control" value="<?php echo $row['q_fanswer'];?>">
+
+  <b>MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4</b><br>
+  <input type="text" id="fvid" name="fvid" class="form-control" value="<?php echo $row['q_fvid'];?>">
+<?php endif; ?>
+
+
+
+<?php if($row['q_faq']):?>
+
+<b>open ended Question/hint</b><br>
+<input type="text" id="faq" name="faq" class="form-control" value="<?php echo $row['q_faq'];?>"><br>
+
+<b>open ended answer</b><br>
+<input type="text" id="faanswer" name="faanswer" class="form-control" value="<?php echo $row['q_faanswer'];?>"> <br>
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>mp3 clip</span><br>
+        <input type="file" name="faudio" id="faudio" value="<?php echo $row['q_faudio'];?>">
+    </div>
+</div>
+
+<?php endif; ?>
+
 
 </div>
 
