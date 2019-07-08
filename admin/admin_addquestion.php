@@ -6,7 +6,7 @@ $cat_tbl            = 'tbl_category';
 $product_categories = getAll($cat_tbl);
 
 if (isset($_POST['submit'])) {
-    $pic = $_FILES['pic'];
+    
     $title = $_POST['title'];
     $question = $_POST['question'];
     $answer = $_POST['answer'];
@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($pic, $title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $cat);        
+        $result  = addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $cat);        
         $message = $result;
     }
 
@@ -240,13 +240,7 @@ $(document).ready(function() {
 
 <input type="text" name="title"  id="title" class="form-control" placeholder="Title/round number of Question (shows on question round list)">
 
-
-<div class="file-field">
-    <div class="btn btn-primary float-center ">
-    <span>Choose an image for the question background (will show on question list) <br>No spaces, dashes, underscores, periods, commas or strange characters in filename.</span><br>Giving all the questions in a round the same background will help you identify them easier.<br>
-        <input type="file" name="pic" id="fileInput pic">
-    </div>
-</div> <hr><br>
+ <hr><br>
 
 
 <div id="red" class="colors" style="display:none">

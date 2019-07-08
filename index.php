@@ -86,7 +86,7 @@ if(isset($_GET['filter'])){
 
    <div class="grid">
 					<figure class="effect-bubba wow fadeIn">
-            <img style="width:480px;" src="images/<?php echo $row['q_img'];?>"/>
+            <img style="width:480px;" src="images/pex.jpg"/>
             
             
 						<figcaption>

@@ -34,9 +34,7 @@ if(isset($_GET['id'])){
         <Div class=" wow fadeIn small-10 cell"><center>
 		<h1 class="wow fadeIn" style="font-family:Pangolin;"><?php echo $row['q_title'];?></h1><hr>
 
-    <?php if($row['q_img']):?>
-    <img class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s" src="images/<?php echo $row['q_img']; ?>">
-    <br><Br><?php endif; ?>
+  
 
 
 <?php if($row['q_question']):?>
