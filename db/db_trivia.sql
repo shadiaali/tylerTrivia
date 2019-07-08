@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 19, 2019 at 10:31 AM
+-- Generation Time: Jul 08, 2019 at 07:51 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -51,23 +51,80 @@ INSERT INTO `tbl_category` (`cat_id`, `cat_name`) VALUES
 
 CREATE TABLE `tbl_questions` (
   `q_id` int(10) UNSIGNED NOT NULL,
-  `q_img` varchar(100) NOT NULL,
-  `q_question` varchar(2000) NOT NULL,
+  `q_question` text NOT NULL,
   `q_answer` text NOT NULL,
-  `q_title` varchar(300) NOT NULL
+  `q_title` text NOT NULL,
+  `q_op1` text NOT NULL,
+  `q_op2` text NOT NULL,
+  `q_op3` text NOT NULL,
+  `q_op4` text NOT NULL,
+  `q_op5` text NOT NULL,
+  `q_clipanswer` text NOT NULL,
+  `q_vid` varchar(150) NOT NULL,
+  `q_mq1` text NOT NULL,
+  `q_mq2` text NOT NULL,
+  `q_mq3` text NOT NULL,
+  `q_mq4` text NOT NULL,
+  `q_mq5` text NOT NULL,
+  `q_ma1` text NOT NULL,
+  `q_ma2` text NOT NULL,
+  `q_ma3` text NOT NULL,
+  `q_ma4` text NOT NULL,
+  `q_ma5` text NOT NULL,
+  `q_mia1` text NOT NULL,
+  `q_mia2` text NOT NULL,
+  `q_mia3` text NOT NULL,
+  `q_mia4` text NOT NULL,
+  `q_mia5` text NOT NULL,
+  `q_mia6` text NOT NULL,
+  `q_mia7` text NOT NULL,
+  `q_songhint` text NOT NULL,
+  `q_song` varchar(150) NOT NULL,
+  `q_songanswer` text NOT NULL,
+  `q_jepcat` text NOT NULL,
+  `q_jepq1` text NOT NULL,
+  `q_jepa1` text NOT NULL,
+  `q_jepq2` text NOT NULL,
+  `q_jepa2` text NOT NULL,
+  `q_jepsong` varchar(150) NOT NULL,
+  `q_jepq3` text NOT NULL,
+  `q_jepa3` text NOT NULL,
+  `q_jepimg` varchar(150) NOT NULL,
+  `q_fq` text NOT NULL,
+  `q_fqa` text NOT NULL,
+  `q_fop1` text NOT NULL,
+  `q_fop2` text NOT NULL,
+  `q_fop3` text NOT NULL,
+  `q_fop4` text NOT NULL,
+  `q_fop5` text NOT NULL,
+  `q_fanswer` text NOT NULL,
+  `q_fvid` varchar(150) NOT NULL,
+  `q_faq` text NOT NULL,
+  `q_faudio` varchar(150) NOT NULL,
+  `q_faanswer` text NOT NULL,
+  `q_clipquestion` text NOT NULL,
+  `q_mainq` text NOT NULL,
+  `q_finalq` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_questions`
 --
 
-INSERT INTO `tbl_questions` (`q_id`, `q_img`, `q_question`, `q_answer`, `q_title`) VALUES
-(105, 'organs.gif', 'Which organ is well developed in some herbivores but only vestigial in humans?', 'The Appendix', 'Question 1'),
-(106, 'nfl.gif', 'What NFL team\'s logo is based on an animal mask from the Kwakwaka\'wakw people of British Columbia?', 'The Seattle Seahawks', 'Question 2'),
-(107, 'motley.gif', 'Which member of Motley Crue had his own reality tv series, based on him going back to college?', 'Tommy Lee', 'Question 3'),
-(108, 'mint.gif', 'What common plant is a hybrid of watermint and spearmint?', 'Peppermint', 'Question 4'),
-(109, 'canada.gif', 'Since the 2015 federal election, how many major federal parties have replaced their leader?', '3 of them - Conservatives, NDP, Bloc Quebecois ', 'Question 5'),
-(110, 'nfl.gif', 'Do Fanshawe Alumni get any discount on fees for courses?', 'paul', 'test');
+INSERT INTO `tbl_questions` (`q_id`, `q_question`, `q_answer`, `q_title`, `q_op1`, `q_op2`, `q_op3`, `q_op4`, `q_op5`, `q_clipanswer`, `q_vid`, `q_mq1`, `q_mq2`, `q_mq3`, `q_mq4`, `q_mq5`, `q_ma1`, `q_ma2`, `q_ma3`, `q_ma4`, `q_ma5`, `q_mia1`, `q_mia2`, `q_mia3`, `q_mia4`, `q_mia5`, `q_mia6`, `q_mia7`, `q_songhint`, `q_song`, `q_songanswer`, `q_jepcat`, `q_jepq1`, `q_jepa1`, `q_jepq2`, `q_jepa2`, `q_jepsong`, `q_jepq3`, `q_jepa3`, `q_jepimg`, `q_fq`, `q_fqa`, `q_fop1`, `q_fop2`, `q_fop3`, `q_fop4`, `q_fop5`, `q_fanswer`, `q_fvid`, `q_faq`, `q_faudio`, `q_faanswer`, `q_clipquestion`, `q_mainq`, `q_finalq`) VALUES
+(193, 'Which organ is well developed in some herbivores but only vestigial in humans?', 'The Appendix.', 'Question 1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(194, '', '', 'Question 1', 'The Matrix', 'Bill and Ted\'s Bogus Journey', 'Dracula', 'Always be my Maybe', 'John Wick', 'Always be my Maybe', 'alwaysbemymaybe', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Name this film', '', ''),
+(195, '', '', 'Question 1', '', '', '', '', '', '', '', 'Titanium', 'Potassium', 'Mercury', 'Fluorine', 'Lead', 'Ti', 'K', 'Hg', 'F', 'Pb', 'Hg', 'F', 'K', 'Pb', 'Ti', 'Fr', 'Ta', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Match the element with its periodic symbol', ''),
+(196, '', '', 'Question 1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'This song was remixed in 2019 and became a smash hit among the Red Dead Redemption crowd:', 'oldt.mp3', 'Old Town Road', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(197, '', '', 'Question 1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Animal Kingdom', 'Where is the heart of a shrimp located: head, body or tail?', 'Head', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(198, '', '', 'Question 2', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Animal Kingdom', 'Almost 3% of ice in Antarctic glaciers consists of the urine of which animal?', 'Penguins', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(199, '', '', 'Question 3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Animal Kingdom', 'True or False: an ostrich\'s eye is larger than its brain', 'True', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(200, '', '', 'Question 1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Rugby', 'In the Olympic form of Rugby, how many players are on the field at one time for each team?', '7 ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(202, '', '', 'Question 2', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Rugby', '', '', '', '', '', 'What is this commonly known as in a game of Rugby?', 'Scrum', 'scrum.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(203, '', '', 'Question 1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sitcom Theme Songs', '', '', 'This show ran from 2013 to present', 'Brooklyn Nine Nine', 'brook.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(204, '', '', '1: Mr Misty', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Which fast food company introduced the Mr. Misty slush drink in 1961?', 'Dairy Queen', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(205, '', '', '2: Keanu Reeves', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'The Matrix', 'None, it\'s his actual real life', 'Always be my Maybe', '', '', 'Always be my maybe', 'alwaysbemymaybe', '', '', '', '', '', 'What is the name of this movie?'),
+(206, '', '', '3: Cowboys', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Who does the protagonist of Old Town Road cheat on?', 'bb.mp3', 'His baby.', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -173,12 +230,103 @@ INSERT INTO `tbl_question_category` (`pc_id`, `q_id`, `cat_id`) VALUES
 (85, 102, 1),
 (86, 103, 2),
 (87, 104, 2),
-(88, 105, 1),
+(88, 105, 2),
 (89, 106, 1),
 (90, 107, 1),
 (91, 108, 1),
 (92, 109, 1),
-(93, 110, 2);
+(93, 110, 2),
+(94, 111, 2),
+(95, 112, 2),
+(96, 113, 2),
+(97, 114, 3),
+(98, 115, 3),
+(99, 116, 3),
+(100, 119, 2),
+(101, 120, 2),
+(102, 121, 2),
+(103, 123, 1),
+(104, 124, 2),
+(105, 124, 2),
+(106, 125, 2),
+(107, 126, 2),
+(108, 127, 2),
+(109, 130, 1),
+(110, 131, 2),
+(111, 132, 2),
+(112, 133, 1),
+(113, 134, 1),
+(114, 135, 1),
+(115, 136, 2),
+(116, 137, 1),
+(117, 138, 1),
+(118, 139, 2),
+(119, 140, 2),
+(120, 141, 1),
+(121, 142, 1),
+(122, 143, 2),
+(123, 144, 1),
+(124, 145, 2),
+(125, 146, 1),
+(126, 147, 2),
+(127, 148, 2),
+(128, 149, 2),
+(129, 150, 2),
+(130, 151, 3),
+(131, 152, 3),
+(132, 153, 3),
+(133, 154, 3),
+(134, 155, 1),
+(135, 156, 2),
+(136, 157, 3),
+(137, 158, 4),
+(138, 159, 4),
+(139, 160, 5),
+(140, 161, 5),
+(141, 162, 5),
+(142, 163, 5),
+(143, 164, 5),
+(144, 165, 5),
+(145, 166, 1),
+(146, 167, 1),
+(147, 168, 5),
+(148, 169, 6),
+(149, 170, 6),
+(150, 171, 6),
+(151, 172, 6),
+(152, 173, 2),
+(153, 174, 1),
+(154, 175, 2),
+(155, 176, 1),
+(156, 177, 2),
+(157, 178, 3),
+(158, 179, 5),
+(159, 180, 5),
+(160, 181, 5),
+(161, 182, 5),
+(162, 183, 5),
+(163, 184, 5),
+(164, 185, 6),
+(165, 186, 6),
+(166, 187, 2),
+(167, 188, 5),
+(168, 189, 2),
+(169, 190, 3),
+(170, 191, 2),
+(171, 193, 1),
+(172, 194, 2),
+(173, 195, 3),
+(174, 196, 4),
+(175, 197, 5),
+(176, 198, 5),
+(177, 199, 5),
+(178, 200, 5),
+(179, 201, 5),
+(180, 202, 5),
+(181, 203, 5),
+(182, 204, 6),
+(183, 205, 6),
+(184, 206, 6);
 
 -- --------------------------------------------------------
 
@@ -243,13 +391,13 @@ ALTER TABLE `tbl_category`
 -- AUTO_INCREMENT for table `tbl_questions`
 --
 ALTER TABLE `tbl_questions`
-  MODIFY `q_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `q_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 --
 -- AUTO_INCREMENT for table `tbl_question_category`
 --
 ALTER TABLE `tbl_question_category`
-  MODIFY `pc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `pc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
