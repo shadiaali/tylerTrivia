@@ -35,14 +35,13 @@ if(isset($_GET['id'])){
         <Div class=" wow fadeIn small-10 cell"><center>
 		<h1 class="wow fadeIn" style="font-family:Pangolin;"><?php echo $row['q_title'];?></h1><hr>
 
+            <?php if($row['q_question']):?>
+            <?php echo $row['q_question'];?>
+            <?php endif; ?>
    
-
-		
-
-<?php if($row['q_question']):?>
-    <button class="success button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">QUESTION: <?php echo $row['q_question'];?></h1></button>
-    <br><?php endif; ?>
-
+            <?php if($row['q_clipquestion']):?>
+            <?php echo $row['q_clipquestion'];?><br>
+            <?php endif; ?>
 
     <?php if($row['q_vid']):?>
 <video width="320" height="240" controls>
@@ -54,25 +53,175 @@ if(isset($_GET['id'])){
 
 <?php if($row['q_op1']):?>
 		<button class="primary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">1. <?php echo $row['q_op1'] ?>
-</h3></button><?php endif; ?><br>
+</h3></button><?php endif; ?>
 
 <?php if($row['q_op2']):?>
 		<button class="secondary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">2. <?php echo $row['q_op2'] ?>
-</h3></button><?php endif; ?><br>
+</h3></button><?php endif; ?>
 
 <?php if($row['q_op3']):?>
 		<button class="success button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">3. <?php echo $row['q_op3'] ?>
-</h3></button><?php endif; ?><br>
+</h3></button><?php endif; ?>
 
 <?php if($row['q_op4']):?>
 		<button class="alert button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">4. <?php echo $row['q_op4'] ?>
-</h3></button><?php endif; ?><br>
+</h3></button><?php endif; ?>
 
 <?php if($row['q_op5']):?>
 		<button class="warning button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">5. <?php echo $row['q_op5'] ?>
-</h3></button><?php endif; ?><br>
+</h3></button><?php endif; ?>
 
 
+<!--match game -->
+
+<?php if($row['q_mainq']):?>
+            <?php echo $row['q_mainq'];?>
+            <?php endif; ?>
+<br>
+<?php if($row['q_mq1']):?>
+<div class="grid-x">
+  <div class="small-6 cell">
+<ol>
+  <li><?php if($row['q_mq1']):?>
+            <?php echo $row['q_mq1'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq2']):?>
+            <?php echo $row['q_mq2'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq3']):?>
+            <?php echo $row['q_mq3'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq4']):?>
+            <?php echo $row['q_mq4'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq5']):?>
+            <?php echo $row['q_mq5'];?>
+            <?php endif; ?></li>
+
+</ol>
+</div>
+<div class="small-6 cell">
+<Div class="cell"><?php if($row['q_mia1']):?>
+            <?php echo $row['q_mia1'];?>
+            <?php endif; ?></div>
+
+            <Div class="cell"><?php if($row['q_mia2']):?>
+            <?php echo $row['q_mia2'];?>
+            <?php endif; ?></div>
+
+            <Div class="cell"><?php if($row['q_mia3']):?>
+            <?php echo $row['q_mia3'];?>
+            <?php endif; ?></div>
+
+            <Div class="cell"><?php if($row['q_mia4']):?>
+            <?php echo $row['q_mia4'];?>
+            <?php endif; ?></div>
+
+            <Div class="cell"><?php if($row['q_mia5']):?>
+            <?php echo $row['q_mia5'];?>
+            <?php endif; ?></div>
+
+            <Div class="cell"><?php if($row['q_mia6']):?>
+            <?php echo $row['q_mia6'];?>
+            <?php endif; ?></div>
+
+            <Div class="cell"><?php if($row['q_mia7']):?>
+            <?php echo $row['q_mia7'];?>
+            <?php endif; ?></div>
+</div>
+</div>
+<?php endif; ?>
+
+<!--name that tune-->
+<?php if($row['q_songhint']):?>
+            <?php echo $row['q_songhint'];?>
+            <?php endif; ?>
+
+            <?php if($row['q_song']):?>
+            <audio controls>
+  <source src="images/<?php echo $row['q_song']; ?>" type="audio/mpeg">
+</audio>
+            <?php endif; ?>
+
+            <!--jeopardy  Question Type 1 - Open Ended Question + Answer-->
+<?php if($row['q_jepq1']):?>
+            <?php echo $row['q_jepq1'];?>
+            <?php endif; ?>
+
+    <!--jeopardy  Question Type 2 - Question/Hint + Song clip + Answer-->
+<?php if($row['q_jepq2']):?>
+            <?php echo $row['q_jepq2'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_jepsong']):?>
+            <audio controls>
+  <source src="images/<?php echo $row['q_jepsong']; ?>" type="audio/mpeg">
+</audio>
+            <?php endif; ?>
+
+
+             <!--jeopardy  Question Type 3 - Question/Hint + Image/Gif + Answer-->
+<?php if($row['q_jepq3']):?>
+            <?php echo $row['q_jepq3'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_jepimg']):?>
+   <img src="images/<?php echo $row['q_jepimg']; ?>">
+
+            <?php endif; ?>
+
+
+ <!--final  Open Ended Question + Answer-->
+<?php if($row['q_fq']):?>
+            <?php echo $row['q_fq'];?><Br>
+            <?php endif; ?>
+
+
+ <!--final type 2  Multiple Options + Video + Answer-->
+ <?php if($row['q_finalq']):?>
+            <?php echo $row['q_finalq'];?><Br>
+            <?php endif; ?>
+
+    <?php if($row['q_fvid']):?>
+<video width="320" height="240" controls>
+  <source src="images/<?php echo $row['q_fvid']; ?>.mp4" type="video/mp4">
+</video><br>
+<?php endif; ?>
+
+            <?php if($row['q_fop1']):?>
+            <?php echo $row['q_fop1'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_fop2']):?>
+            <?php echo $row['q_fop2'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_fop3']):?>
+            <?php echo $row['q_fop3'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_fop4']):?>
+            <?php echo $row['q_fop4'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_fop5']):?>
+            <?php echo $row['q_fop5'];?><Br>
+            <?php endif; ?>
+
+    <!--final Type 3 - Audio + Question/hint + answer -->
+    <?php if($row['q_faq']):?>
+            <?php echo $row['q_faq'];?><Br>
+            <?php endif; ?>
+
+            <?php if($row['q_faudio']):?>
+            <audio controls>
+  <source src="images/<?php echo $row['q_faudio']; ?>" type="audio/mpeg">
+</audio>
+            <?php endif; ?>
 <!--bottom-->
 <hr>
 <button class="warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"

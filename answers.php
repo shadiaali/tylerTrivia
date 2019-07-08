@@ -35,8 +35,6 @@ if(isset($_GET['id'])){
 		<h1 class="wow fadeIn" style="font-family:Pangolin;"><?php echo $row['q_title'];?></h1><hr>
 
   
-
-
 <?php if($row['q_question']):?>
 		<button class="secondary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">QUESTION: <?php echo $row['q_question'] ?>
 </h3></button><br><?php endif; ?>
@@ -58,6 +56,112 @@ if(isset($_GET['id'])){
 <?php echo $row['q_clipanswer'] ?>
 </h1></button>
 <?php endif; ?>
+
+<!--match game -->
+
+<?php if($row['q_mainq']):?>
+            <?php echo $row['q_mainq'];?>
+            <?php endif; ?>
+<br>
+<?php if($row['q_mq1']):?>
+<div class="grid-x">
+  <div class="small-6 cell">
+<ol>
+  <li><?php if($row['q_mq1']):?>
+            <?php echo $row['q_mq1'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq2']):?>
+            <?php echo $row['q_mq2'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq3']):?>
+            <?php echo $row['q_mq3'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq4']):?>
+            <?php echo $row['q_mq4'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_mq5']):?>
+            <?php echo $row['q_mq5'];?>
+            <?php endif; ?></li>
+
+</ol>
+</div>
+<div class="small-6 cell">
+
+<ol>
+  <li><?php if($row['q_ma1']):?>
+            <?php echo $row['q_ma1'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_ma2']):?>
+            <?php echo $row['q_ma2'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_ma3']):?>
+            <?php echo $row['q_ma3'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_ma4']):?>
+            <?php echo $row['q_ma4'];?>
+            <?php endif; ?></li>
+
+            <li><?php if($row['q_ma5']):?>
+            <?php echo $row['q_ma5'];?>
+            <?php endif; ?></li>
+
+</ol>
+
+</div>
+</div>
+<?php endif; ?>
+
+<!--name that tune-->
+<?php if($row['q_songanswer']):?>
+            <?php echo $row['q_songanswer'];?>
+            <?php endif; ?>
+
+
+ <!--jeopardy  Question Type 1 - Open Ended Question + Answer-->
+ <?php if($row['q_jepa1']):?>
+            <?php echo $row['q_jepa1'];?>
+            <?php endif; ?>
+
+ <!--jeopardy  Question Type 2 - Question/Hint + Song clip + Answer-->
+ <?php if($row['q_jepa2']):?>
+            <?php echo $row['q_jepa2'];?><Br>
+            <?php endif; ?>
+
+
+   <!--jeopardy  Question Type 3 - Question/Hint + Image/Gif + Answer-->
+   <?php if($row['q_jepa3']):?>
+            <?php echo $row['q_jepa3'];?><Br>
+            <?php endif; ?>
+
+
+ <!--final  Open Ended Question + Answer-->
+<?php if($row['q_fqa']):?>
+            <?php echo $row['q_fqa'];?><Br>
+            <?php endif; ?>
+
+ <!--final type 2  Multiple Options + Video + Answer-->
+  <?php if($row['q_fvid']):?>
+<video width="320" height="240" controls>
+  <source src="images/<?php echo $row['q_fvid']; ?>.mp4" type="video/mp4">
+</video><br>
+<?php endif; ?>
+
+<?php if($row['q_fanswer']):?>
+            <?php echo $row['q_fanswer'];?><Br>
+            <?php endif; ?>
+
+
+   <!--final Type 3 - Audio + Question/hint + answer -->
+   <?php if($row['q_faanswer']):?>
+            <?php echo $row['q_faanswer'];?><Br>
+            <?php endif; ?>
 
 
 <!--bottom-->
