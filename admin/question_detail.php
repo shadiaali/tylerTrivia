@@ -225,6 +225,133 @@
 
 
 
+<?php if($row['q_mq1']):?>
+
+<b>Question/choice 1</b><br>
+<input type="text" id="mq1" name="mq1" class="form-control" value="<?php echo $row['q_mq1'];?>">
+
+<b>Question/choice 2</b><br>
+  <input type="text" id="mq2" name="mq2" class="form-control" value="<?php echo $row['q_mq2'];?>">
+
+  <b>Question/choice 3</b><br>
+  <input type="text" id="mq3" name="mq3" class="form-control" value="<?php echo $row['q_mq3'];?>">
+
+  <b>Question/choice 4</b><br>
+  <input type="text" id="mq4" name="mq4" class="form-control" value="<?php echo $row['q_mq4'];?>">
+
+  <b>Question/choice 5</b><br>
+  <input type="text" id="mq5" name="mq5" class="form-control" value="<?php echo $row['q_mq5'];?>">
+  <br><br>
+
+  <b>Correct answer/choice/match for 1</b><br>
+  <input type="text" id="ma1" name="ma1" class="form-control" value="<?php echo $row['q_ma1'];?>">
+
+  <b>Correct answer/choice/match for 2</b><br>
+  <input type="text" id="ma2" name="ma2" class="form-control" value="<?php echo $row['q_ma2'];?>">
+
+  <b>Correct answer/choice/match for 3</b><br>
+  <input type="text" id="ma3" name="ma3" class="form-control" value="<?php echo $row['q_ma3'];?>">
+
+  <b>Correct answer/choice/match for 4</b><br>
+  <input type="text" id="ma4" name="ma4" class="form-control" value="<?php echo $row['q_ma4'];?>">
+
+  <b>Correct answer/choice/match for 5</b><br>
+  <input type="text" id="ma5" name="ma5" class="form-control" value="<?php echo $row['q_ma5'];?>">
+  <br><br>
+
+  <b>INcorrect answer/choice/match for 1</b><br>
+  <input type="text" id="mia1" name="mia1" class="form-control" value="<?php echo $row['q_mia1'];?>">
+
+  <b>INcorrect answer/choice/match for 2</b><br>
+  <input type="text" id="mia2" name="mia2" class="form-control" value="<?php echo $row['q_mia2'];?>">
+
+  <b>INcorrect answer/choice/match for 3</b><br>
+  <input type="text" id="mia3" name="mia3" class="form-control" value="<?php echo $row['q_mia3'];?>">
+
+  <b>INcorrect answer/choice/match for 4</b><br>
+  <input type="text" id="mia4" name="mia4" class="form-control" value="<?php echo $row['q_mia4'];?>">
+
+  <b>INcorrect answer/choice/match for 5</b><br>
+  <input type="text" id="mia5" name="mia5" class="form-control" value="<?php echo $row['q_mia5'];?>">
+
+  <b>Another INcorrect answer/choice/match to throw them off</b><br>
+  <input type="text" id="mia6" name="mia6" class="form-control" value="<?php echo $row['q_mia6'];?>">
+
+  <b>Another INcorrect answer/choice/match to throw them off</b><br>
+  <input type="text" id="mia7" name="mia7" class="form-control" value="<?php echo $row['q_mia7'];?>">
+<?php endif; ?>
+
+
+<?php if($row['q_songanswer']):?>
+
+<b>Song hint or question</b><br>
+<input type="text" id="songhint" name="songhint" class="form-control" value="<?php echo $row['q_songhint'];?>"><br>
+
+<div class="file-field"><b>Song mp3</b><Br>
+  <div class="btn btn-primary float-center ">
+      <span>mp3 </span><br>
+      <input type="file" name="song" id="song" value="<?php echo $row['q_song'];?>">
+  </div>
+</div><br>
+<b>Answer</b><br>
+<input type="text" id="songanswer" name="songanswer" class="form-control" value="<?php echo $row['q_songanswer'];?>">
+
+<?php endif; ?>
+
+<?php if($row['q_jepcat']):?>
+<b>Jeopardy Category Name <i>(shown on questions list</i>)</b><br>
+<input type="text" id="jepcat" name="jepcat" class="form-control" value="<?php echo $row['q_jepcat'];?>">
+<?php endif; ?>
+
+
+<?php if($row['q_jepq1']):?>
+
+<b>Jeopardy open ended question</b><Br>
+<input type="text" id="jepq1" name="jepq1" class="form-control" value="<?php echo $row['q_jepq1'];?>"><Br>
+
+<b>Jeopardy open ended answer</b><br>
+<input type="text" id="jepa1" name="jepa1" class="form-control" value="<?php echo $row['q_jepa1'];?>">
+<?php endif; ?>
+
+
+<?php if($row['q_jepq2']):?>
+
+<b>Jeopardy question/hint</b><Br>
+<input type="text" id="jepq2" name="jepq2" class="form-control" value="<?php echo $row['q_jepq2'];?>"><br>
+
+<b>Jeopardy answer</b><Br>
+<input type="text" id="jepa2" name="jepa2" class="form-control" value="<?php echo $row['q_jepa2'];?>"> <br>
+
+<b>Jeopardy song clip</b><br>
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>mp3 </span><br>
+        <input type="file" name="jepsong" id="jepsong" value="<?php echo $row['q_jepsong'];?>">
+    </div>
+</div>
+<?php endif; ?>
+
+
+
+<?php if($row['q_jepq3']):?>
+
+<b>Jeopardy Question/hint</b><br>
+<input type="text" id="jepq3" name="jepq3" class="form-control" value="<?php echo $row['q_jepq3'];?>"><br>
+
+<b>Jeopardy answer</b><br>
+<input type="text" id="jepa3" name="jepa3" class="form-control" value="<?php echo $row['q_jepa3'];?>"> <br>
+
+<b>Jeopardy image/gif</b><br>
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jepimg" id="jepimg" value="<?php echo $row['q_jepimg'];?>">
+    </div>
+</div> 
+<?php endif; ?>
+
+
+
 </div>
 
 

@@ -282,19 +282,19 @@ $(document).ready(function() {
   <input type="text" id="mq4" name="mq4" class="form-control" placeholder="question 4">
   <input type="text" id="mq5" name="mq5" class="form-control" placeholder="question 5">
   <br><br>
-  <input type="text" id="ma1" name="ma1" class="form-control" placeholder="answer 1">
-  <input type="text" id="ma2" name="ma2" class="form-control" placeholder="answer 2">
-  <input type="text" id="ma3" name="ma3" class="form-control" placeholder="answer 3">
-  <input type="text" id="ma4" name="ma4" class="form-control" placeholder="answer 4">
-  <input type="text" id="ma5" name="ma5" class="form-control" placeholder="answer 5">
+  <input type="text" id="ma1" name="ma1" class="form-control" placeholder="correct answer/choice/match for 1">
+  <input type="text" id="ma2" name="ma2" class="form-control" placeholder="correct answer/choice/match for 2">
+  <input type="text" id="ma3" name="ma3" class="form-control" placeholder="correct answer/choice/match for 3">
+  <input type="text" id="ma4" name="ma4" class="form-control" placeholder="correct answer/choice/match for 4">
+  <input type="text" id="ma5" name="ma5" class="form-control" placeholder="correct answer/choice/match for 5">
   <br>
-  <input type="text" id="mia1" name="mia1" class="form-control" placeholder="incorrect answer 1">
-  <input type="text" id="mia2" name="mia2" class="form-control" placeholder="incorrect answer 2">
-  <input type="text" id="mia3" name="mia3" class="form-control" placeholder="incorrect answer 3">
-  <input type="text" id="mia4" name="mia4" class="form-control" placeholder="incorrect answer 4">
-  <input type="text" id="mia5" name="mia5" class="form-control" placeholder="incorrect answer 5">
-  <input type="text" id="mia6" name="mia6" class="form-control" placeholder="incorrect answer 5">
-  <input type="text" id="mia7" name="mia7" class="form-control" placeholder="incorrect answer 5">
+  <input type="text" id="mia1" name="mia1" class="form-control" placeholder="incorrect answer/choice/match for 1">
+  <input type="text" id="mia2" name="mia2" class="form-control" placeholder="incorrect answer/choice/match for 2">
+  <input type="text" id="mia3" name="mia3" class="form-control" placeholder="incorrect answer/choice/match for 3">
+  <input type="text" id="mia4" name="mia4" class="form-control" placeholder="incorrect answer/choice/match for 4">
+  <input type="text" id="mia5" name="mia5" class="form-control" placeholder="incorrect answer/choice/match for 5">
+  <input type="text" id="mia6" name="mia6" class="form-control" placeholder="another incorrect answer/choice/match to throw them off">
+  <input type="text" id="mia7" name="mia7" class="form-control" placeholder="another incorrect answer/choice/match to throw them off">
   
 
 
