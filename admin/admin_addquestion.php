@@ -171,43 +171,8 @@ $(document).ready(function() {
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-    <div class="container">
-
-      <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="../index.php">
-        <img src="../assets/pubLogo.png" style="height:100px;margin-right:10px;">
-      </a>
-
-      <!-- Collapse -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons ml-auto">
-         
-          
-          <li class="nav-item">
-            <a href="scripts/caller.php?caller_id=logout" class="nav-link border border-light rounded waves-effect">
-              <i class="far fa-id-badge mr-2"></i>Logout
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-  </nav>
-  <!-- Navbar -->
-  <Br><Br><Br><Br><Br><Br>
+  
+  <Br><Br>
 
   
 

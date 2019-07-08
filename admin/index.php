@@ -60,7 +60,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="../index.php">
-        <img src="../assets/pubLogo.png" style="height:100px;margin-right:10px;">
+        <strong>tylerTrivia</strong>
       </a>
 
       <!-- Collapse -->

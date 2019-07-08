@@ -90,14 +90,11 @@ if(isset($_GET['filter'])){
    
 
    <div class="grid">
-					<figure class="effect-bubba wow fadeIn">
-            <img style="width:480px;" src="images/pex.jpg"/>
-            
-            
-						<figcaption>
-              <h2><Span><?php echo $row['q_title'];?>
+					
+              <div class="auto cell">
+                <h2><Span><?php echo $row['q_title'];?>
               <?php if($row['q_jepcat']):?>
-        <?php echo $row['q_jepcat'];?>
+        <br><?php echo $row['q_jepcat'];?>
         <?php endif; ?>
             
             </span></h2>
@@ -106,11 +103,7 @@ if(isset($_GET['filter'])){
                <a class="button primary wow fadeIn" href="details.php?id=<?php echo $row['q_id'];?>" >QUESTION</a>
               <a class="button success wow fadeIn" href="answers.php?id=<?php echo $row['q_id'];?>">Answer</a>
 </p>
-    
-
-							
-						</figcaption>			
-					</figure>
+</div><hr>
 					
 				</div>
 
