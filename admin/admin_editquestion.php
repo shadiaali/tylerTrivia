@@ -1,5 +1,18 @@
 <?php require_once('scripts/config.php');
-    $results = getAll('tbl_questions');
+if(isset($_GET['filter'])){
+	$tbl = 'tbl_questions';
+	$tbl_2 = 'tbl_category';
+	$tbl_3 = 'tbl_question_category';
+	$col = 'q_id';
+	$col_2 = 'cat_id';
+	$col_3 = 'cat_name';
+	$filter = $_GET['filter'];
+	$results = filterResults($tbl,$tbl_2,$tbl_3,$col,$col_2,$col_3,$filter);
+}else{
+  $results = getAll('tbl_questions');
+  $headerr = "Welcome!";
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,11 +24,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Edit or Delete Product</title>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
   <!-- css -->
   <link href="../css/style.css" rel="stylesheet">
   <style type="text/css">
@@ -57,8 +70,34 @@
 
   <!--Main layout-->
   <main>
-    <div class="container">
+    <div class="container" style="text-align:center;">
 
+    <div class="btn-group" role="group" aria-label="order by category">
+    <a href="admin_editquestion.php?filter=One">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 1: Mixed Bag</button></a>
+
+    <a href="admin_editquestion.php?filter=Two">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 2: Have You Seen the Scene?</button></a>
+
+    <a href="admin_editquestion.php?filter=Three">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 3: Match Game</button></a>
+
+    <a href="admin_editquestion.php?filter=Four">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 4: Name that Tune</button></a>
+
+    <a href="admin_editquestion.php?filter=Jeopardy">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy</button></a>
+
+    <a href="admin_editquestion.php?filter=Final">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 6: Final Questions</button></a>
+
+</div><hr>
 
 
 	<table class="table table-striped table-responsive-md btn-table">
@@ -189,13 +228,13 @@
   
   <!-- SCRIPTS -->
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
   <!-- Initializations -->
   <script type="text/javascript">
     // Animations initialization
