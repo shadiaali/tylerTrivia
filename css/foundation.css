@@ -2506,10 +2506,10 @@ ul.no-bullet, ol.no-bullet {
       background-color: #fff;
       color: #000; }
   .button.warning {
-    background-color: #ffae00;
-    color: #0a0a0a; }
+    background-color: #e2231a;
+    color: #fff; }
     .button.warning:hover, .button.warning:focus {
-      background-color: #cc8b00;
+      background-color: #fff;
       color: #0a0a0a; }
   .button.alert {
     background-color: #cc4b37;
