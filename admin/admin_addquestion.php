@@ -61,26 +61,6 @@ if (isset($_POST['submit'])) {
     $clipquestion = $_POST['clipquestion'];
     $mainq = $_POST['mainq'];
     $finalq = $_POST['finalq'];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
     $cat     = $_POST['catList'];
 
    
@@ -140,13 +120,43 @@ if (isset($_POST['submit'])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.js" integrity="sha256-lcAjyA3+DTAwTFgkSHiZUGH4eAGmbapda/TyUSvg5vk=" crossorigin="anonymous"></script>
 
   <script>
-
 $(function() {
-        $('.colorselector').change(function(){
-            $('.colors').hide();
-            $('#' + $(this).val()).show();
-        });
-    });
+
+
+
+
+$('.questionselector').change(function(){
+    var roundNumber;
+
+
+    switch($(this).val())
+    {
+        case "one":
+             roundNumber = 1;
+             break;
+        case "two":
+             roundNumber = 2;
+             break;
+        case "three":
+             roundNumber = 3;
+             break;
+        case "four":
+             roundNumber = 4;
+             break;
+        case "five":
+             roundNumber = 5;
+             break;
+        case "six":
+             roundNumber = 6;
+             break;
+    }
+
+
+    $('.rounds').hide();
+    $('#' + $(this).val()).show();
+    $('#catlist').val(roundNumber)
+});
+});
 
     $(document).ready(function() {
     $("input[name$='qs']").click(function() {
@@ -166,7 +176,9 @@ $(document).ready(function() {
     });
 });
 
+
     </script>
+    
 </head>
 
 <body>
@@ -196,25 +208,25 @@ $(document).ready(function() {
 <form  action="admin_addquestion.php" method="post" enctype="multipart/form-data" class="md-form" style="color: #757575;">
 <br>
 
-<Select class="colorselector">
-   <option value="none">Select a Question Type</option>
+<Select class="questionselector">
+   <option value="none" disabled selected>Select a Question Type</option>
 
-   <option value="red">Round One - Mixed bag</option>
-   <option value="yellow">Round Two - Have you seen the scene?</option>
-   <option value="blue">Round Three - Match Game</option>
+   <option value="one">Round One - Mixed bag</option>
+   <option value="two">Round Two - Have you seen the scene?</option>
+   <option value="three">Round Three - Match Game</option>
    <option value="four">Round Four - Name that Tune</option>
    <option value="five">Round Five - Jeopardy</option>
    <option value="six">Final Round</option>
 
 </Select>
-<Br><Br>
 
 
-<select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
-        <option value="" disabled selected>Insert into Category...</option>
+
+<select name="catList" id="catlist" class="mdb-select md-form mb-4 initialized" >
+        <option value="">Insert into Category...</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
 <option value="<?php echo $product_category['cat_id']; ?>">
-    <?php echo $product_category['cat_name']; ?>
+    <?php echo $product_category['cat_name']; ?> 
 </option>
 <?php endwhile; ?>
     </select><br>
@@ -227,7 +239,7 @@ $(document).ready(function() {
  
 
 
-<div id="red" class="colors" style="display:none">
+<div id="one" class="rounds" style="display:none">
 
 <input type="text" name="question"  id="question" class="form-control" placeholder="question">
 
@@ -238,7 +250,7 @@ $(document).ready(function() {
   </div>
 <br>
   
-  <div id="yellow" class="colors" style="display:none">
+  <div id="two" class="rounds" style="display:none">
   <input type="text" id="clipquestion" name="clipquestion" class="form-control" placeholder="question">
   
   <br><i>Options will only show if they're filled in.</i><br>
@@ -256,7 +268,7 @@ $(document).ready(function() {
   </div>
 
   
-  <div id="blue" class="colors" style="display:none">
+  <div id="three" class="rounds" style="display:none">
   <input type="text" id="mainq" name="mainq" class="form-control" placeholder="main question/instructions">
   <input type="text" id="mq1" name="mq1" class="form-control" placeholder="question 1">
   <input type="text" id="mq2" name="mq2" class="form-control" placeholder="question 2">
@@ -282,7 +294,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="four" class="colors" style="display:none">
+  <div id="four" class="rounds" style="display:none">
 
   <input type="text" id="songhint" name="songhint" class="form-control" placeholder="Song question/hint">
 
@@ -298,7 +310,7 @@ $(document).ready(function() {
   </div>
 
 
-  <div id="five" class="colors" style="display:none">
+  <div id="five" class="rounds" style="display:none">
   
   <input type="text" id="jepcat" name="jepcat" class="form-control" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
 
@@ -341,7 +353,7 @@ $(document).ready(function() {
 </div>
   </div>
 
-  <div id="six" class="colors" style="display:none">
+  <div id="six" class="rounds" style="display:none">
 
   <input type="radio" name="q1s" value="1"/> Type 1 - Open Ended Question + Answer<br>
   <input type="radio" name="q1s" value="2"/> Type 2 - Multiple Options + Video + Answer<br>
@@ -385,7 +397,6 @@ $(document).ready(function() {
 
 
 </div>
-
 
 
 
