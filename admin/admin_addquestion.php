@@ -63,11 +63,16 @@ if (isset($_POST['submit'])) {
     $finalq = $_POST['finalq'];
     $faudio = $_FILES['faudio'];
     $jept1 = $_FILES['jept1'];
+    $jept2 = $_FILES['jept2'];
+    $jept3 = $_FILES['jept3'];
+    $jept4 = $_FILES['jept4'];
+    $jept5 = $_FILES['jept5'];
+
 
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $cat);        
+        $result  = addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $jept2, $jept3, $jept4, $jept5, $cat);        
         $message = $result;
     }
 
@@ -337,6 +342,34 @@ $(document).ready(function() {
     <div class="btn btn-primary float-center ">
         <span>image </span><br>
         <input type="file" name="jept1" id="jept1">
+    </div>
+</div>
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image 2</span><br>
+        <input type="file" name="jept2" id="jept2">
+    </div>
+</div>
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image 3</span><br>
+        <input type="file" name="jept3" id="jept3">
+    </div>
+</div>
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image 4</span><br>
+        <input type="file" name="jept4" id="jept4">
+    </div>
+</div>
+
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image 5</span><br>
+        <input type="file" name="jept5" id="jept5">
     </div>
 </div>
 </div>

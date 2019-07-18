@@ -1,6 +1,6 @@
 <?php
 
-function addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $cat) {
+function addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $jept2, $jept3, $jept4, $jept5, $cat) {
     try {
         include 'connect.php';
 
@@ -23,10 +23,22 @@ function addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $
 
         $target_path6 = '../images/' . $jept1['name'];
         !move_uploaded_file($jept1['tmp_name'], $target_path6); 
+
+        $target_path7 = '../images/' . $jept2['name'];
+        !move_uploaded_file($jept2['tmp_name'], $target_path7); 
+
+        $target_path8 = '../images/' . $jept3['name'];
+        !move_uploaded_file($jept3['tmp_name'], $target_path8); 
+
+        $target_path9 = '../images/' . $jept4['name'];
+        !move_uploaded_file($jept4['tmp_name'], $target_path9); 
+
+        $target_path10 = '../images/' . $jept5['name'];
+        !move_uploaded_file($jept5['tmp_name'], $target_path10); 
     
        
-        $insert_prod_query = 'INSERT INTO tbl_questions(q_title, q_question, q_answer,q_op1, q_op2, q_op3, q_op4, q_op5, q_clipanswer, q_vid, q_mq1, q_mq2, q_mq3, q_mq4, q_mq5, q_ma1, q_ma2, q_ma3, q_ma4, q_ma5, q_mia1, q_mia2, q_mia3, q_mia4, q_mia5, q_mia6, q_mia7, q_songhint, q_song, q_songanswer, q_jepcat, q_jepq1, q_jepa1, q_jepq2, q_jepa2, q_jepsong, q_jepq3, q_jepa3, q_jepimg, q_fq, q_fqa, q_fop1, q_fop2, q_fop3, q_fop4, q_fop5, q_fanswer, q_fvid, q_faq, q_faudio, q_faanswer, q_clipquestion, q_mainq, q_finalq, q_jept1)';
-        $insert_prod_query .= ' VALUES(:title, :question, :answer, :op1, :op2, :op3, :op4, :op5, :clipanswer, :vid, :mq1, :mq2, :mq3, :mq4, :mq5, :ma1, :ma2, :ma3, :ma4, :ma5, :mia1, :mia2, :mia3, :mia4, :mia5, :mia6, :mia7, :songhint, :song, :songanswer, :jepcat, :jepq1, :jepa1, :jepq2, :jepa2, :jepsong, :jepq3, :jepa3, :jepimg, :fq, :fqa, :fop1, :fop2, :fop3, :fop4, :fop5, :fanswer, :fvid, :faq, :faudio, :faanswer, :clipquestion, :mainq, :finalq, :jept1)';
+        $insert_prod_query = 'INSERT INTO tbl_questions(q_title, q_question, q_answer,q_op1, q_op2, q_op3, q_op4, q_op5, q_clipanswer, q_vid, q_mq1, q_mq2, q_mq3, q_mq4, q_mq5, q_ma1, q_ma2, q_ma3, q_ma4, q_ma5, q_mia1, q_mia2, q_mia3, q_mia4, q_mia5, q_mia6, q_mia7, q_songhint, q_song, q_songanswer, q_jepcat, q_jepq1, q_jepa1, q_jepq2, q_jepa2, q_jepsong, q_jepq3, q_jepa3, q_jepimg, q_fq, q_fqa, q_fop1, q_fop2, q_fop3, q_fop4, q_fop5, q_fanswer, q_fvid, q_faq, q_faudio, q_faanswer, q_clipquestion, q_mainq, q_finalq, q_jept1, q_jept2, q_jept3, q_jept4, q_jept5)';
+        $insert_prod_query .= ' VALUES(:title, :question, :answer, :op1, :op2, :op3, :op4, :op5, :clipanswer, :vid, :mq1, :mq2, :mq3, :mq4, :mq5, :ma1, :ma2, :ma3, :ma4, :ma5, :mia1, :mia2, :mia3, :mia4, :mia5, :mia6, :mia7, :songhint, :song, :songanswer, :jepcat, :jepq1, :jepa1, :jepq2, :jepa2, :jepsong, :jepq3, :jepa3, :jepimg, :fq, :fqa, :fop1, :fop2, :fop3, :fop4, :fop5, :fanswer, :fvid, :faq, :faudio, :faanswer, :clipquestion, :mainq, :finalq, :jept1, :jept2, :jept3, :jept4, :jept5)';
          $insert_prod   = $pdo->prepare($insert_prod_query);
         $insert_result = $insert_prod->execute(
             array(
@@ -85,6 +97,10 @@ function addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $
                 ':mainq'      => $mainq,
                 ':finalq'      => $finalq,
                 ':jept1'       => $jept1['name'],
+                ':jept2'       => $jept2['name'],
+                ':jept3'       => $jept3['name'],
+                ':jept4'       => $jept4['name'],
+                ':jept5'       => $jept5['name'],
 
 
  
@@ -112,7 +128,7 @@ function addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $
     }
 }
 
-function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $category) {
+function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $jept2, $jept3, $jept4, $jept5, $category) {
       
       try {
           include 'connect.php';
@@ -122,7 +138,7 @@ function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, 
         }
 
         
-            $query = "UPDATE tbl_questions SET q_title = :title, q_question = :question, q_answer = :answer, q_op1 = :op1, q_op2 = :op2, q_op3 = :op3, q_op4 = :op4, q_op5 = :op5, q_clipanswer = :clipanswer, q_vid = :vid, q_mq1 = :mq1, q_mq2 = :mq2, q_mq3 = :mq3, q_mq4 = :mq4, q_mq5 = :mq5, q_ma1 = :ma1, q_ma2 = :ma2, q_ma3 = :ma3, q_ma4 = :ma4, q_ma5 = :ma5, q_mia1 = :mia1, q_mia2 = :mia2, q_mia3 = :mia3, q_mia4 = :mia4, q_mia5 = :mia5, q_mia6 = :mia6, q_mia7 = :mia7, q_songhint = :songhint, q_song = :song, q_songanswer = :songanswer, q_jepcat = :jepcat, q_jepq1 = :jepq1, q_jepa1 = :jepa1, q_jepq2 = :jepq2, q_jepa2 = :jepa2, q_jepsong = :jepsong, q_jepq3 = :jepq3, q_jepa3 = :jepa3, q_jepimg = :jepimg, q_fq = :fq, q_fqa = :fqa, q_fop1 = :fop1, q_fop2 = :fop2, q_fop3 = :fop3, q_fop4 = :fop4, q_fop5 = :fop5, q_fanswer = :fanswer, q_fvid = :fvid, q_faq = :faq, q_faudio = :faudio, q_faanswer = :faanswer, q_clipquestion = :clipquestion, q_mainq = :mainq, q_finalq = :finalq, q_jept1 = :jept1 WHERE q_id = :question_id";
+            $query = "UPDATE tbl_questions SET q_title = :title, q_question = :question, q_answer = :answer, q_op1 = :op1, q_op2 = :op2, q_op3 = :op3, q_op4 = :op4, q_op5 = :op5, q_clipanswer = :clipanswer, q_vid = :vid, q_mq1 = :mq1, q_mq2 = :mq2, q_mq3 = :mq3, q_mq4 = :mq4, q_mq5 = :mq5, q_ma1 = :ma1, q_ma2 = :ma2, q_ma3 = :ma3, q_ma4 = :ma4, q_ma5 = :ma5, q_mia1 = :mia1, q_mia2 = :mia2, q_mia3 = :mia3, q_mia4 = :mia4, q_mia5 = :mia5, q_mia6 = :mia6, q_mia7 = :mia7, q_songhint = :songhint, q_song = :song, q_songanswer = :songanswer, q_jepcat = :jepcat, q_jepq1 = :jepq1, q_jepa1 = :jepa1, q_jepq2 = :jepq2, q_jepa2 = :jepa2, q_jepsong = :jepsong, q_jepq3 = :jepq3, q_jepa3 = :jepa3, q_jepimg = :jepimg, q_fq = :fq, q_fqa = :fqa, q_fop1 = :fop1, q_fop2 = :fop2, q_fop3 = :fop3, q_fop4 = :fop4, q_fop5 = :fop5, q_fanswer = :fanswer, q_fvid = :fvid, q_faq = :faq, q_faudio = :faudio, q_faanswer = :faanswer, q_clipquestion = :clipquestion, q_mainq = :mainq, q_finalq = :finalq, q_jept1 = :jept1, q_jept2 = :jept2, q_jept3 = :jept3, q_jept4 = :jept4, q_jept5 = :jept5 WHERE q_id = :question_id";
 
             $edit_product = $pdo->prepare($query);
             $edit_product->execute(
@@ -182,7 +198,10 @@ function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, 
                 ':mainq'    => $mainq,
                 ':finalq'    => $finalq,
                 ':jept1'    => $jept1,
-
+                ':jept2'    => $jept2,
+                ':jept3'    => $jept3,
+                ':jept4'    => $jept4,
+                ':jept5'    => $jept5,
 
                 ':question_id' => $edit_cat,
             )

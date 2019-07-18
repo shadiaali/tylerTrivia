@@ -94,20 +94,47 @@ if(isset($_GET['filter'])){
 
 <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategoryImages') !== false)): ?>
 
-<?php 
-	$results = getAll($tbl);
-?>
-<?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-<?php echo $row['q_jept1'];?>
-<?php echo $row['q_jept2'];?>
-<?php echo $row['q_jept3'];?>
-<?php echo $row['q_jept4'];?>
-<?php echo $row['q_jept5'];?>
 
-<?php endwhile;?>
+<div class="grid-x grid-margin-x " style="margin-right:2%;margin-left:1%;margin-top:4%;">
+  <div class="auto cell"><?php $results = getAll($tbl);?>
+            <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+<?php if($row['q_jept1']):?><h1>Category 1</h1>
+<a href="?filter=JeopardyCategory1"><img src="images/<?php echo $row['q_jept1'];?>"></a>
+            <?php endif; ?>
+            <?php endwhile;?></div>
 
+  <div class="auto cell"><?php $results = getAll($tbl);?>
+            <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+            <?php if($row['q_jept2']):?><h1>Category 2</h1>
+<a href="?filter=JeopardyCategory2"><img src="images/<?php echo $row['q_jept2'];?>"></a>
+            <?php endif; ?>
+            <?php endwhile;?>
+          </div>
 
+  <div class="auto cell">  <?php $results = getAll($tbl);?>
+            <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+            <?php if($row['q_jept3']):?><h1>Category 3</h1>
+<a href="?filter=JeopardyCategory3"><img src="images/<?php echo $row['q_jept3'];?>"></a>
+            <?php endif; ?>
+            <?php endwhile;?>
+</div>
 
+  <div class="auto cell"> <?php $results = getAll($tbl);?>
+            <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+            <?php if($row['q_jept4']):?><h1>Category 4</h1>
+<a href="?filter=JeopardyCategory4"><img src="images/<?php echo $row['q_jept4'];?>"></a>
+            <?php endif; ?>
+            <?php endwhile;?></div>
+
+  <div class="auto cell"> <?php $results = getAll($tbl);?>
+ <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+ <?php if($row['q_jept5']):?><h1>Category 5</h1>
+<a href="?filter=JeopardyCategory5"><img src="images/<?php echo $row['q_jept5'];?>"></a>
+            <?php endif; ?>
+          <?php endwhile;?>
+</div>
+
+</div>
 
 
 
