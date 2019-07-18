@@ -67,7 +67,7 @@ if(isset($_GET['filter'])){
 <div class="small-4 cell round"> <a href="index.php?filter=Four"><h1 style="margin-top:20px;"><b><span>Round 4</span></b>
 </h1></a><Br><h3 class="ru">"<i>Name that tune!</i>"</h3><br>
                <a href="round4rules.html"><H2 class="ru">Rules</h2></a></div>
-<div class="small-4 cell round"><a href="index.php?filter=Jeopardy"><h1 style="margin-top:20px;"><b><span>Jeopardy</span></b>
+<div class="small-4 cell round"><a href="index.php?filter=JeopardyCategoryImages"><h1 style="margin-top:20px;"><b><span>Jeopardy</span></b>
 </h1></a><Br><h3 class="ru">"<i>Categories</i>"</h3><br>
                <a href="round5rules.html"><H2 class="ru">Rules</h2></a></div>
 <div class="small-4 cell round"> <a href="index.php?filter=Final"><h1 style="margin-top:20px;"><b><span>Final</span></b>
@@ -86,10 +86,39 @@ if(isset($_GET['filter'])){
     <button type="button" class="button" data-toggle="offCanvasTop1"><i class="fas fa-bars"></i> Game Panel</button>
 
 
-    <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
 
 <div class="grid-container full wow fadeIn">
   <div class="grid-x">
+
+<div>
+
+<?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategoryImages') !== false)): ?>
+
+<?php 
+	$results = getAll($tbl);
+?>
+<?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+<?php echo $row['q_jept1'];?>
+<?php echo $row['q_jept2'];?>
+<?php echo $row['q_jept3'];?>
+<?php echo $row['q_jept4'];?>
+<?php echo $row['q_jept5'];?>
+
+<?php endwhile;?>
+
+
+
+
+
+
+ <?php else: ?>
+
+
+</div>
+
+
+    <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+
   <div class="small-12 cell wow fadeIn" style="margin:0 auto;margin-top:20px; margin-bottom:20px;background-color:rgba(121, 4, 4, 0.877);padding:10px;width:70%;">
 <h1 class="headi wow fadeIn"><b><?php echo $row['q_title'];?></b></h1>
 <h2 class="sub wow fadeIn"> <?php if($row['q_jepcat']):?>
@@ -107,7 +136,7 @@ if(isset($_GET['filter'])){
 
 
 </div>
-<?php endwhile;?>   
+<?php endwhile;?>   <?php endif; ?>
 
 
 

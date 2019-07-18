@@ -61,10 +61,13 @@ if (isset($_POST['submit'])) {
     $clipquestion = $_POST['clipquestion'];
     $mainq = $_POST['mainq'];
     $finalq = $_POST['finalq'];
+    $faudio = $_FILES['faudio'];
+    $jept1 = $_FILES['jept1'];
+
     $cat     = $_POST['catList'];
 
    
-        $result  = addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $cat);        
+        $result  = addQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $cat);        
         $message = $result;
     }
 
@@ -149,11 +152,26 @@ $('.questionselector').change(function(){
         case "six":
              roundNumber = 6;
              break;
+        case "seven":
+             roundNumber = 7;
+             break;
+        case "eight":
+             roundNumber = 8;
+             break;
+        case "nine":
+             roundNumber = 9;
+             break;
+        case "ten":
+             roundNumber = 10;
+             break;
+        case "eleven":
+             roundNumber = 11;
+             break;
     }
 
 
     $('.rounds').hide();
-    $('#' + $(this).val()).show();
+    $('.' + $(this).val()).show();
     $('#catlist').val(roundNumber)
 });
 });
@@ -211,19 +229,24 @@ $(document).ready(function() {
 <Select class="questionselector">
    <option value="none" disabled selected>Select a Question Type</option>
 
-   <option value="one">Round One - Mixed bag</option>
-   <option value="two">Round Two - Have you seen the scene?</option>
-   <option value="three">Round Three - Match Game</option>
-   <option value="four">Round Four - Name that Tune</option>
-   <option value="five">Round Five - Jeopardy</option>
-   <option value="six">Final Round</option>
+   <option value="one">Round One: Mixed Bag Questions</option>
+   <option value="two">Round Two: Have you seen the scene? Questions</option>
+   <option value="three">Round Three: Match Game Questions</option>
+   <option value="four">Round Four: Name that Tune Questions</option>
+   <option value="five">Category Images for Jeopardy</option>
+   <option value="seven">Jeopardy Category 1 Questions</option>
+   <option value="eight">Jeopardy Category 2 Questions</option>
+   <option value="nine">Jeopardy Category 3 Questions</option>
+   <option value="ten">Jeopardy Category 4 Questions</option>
+   <option value="eleven">Jeopardy Category 5 Questions</option>
+   <option value="six">Final Round Questions</option>
 
 </Select>
 
 
 
 <select name="catList" id="catlist" class="mdb-select md-form mb-4 initialized" >
-        <option value="">Insert into Category...</option>
+        <option value="">Insert into a Round...</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
 <option value="<?php echo $product_category['cat_id']; ?>">
     <?php echo $product_category['cat_name']; ?> 
@@ -239,7 +262,7 @@ $(document).ready(function() {
  
 
 
-<div id="one" class="rounds" style="display:none">
+<div  class="one rounds" style="display:none">
 
 <input type="text" name="question"  id="question" class="form-control" placeholder="question">
 
@@ -250,7 +273,7 @@ $(document).ready(function() {
   </div>
 <br>
   
-  <div id="two" class="rounds" style="display:none">
+  <div class="two rounds" style="display:none">
   <input type="text" id="clipquestion" name="clipquestion" class="form-control" placeholder="question">
   
   <br><i>Options will only show if they're filled in.</i><br>
@@ -268,7 +291,7 @@ $(document).ready(function() {
   </div>
 
   
-  <div id="three" class="rounds" style="display:none">
+  <div  class="three rounds" style="display:none">
   <input type="text" id="mainq" name="mainq" class="form-control" placeholder="main question/instructions">
   <input type="text" id="mq1" name="mq1" class="form-control" placeholder="question 1">
   <input type="text" id="mq2" name="mq2" class="form-control" placeholder="question 2">
@@ -294,7 +317,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="four" class="rounds" style="display:none">
+  <div class="four rounds" style="display:none">
 
   <input type="text" id="songhint" name="songhint" class="form-control" placeholder="Song question/hint">
 
@@ -309,8 +332,16 @@ $(document).ready(function() {
 
   </div>
 
+  <div class="five rounds" style="display:none">
+  <div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jept1" id="jept1">
+    </div>
+</div>
+</div>
 
-  <div id="five" class="rounds" style="display:none">
+  <div class="seven eight nine ten eleven rounds" style="display:none">
   
   <input type="text" id="jepcat" name="jepcat" class="form-control" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
 
@@ -353,7 +384,7 @@ $(document).ready(function() {
 </div>
   </div>
 
-  <div id="six" class="rounds" style="display:none">
+  <div class="six rounds" style="display:none">
 
   <input type="radio" name="q1s" value="1"/> Type 1 - Open Ended Question + Answer<br>
   <input type="radio" name="q1s" value="2"/> Type 2 - Multiple Options + Video + Answer<br>
@@ -397,7 +428,6 @@ $(document).ready(function() {
 
 
 </div>
-
 
 
 
