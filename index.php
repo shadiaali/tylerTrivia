@@ -90,79 +90,136 @@ if(isset($_GET['filter'])){
 <div class="grid-container full wow fadeIn">
   <div class="grid-x">
 
-<div>
+
 
 <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategoryImages') !== false)): ?>
 
 
-<div class="grid-x grid-margin-x " style="margin-right:2%;margin-left:1%;margin-top:4%;">
-  <div class="auto cell"><?php $results = getAll($tbl);?>
+<div class="grid-x grid-margin-x grid-margin-y" style="margin-right:0.5%;margin-left:0.5%;margin-top:1%;"> 
+
+  <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Round 5: Jeopardy</span></b></div>
+            
+
+  <div class="medium-4 small-12 cell wow fadeIn cats" data-wow-duration="1s">
+  <?php $results = getAll($tbl);?>
             <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-<?php if($row['q_jept1']):?><h1>Category 1</h1>
-<a href="?filter=JeopardyCategory1"><img src="images/<?php echo $row['q_jept1'];?>"></a>
+<?php if($row['q_jept1']):?><a href="?filter=JeopardyCategory1"><h3 class="ru wow fadeIn">Category 1</h3>
+<img style="border-radius:5%;width:60vh;height:40vh;" src="images/<?php echo $row['q_jept1'];?>"></a>
             <?php endif; ?>
             <?php endwhile;?></div>
 
-  <div class="auto cell"><?php $results = getAll($tbl);?>
+  <div class="medium-4 small-12 cell wow fadeIn cats" data-wow-duration="1.1s"><?php $results = getAll($tbl);?>
             <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-            <?php if($row['q_jept2']):?><h1>Category 2</h1>
-<a href="?filter=JeopardyCategory2"><img src="images/<?php echo $row['q_jept2'];?>"></a>
+            <?php if($row['q_jept2']):?><a href="?filter=JeopardyCategory2"><h3 class="ru wow fadeIn">Category 2</h3>
+<img style="border-radius:5%;width:60vh;height:40vh;" src="images/<?php echo $row['q_jept2'];?>"></a>
             <?php endif; ?>
             <?php endwhile;?>
           </div>
 
-  <div class="auto cell">  <?php $results = getAll($tbl);?>
+  <div class="medium-4 small-12 cell wow fadeIn cats" data-wow-duration="1.2s">  <?php $results = getAll($tbl);?>
             <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-            <?php if($row['q_jept3']):?><h1>Category 3</h1>
-<a href="?filter=JeopardyCategory3"><img src="images/<?php echo $row['q_jept3'];?>"></a>
+            <?php if($row['q_jept3']):?><a href="?filter=JeopardyCategory3"><h3 class="ru wow fadeIn">Category 3</h3>
+<img style="border-radius:5%;width:60vh;height:40vh;" src="images/<?php echo $row['q_jept3'];?>"></a>
             <?php endif; ?>
             <?php endwhile;?>
 </div>
 
-  <div class="auto cell"> <?php $results = getAll($tbl);?>
+<div class="grid-x grid-margin-x" style="margin-right:10%;margin-left:15%;margin-top:1%;margin-bottom:1%;">
+  <div  class="medium-6 small-12 cell wow fadeIn cats" data-wow-duration="1.3s"> <?php $results = getAll($tbl);?>
             <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-            <?php if($row['q_jept4']):?><h1>Category 4</h1>
-<a href="?filter=JeopardyCategory4"><img src="images/<?php echo $row['q_jept4'];?>"></a>
+            <?php if($row['q_jept4']):?><a href="?filter=JeopardyCategory4"><h3 class="ru wow fadeIn">Category 4</h3>
+<img style="border-radius:5%;width:60vh;height:40vh;" src="images/<?php echo $row['q_jept4'];?>"></a>
             <?php endif; ?>
             <?php endwhile;?></div>
 
-  <div class="auto cell"> <?php $results = getAll($tbl);?>
+  <div class="medium-6 small-12 cell wow fadeIn cats" data-wow-duration="1.4s"> <?php $results = getAll($tbl);?>
  <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
- <?php if($row['q_jept5']):?><h1>Category 5</h1>
-<a href="?filter=JeopardyCategory5"><img src="images/<?php echo $row['q_jept5'];?>"></a>
+ <?php if($row['q_jept5']):?><a href="?filter=JeopardyCategory5"><h3 class="ru wow fadeIn">Category 5</h3>
+<img style="border-radius:5%;width:60vh;height:40vh;" src="images/<?php echo $row['q_jept5'];?>"></a>
             <?php endif; ?>
           <?php endwhile;?>
 </div>
-
+</div>
 </div>
 
 
 
  <?php else: ?>
 
+ <?php if((strpos($_SERVER['REQUEST_URI'],'Final') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Round 6: Final Round</span></b></div>
+            <?php endif; ?>
 
-</div>
+            <?php if((strpos($_SERVER['REQUEST_URI'],'Four') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Round 4: Name that Tune!</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'Three') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Round 3: Match Game</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'Two') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Round 2: Have You <br>Seen the Scene?</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'One') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Round 1: Mixed Bag</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory1') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 1</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory2') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 2</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory3') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 3</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory4') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 4</span></b></div>
+            <?php endif; ?>
+
+            <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory5') !== false)):?>
+ <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 5</span></b></div>
+            <?php endif; ?>
 
 
-    <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+ <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
+  <div class="small-12 cell wow fadeIn qb" style="width:70%;">    
 
-  <div class="small-12 cell wow fadeIn" style="margin:0 auto;margin-top:20px; margin-bottom:20px;background-color:rgba(121, 4, 4, 0.877);padding:10px;width:70%;">
 <h1 class="headi wow fadeIn"><b><?php echo $row['q_title'];?></b></h1>
 <h2 class="sub wow fadeIn"> <?php if($row['q_jepcat']):?>
-        "<?php echo $row['q_jepcat'];?>"
+        "<?php echo $row['q_jepcat'];?>"<br>
         <?php endif; ?></h2>
-<a class="button primary wow fadeIn" href="details.php?id=<?php echo $row['q_id'];?>" >QUESTION</a>
- <a class="button success wow fadeIn" href="answers.php?id=<?php echo $row['q_id'];?>">ANSWER</a>
-
+        <div class="grid-x">
+<div style="padding-left:15px;padding-right:5px;" class="small-6 cell"><a class="button expanded primary wow fadeIn" href="details.php?id=<?php echo $row['q_id'];?>" >QUESTION</a>  </div>
+ <div style="padding-right:15px;padding-left:5px;" class="small-6 cell"><a class="button expanded success wow fadeIn" href="answers.php?id=<?php echo $row['q_id'];?>">ANSWER</a></div>
+</div>
     
 
     
 </div>
+
+
 </div>
 
 
 
-</div>
+</div><br>
 <?php endwhile;?>   <?php endif; ?>
 
 

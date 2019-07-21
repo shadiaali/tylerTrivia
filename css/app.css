@@ -105,12 +105,42 @@ background-repeat:repeat-y;
 
 .rounds{
   background: url("http://localhost:8888/tylerTrivia/images/fanb.png") center center fixed; 
-  background-repeat:repeat;  text-align:center;
+  -webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-repeat:repeat-y;  text-align:center;
 }
 
 .round{
   background-color:rgba(121, 4, 4, 0.877);
   text-align:center;
+  border-radius:5%;
+  
+}
+
+.round:hover{
+  background-color:rgba(255, 255, 255, 0.3);
+  
+
+}
+
+
+
+.roundq{
+  background-color:rgba(255, 255, 255, 0.3);
+
+
+}
+
+.cats{
+  background-color:rgba(121, 4, 4, 0.877);
+  padding:1.5%;
+  border-radius:5%;
+}
+
+.cats:hover{
+  background-color:rgba(255, 255, 255, 0.3);
   
 }
 
@@ -214,16 +244,16 @@ a {
   }
 
   .headi b{
-    font: 4vw Rubik Mono One;
+    font: 3.5vw Rubik Mono One;
     letter-spacing: -2px;
     color:  #fff;
     
   }
 
   .headi b:hover{
-    font: 4vw Rubik Mono One;
+    font: 3.5vw Rubik Mono One;
     letter-spacing: -2px;
-    background-color:#e2231a;
+    
 
     
   }
@@ -236,5 +266,22 @@ a {
   .sub:hover{
     font-family:Rubik Mono One;
     color:rgb(196, 36, 36);
+    
+  }
+
+  .qb{
+    border-radius:20px;
+    margin:0 auto;
+    margin-top:20px; 
+    background-color:rgba(121, 4, 4, 0.877);
+    padding:5px;
+   
+    
+  }
+
+  .qb:hover{
+    background-color:rgba(255, 255, 255, 0.3);
+   
+    
     
   }

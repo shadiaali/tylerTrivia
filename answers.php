@@ -20,42 +20,53 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="css/app.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Pangolin|Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One&display=swap" rel="stylesheet"> 
     
     <script src="https://kit.fontawesome.com/2ce5f1a851.js"></script>
 
   </head>
-  <body>
+  <body class="rounds" >
 
 <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-<div class="grid-container wow fadeIn">
+<div class="grid-container full wow fadeIn">
     <div class="grid-x wow fadeIn">
-        <div class="auto cell"></div>
-        <Div class=" wow fadeIn small-10 cell"><center>
-		<h1 class="wow fadeIn" style="font-family:Pangolin;"><?php echo $row['q_title'];?></h1><hr>
+       
+        <Div class=" wow fadeIn small-12 cell"><center>
+        <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-bottom:2%;margin-top:1%;">
+                <span style="font-size: 4vw;font-family: Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;"><?php echo $row['q_title'];?></span></div>
 
-  
-<?php if($row['q_question']):?>
-		<button class="secondary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">QUESTION: <?php echo $row['q_question'] ?>
-</h3></button><br><?php endif; ?>
+  <!--round 1-->
+                <?php if($row['q_question']):?>
+            <div class="auto cell round" style="padding:2%;width:70%;border-radius:5px;margin-bottom:1%;"><h3><i class="ru wow fadeIn"><?php echo $row['q_question'];?></i></h3></div>
+            <?php endif; ?>
 
-    <?php if($row['q_answer']):?>
-    <button class="alert button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">ANSWER: 
-<?php echo $row['q_answer'] ?>
-</h1></button><br>
-<hr><?php endif; ?>
-
-<?php if($row['q_vid']):?>
-<video width="320" height="240" controls>
-  <source src="images/<?php echo $row['q_vid']; ?>.mp4" type="video/mp4">
-</video><br>
-<?php endif; ?>
+    
+            <?php if($row['q_answer']):?>
+            <div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h1 class="ru wow fadeIn">Answer: <?php echo $row['q_answer'];?></h1></div>
+            <?php endif; ?>
+            
+<!--round 2-->
     
 <?php if($row['q_clipanswer']):?>
-    <button class="alert button wow fadeInRight"><h1 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"> 
-<?php echo $row['q_clipanswer'] ?>
-</h1></button>
-<?php endif; ?>
+
+
+    <?php if($row['q_vid']):?>
+
+<div class="grid-x grid-margin-x"style="margin-left:8%;margin-right:8%;">
+  <div class="small-4 cell"><?php if($row['q_clipanswer']):?>
+  <div class="auto cell roundq" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_clipanswer'];?></h3></div><?php endif; ?>
+
+</div>
+  <div class="small-8 cell" >
+    
+  <div class="flex-video">
+  <iframe src="images/<?php echo $row['q_vid']; ?>.mp4" frameborder="0" allowfullscreen></iframe>
+  
+</div>
+ 
+</div>
+</div>
+<?php endif; ?><?php endif; ?>
 
 <!--match game -->
 
@@ -165,7 +176,7 @@ if(isset($_GET['id'])){
 
 
 <!--bottom-->
-<hr>
+
 <button class="warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"
                         onclick="goBack()">
                         <h3>Go Back</h3>

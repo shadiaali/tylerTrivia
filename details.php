@@ -26,50 +26,58 @@ if(isset($_GET['id'])){
     <script src="https://kit.fontawesome.com/2ce5f1a851.js"></script>
 
   </head>
-  <body>
+  <body class="rounds" >
 
 <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
-<div class="grid-container wow fadeIn">
+<div class="grid-container full wow fadeIn">
     <div class="grid-x wow fadeIn">
         <div class="auto cell"></div>
         <Div class=" wow fadeIn small-10 cell"><center>
-		<h1 class="wow fadeIn" style="font-family:Pangolin;"><?php echo $row['q_title'];?></h1><hr>
+        <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:1%;margin-bottom:2%;">
+                <span style="font-size: 4vw;font-family: Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;"><?php echo $row['q_title'];?></span></div>
 
+<!--Round one mixed bag -->
             <?php if($row['q_question']):?>
-            <?php echo $row['q_question'];?>
+            <div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_question'];?></h3></div>
             <?php endif; ?>
-   
-            <?php if($row['q_clipquestion']):?>
-            <?php echo $row['q_clipquestion'];?><br>
+  
+  <!--Round two have you seen the scene -->
+          
+
+  <?php if($row['q_clipquestion']):?>
+            <div class="auto cell" style="padding:2%;width:85%;border-radius:5px;"><h3 class="ru wow fadeIn"><?php echo $row['q_clipquestion'];?></h3></div>
             <?php endif; ?>
 
     <?php if($row['q_vid']):?>
-<video width="320" height="240" controls>
-  <source src="images/<?php echo $row['q_vid']; ?>.mp4" type="video/mp4">
-</video><br>
-<?php endif; ?>
 
-
-
-<?php if($row['q_op1']):?>
-		<button class="primary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">1. <?php echo $row['q_op1'] ?>
-</h3></button><?php endif; ?>
+<div class="grid-x grid-margin-x">
+  <div class="small-4 cell"><?php if($row['q_op1']):?>
+  <div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_op1'];?></h3></div><?php endif; ?>
 
 <?php if($row['q_op2']):?>
-		<button class="secondary button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">2. <?php echo $row['q_op2'] ?>
-</h3></button><?php endif; ?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_op2'];?></h3></div><?php endif; ?>
 
 <?php if($row['q_op3']):?>
-		<button class="success button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">3. <?php echo $row['q_op3'] ?>
-</h3></button><?php endif; ?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_op3'];?></h3></div><?php endif; ?>
 
 <?php if($row['q_op4']):?>
-		<button class="alert button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">4. <?php echo $row['q_op4'] ?>
-</h3></button><?php endif; ?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_op4'];?></h3></div><?php endif; ?>
 
 <?php if($row['q_op5']):?>
-		<button class="warning button wow fadeInRight"><h3 class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">5. <?php echo $row['q_op5'] ?>
-</h3></button><?php endif; ?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_op5'];?></h3></div><?php endif; ?>
+</div>
+  <div class="small-8 cell" >
+    
+  <div class="flex-video">
+  <iframe src="images/<?php echo $row['q_vid']; ?>.mp4" frameborder="0" allowfullscreen></iframe>
+  
+</div>
+ 
+</div>
+</div>
+
+<?php endif; ?>
+
 
 
 <!--match game -->
@@ -223,11 +231,13 @@ if(isset($_GET['id'])){
 </audio>
             <?php endif; ?>
 <!--bottom-->
-<hr>
+
 <button class="warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"
                         onclick="goBack()">
                         <h3>Go Back</h3>
                     </button>
+
+                   
 </center></div>
 <div class="auto cell"></div>
 
