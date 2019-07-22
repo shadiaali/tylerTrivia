@@ -83,77 +83,79 @@ if(isset($_GET['id'])){
 <!--match game -->
 
 <?php if($row['q_mainq']):?>
-            <?php echo $row['q_mainq'];?>
+<div class="auto cell round" style="background:transparent;border-radius:5px;"><h3 class="ru wow fadeIn"><?php echo $row['q_mainq'];?></h3></div>
             <?php endif; ?>
 <br>
 <?php if($row['q_mq1']):?>
-<div class="grid-x">
-  <div class="small-6 cell">
-<ol>
-  <li><?php if($row['q_mq1']):?>
+<div class="grid-x grid-margin-x">
+  <div class="small-6 cell round" style="padding:2%;border-radius:5px;">
+<ol style="text-align:left;margin-left:20%;">
+<h3 class="ru"><li><?php if($row['q_mq1']):?>
             <?php echo $row['q_mq1'];?>
-            <?php endif; ?></li>
+            <?php endif; ?></li></h3>
 
-            <li><?php if($row['q_mq2']):?>
+            <h3 class="ru"><li><?php if($row['q_mq2']):?>
             <?php echo $row['q_mq2'];?>
-            <?php endif; ?></li>
+            <?php endif; ?></li></h3>
 
-            <li><?php if($row['q_mq3']):?>
+            <h3 class="ru"><li><?php if($row['q_mq3']):?>
             <?php echo $row['q_mq3'];?>
-            <?php endif; ?></li>
+            <?php endif; ?></li></h3>
 
-            <li><?php if($row['q_mq4']):?>
+            <h3 class="ru"><li><?php if($row['q_mq4']):?>
             <?php echo $row['q_mq4'];?>
-            <?php endif; ?></li>
+            <?php endif; ?></li></h3>
 
-            <li><?php if($row['q_mq5']):?>
+            <h3 class="ru"><li><?php if($row['q_mq5']):?>
             <?php echo $row['q_mq5'];?>
-            <?php endif; ?></li>
+            <?php endif; ?></li></h3>
 
 </ol>
 </div>
-<div class="small-6 cell">
-<Div class="cell"><?php if($row['q_mia1']):?>
-            <?php echo $row['q_mia1'];?>
+<div class="small-6 cell round" style="padding:2%;border-radius:5px;">
+<Div class="cell"><h3 class="ru"><?php if($row['q_mia1']):?>
+            <?php echo $row['q_mia1'];?></h3>
             <?php endif; ?></div>
 
-            <Div class="cell"><?php if($row['q_mia2']):?>
-            <?php echo $row['q_mia2'];?>
+            <Div class="cell"><h3 class="ru"><?php if($row['q_mia2']):?>
+            <?php echo $row['q_mia2'];?></h3>
             <?php endif; ?></div>
 
-            <Div class="cell"><?php if($row['q_mia3']):?>
-            <?php echo $row['q_mia3'];?>
+            <Div class="cell"><h3 class="ru"><?php if($row['q_mia3']):?>
+            <?php echo $row['q_mia3'];?></h3>
             <?php endif; ?></div>
 
-            <Div class="cell"><?php if($row['q_mia4']):?>
-            <?php echo $row['q_mia4'];?>
+            <Div class="cell"><h3 class="ru"><?php if($row['q_mia4']):?>
+            <?php echo $row['q_mia4'];?></h3>
             <?php endif; ?></div>
 
-            <Div class="cell"><?php if($row['q_mia5']):?>
-            <?php echo $row['q_mia5'];?>
+            <Div class="cell"><h3 class="ru"><?php if($row['q_mia5']):?>
+            <?php echo $row['q_mia5'];?></h3>
             <?php endif; ?></div>
 
-            <Div class="cell"><?php if($row['q_mia6']):?>
-            <?php echo $row['q_mia6'];?>
+            <Div class="cell"><h3 class="ru"><?php if($row['q_mia6']):?>
+            <?php echo $row['q_mia6'];?></h3>
             <?php endif; ?></div>
 
-            <Div class="cell"><?php if($row['q_mia7']):?>
-            <?php echo $row['q_mia7'];?>
+            <Div class="cell"><h3 class="ru"><?php if($row['q_mia7']):?>
+            <?php echo $row['q_mia7'];?></h3>
             <?php endif; ?></div>
 </div>
-</div>
+</div><br>
 <?php endif; ?>
 
 <!--name that tune-->
 <?php if($row['q_songhint']):?>
-            <?php echo $row['q_songhint'];?>
-            <?php endif; ?>
-
-            <?php if($row['q_song']):?>
+<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_songhint'];?></h3><br>
+<?php if($row['q_song']):?>
             <audio controls>
   <source src="images/<?php echo $row['q_song']; ?>" type="audio/mpeg">
 </audio>
             <?php endif; ?>
+          </div>
+            <?php endif; ?>
+
+            
 
             <!--jeopardy  Question Type 1 - Open Ended Question + Answer-->
 <?php if($row['q_jepq1']):?>

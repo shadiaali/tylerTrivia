@@ -24,7 +24,7 @@
 	$cat_tbl            = 'tbl_category';
 	$product_categories = getAll($cat_tbl);
 
-	if(isset($_REQUEST['update_prod'])){
+	if(isset($_POST['update_prod'])){
     $title   = trim($_POST['title']);
     $question  	= trim($_POST['question']);
     $answer = trim($_POST['answer']);
@@ -53,14 +53,14 @@
     $mia6 = trim($_POST['mia6']);
     $mia7 = trim($_POST['mia7']);
     $songhint = trim($_POST['songhint']);
-    $song = trim($_POST['song']);
+    $song = trim($_FILES['song']);
     $songanswer = trim($_POST['songanswer']);
     $jepcat = trim($_POST['jepcat']);
     $jepq1 = trim($_POST['jepq1']);
     $jepa1 = trim($_POST['jepa1']);
     $jepq2 = trim($_POST['jepq2']);
     $jepa2 = trim($_POST['jepa2']);
-    $jepsong = trim($_POST['jepsong']);
+    $jepsong = trim($_FILES['jepsong']);
     $jepq3 = trim($_POST['jepq3']);
     $jepa3 = trim($_POST['jepa3']);
     $jepimg = trim($_POST['jepimg']);
@@ -74,19 +74,22 @@
     $fanswer = trim($_POST['fanswer']);
     $fvid = trim($_POST['fvid']);
     $faq = trim($_POST['faq']);
-    $faudio = trim($_POST['faudio']);
+    $faudio = trim($_FILES['faudio']);
     $faanswer = trim($_POST['faanswer']);
     $clipquestion = trim($_POST['clipquestion']);
     $mainq = trim($_POST['mainq']);
     $finalq = trim($_POST['finalq']);
+    $jept1 = trim($_FILES['jept1']);
+    $jept2 = trim($_FILES['jept2']);
+    $jept3 = trim($_FILES['jept3']);
+    $jept4 = trim($_FILES['jept4']);
+    $jept5 = trim($_FILES['jept5']);
+    $category = trim($_POST['catList']);
+    
+    
+  
 
-
-
-
-
-
-		$category = trim($_POST['catList']);
-		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $category);
+		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $jept2, $jept3, $jept4, $jept5, $category);
 		$message = $result;
 	}
 ?>
@@ -107,7 +110,7 @@
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
   <!-- css -->
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/app.css" rel="stylesheet">
   <style type="text/css">
     html,
     body,
@@ -170,7 +173,7 @@
 <b>Question Title <i>(shown on question list)</i></b><br>
 <input type="text" name="title"  value="<?php echo $row['q_title'];?>" id="title" class="form-control"><br>
 
-<b>Insert into what round?</b><br>
+<b>Insert into what round?</b><i style="color:#cc0000">(If not changing round, leave blank)</i><br>
 <select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
         <option value="" disabled selected>Product Category</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
@@ -288,12 +291,10 @@
 <b>Song hint or question</b><br>
 <input type="text" id="songhint" name="songhint" class="form-control" value="<?php echo $row['q_songhint'];?>"><br>
 
-<div class="file-field"><b>Song mp3</b><Br>
-  <div class="btn btn-primary float-center ">
+
       <span>mp3 </span><br>
-      <input type="file" name="song" id="song" value="<?php echo $row['q_song'];?>">
-  </div>
-</div><br>
+      <input type="text" name="song" id="song" value="<?php echo $row['q_song'];?>">
+  <br>
 <b>Answer</b><br>
 <input type="text" id="songanswer" name="songanswer" class="form-control" value="<?php echo $row['q_songanswer'];?>">
 
@@ -346,7 +347,59 @@
 <div class="file-field">
     <div class="btn btn-primary float-center ">
         <span>image </span><br>
-        <input type="file" name="jepimg" id="jepimg" value="<?php echo $row['q_jepimg'];?>">
+        <input type="file" name="jepimg" id="jepimg" value="<?php echo $row['q_jepimg'];?>"> <img src="../images/<?php echo $row['q_jepimg'];?>">
+    </div>
+</div> 
+<?php endif; ?>
+
+<?php if($row['q_jept1']):?>
+
+<b>Jeopardy category 1 image</b><br>
+Please delete your category image and then reupload your file on the Add Questions page.  
+<?php endif; ?>
+
+
+
+<?php if($row['q_jept2']):?>
+
+<b>Jeopardy category 2 image</b><br>
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jept2" id="jept2" value="<?php echo $row['q_jept2'];?>"> <img src="../images/<?php echo $row['q_jept2'];?>">
+    </div>
+</div> 
+<?php endif; ?>
+
+<?php if($row['q_jept3']):?>
+
+<b>Jeopardy category 3 image</b><br>
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jept3" id="jept3" value="<?php echo $row['q_jept3'];?>"> <img src="../images/<?php echo $row['q_jept3'];?>">
+    </div>
+</div> 
+<?php endif; ?>
+
+<?php if($row['q_jept4']):?>
+
+<b>Jeopardy category 4 image</b><br>
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jept4" id="jept4" value="<?php echo $row['q_jept4'];?>"> <img src="../images/<?php echo $row['q_jept4'];?>">
+    </div>
+</div> 
+<?php endif; ?>
+
+<?php if($row['q_jept5']):?>
+
+<b>Jeopardy category 5 image</b><br>
+<div class="file-field">
+    <div class="btn btn-primary float-center ">
+        <span>image </span><br>
+        <input type="file" name="jept5" id="jept5" value="<?php echo $row['q_jept5'];?>"> <img src="../images/<?php echo $row['q_jept5'];?>">
     </div>
 </div> 
 <?php endif; ?>
@@ -404,7 +457,7 @@
 
 
 
-<button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="update_prod" value="Update" name="submit">Submit</button>
+<button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="update_prod" value="Update">Submit</button>
 
 </form>
 <?php endif; ?>
@@ -413,9 +466,9 @@
 </div>
 
 
-
-<a href="../admin"><button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect">Back</button></a>
-
+<div style="margin-left:20%;margin-right:20%;">
+<a href="../admin/admin_editquestion.php"><button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect">Back to question list</button></a>
+  </div>
 </div>
   </main>
   <!--Main layout-->

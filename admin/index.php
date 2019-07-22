@@ -113,7 +113,7 @@
 
 <div class="pt-2">
 <a href="admin_addquestion.php"> <button type="button" class="btn btn-outline-white">Add Questions <i class="fas fa-cart-plus ml-1"></i></button></a>
-<a href="admin_editquestion.php"><button type="button" class="btn btn-outline-white">Edit or Delete Questions <i class="fas fa-edit ml-1"></i></button></a>
+<a href="admin_editquestion.php?filter=One"><button type="button" class="btn btn-outline-white">Edit or Delete Questions <i class="fas fa-edit ml-1"></i></button></a>
 </div>
 
 </div>

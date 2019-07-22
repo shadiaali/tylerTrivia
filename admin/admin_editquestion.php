@@ -22,7 +22,7 @@ if(isset($_GET['filter'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Edit or Delete Product</title>
+  <title>Edit or Delete Questions</title>
   <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
@@ -89,15 +89,39 @@ if(isset($_GET['filter'])){
     <button type="button" class="btn btn-red btn-sm m-0">
     Round 4: Name that Tune</button></a>
 
-    <a href="admin_editquestion.php?filter=Jeopardy">
-    <button type="button" class="btn btn-red btn-sm m-0">
-    Round 5: Jeopardy</button></a>
-
     <a href="admin_editquestion.php?filter=Final">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-block btn-red btn-sm m-0">
     Round 6: Final Questions</button></a>
+  </div>
 
-</div><hr>
+  <div class="btn-group" role="group" aria-label="order by category row 2">
+    <a href="admin_editquestion.php?filter=JeopardyCategoryImages">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy Category Images</button></a>
+
+    <a href="admin_editquestion.php?filter=JeopardyCategory1">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy Category 1</button></a>
+    
+    <a href="admin_editquestion.php?filter=JeopardyCategory2">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy Category 2</button></a>
+
+    <a href="admin_editquestion.php?filter=JeopardyCategory3">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy Category 3</button></a>
+
+    <a href="admin_editquestion.php?filter=JeopardyCategory4">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy Category 4</button></a>
+
+    <a href="admin_editquestion.php?filter=JeopardyCategory5">
+    <button type="button" class="btn btn-red btn-sm m-0">
+    Round 5: Jeopardy Category 5</button></a>
+
+  </div>
+
+  <hr>
 
 
 	<table class="table table-striped table-responsive-md btn-table">
@@ -210,8 +234,18 @@ if(isset($_GET['filter'])){
         
         </td>
         
-				<td class="wow fadeIn"><a href="question_detail.php?update_id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></a></td>
+				<td class="wow fadeIn">
+        <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategoryImages') !== false)): ?>
+        <td class="wow fadeIn"><a href="scripts/caller.php?caller_id=erase&id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-red btn-sm m-0">Delete</button></a></td>
+
+        <?php else: ?>
+        <a href="question_detail.php?update_id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></a>
+      
+      </td>
 				<td class="wow fadeIn"><a href="scripts/caller.php?caller_id=erase&id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-red btn-sm m-0">Delete</button></a></td>
+        <?php endif; ?>
+
+        
 
             </tr>
             <?php endwhile; ?>
@@ -219,7 +253,7 @@ if(isset($_GET['filter'])){
     </table>
 
 	
-	<a href="../admin/index.php"><button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect">Back</button></a>
+	<a href="../admin/index.php"><button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect">Back to Admin index</button></a>
 
 </div>
   </main>
