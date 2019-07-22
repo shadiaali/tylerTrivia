@@ -159,79 +159,85 @@ if(isset($_GET['id'])){
 
             <!--jeopardy  Question Type 1 - Open Ended Question + Answer-->
 <?php if($row['q_jepq1']):?>
-            <?php echo $row['q_jepq1'];?>
+<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_jepq1'];?></h3></div>
             <?php endif; ?>
 
     <!--jeopardy  Question Type 2 - Question/Hint + Song clip + Answer-->
 <?php if($row['q_jepq2']):?>
-            <?php echo $row['q_jepq2'];?><Br>
-            <?php endif; ?>
+<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_jepq2'];?></h3><br>
+            
 
             <?php if($row['q_jepsong']):?>
             <audio controls>
   <source src="images/<?php echo $row['q_jepsong']; ?>" type="audio/mpeg">
-</audio>
-            <?php endif; ?>
+</audio></div>
+            <?php endif; ?><?php endif; ?>
 
 
              <!--jeopardy  Question Type 3 - Question/Hint + Image/Gif + Answer-->
 <?php if($row['q_jepq3']):?>
-            <?php echo $row['q_jepq3'];?><Br>
-            <?php endif; ?>
+<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_jepq3'];?></h3>
+            
 
             <?php if($row['q_jepimg']):?>
    <img src="images/<?php echo $row['q_jepimg']; ?>">
-
-            <?php endif; ?>
+   </div>
+            <?php endif; ?><?php endif; ?>
 
 
  <!--final  Open Ended Question + Answer-->
 <?php if($row['q_fq']):?>
-            <?php echo $row['q_fq'];?><Br>
+<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fq'];?></h3></div>
             <?php endif; ?>
 
 
  <!--final type 2  Multiple Options + Video + Answer-->
  <?php if($row['q_finalq']):?>
-            <?php echo $row['q_finalq'];?><Br>
+            <div class="auto cell" style="padding:2%;width:85%;border-radius:5px;"><h3 class="ru wow fadeIn"><?php echo $row['q_finalq'];?></h3></div>
             <?php endif; ?>
 
     <?php if($row['q_fvid']):?>
-<video width="320" height="240" controls>
-  <source src="images/<?php echo $row['q_fvid']; ?>.mp4" type="video/mp4">
-</video><br>
+
+<div class="grid-x grid-margin-x">
+  <div class="small-4 cell"><?php if($row['q_fop1']):?>
+  <div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fop1'];?></h3></div><?php endif; ?>
+
+<?php if($row['q_fop2']):?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fop2'];?></h3></div><?php endif; ?>
+
+<?php if($row['q_fop3']):?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fop3'];?></h3></div><?php endif; ?>
+
+<?php if($row['q_fop4']):?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fop4'];?></h3></div><?php endif; ?>
+
+<?php if($row['q_fop5']):?>
+<div class="auto cell round" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fop5'];?></h3></div><?php endif; ?>
+</div>
+  <div class="small-8 cell" >
+    
+  <div class="flex-video">
+  <iframe src="images/<?php echo $row['q_fvid']; ?>.mp4" frameborder="0" allowfullscreen></iframe>
+  
+</div>
+ 
+</div>
+</div>
+
 <?php endif; ?>
 
-            <?php if($row['q_fop1']):?>
-            <?php echo $row['q_fop1'];?><Br>
-            <?php endif; ?>
 
-            <?php if($row['q_fop2']):?>
-            <?php echo $row['q_fop2'];?><Br>
-            <?php endif; ?>
-
-            <?php if($row['q_fop3']):?>
-            <?php echo $row['q_fop3'];?><Br>
-            <?php endif; ?>
-
-            <?php if($row['q_fop4']):?>
-            <?php echo $row['q_fop4'];?><Br>
-            <?php endif; ?>
-
-            <?php if($row['q_fop5']):?>
-            <?php echo $row['q_fop5'];?><Br>
-            <?php endif; ?>
 
     <!--final Type 3 - Audio + Question/hint + answer -->
     <?php if($row['q_faq']):?>
-            <?php echo $row['q_faq'];?><Br>
-            <?php endif; ?>
+<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_faq'];?></h3><br>
+            
 
             <?php if($row['q_faudio']):?>
             <audio controls>
   <source src="images/<?php echo $row['q_faudio']; ?>" type="audio/mpeg">
-</audio>
-            <?php endif; ?>
+</audio></div>
+            <?php endif; ?><?php endif; ?>
 <!--bottom-->
 
 <button class="warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"

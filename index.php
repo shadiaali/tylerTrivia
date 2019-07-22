@@ -58,7 +58,7 @@ if(isset($_GET['filter'])){
               </div>
              <div class="small-4 cell round"> <a href="index.php?filter=Three"><h1 style="margin-top:20px;"><b><span>Round 3</span></b>
 </h1></a><Br><h3 class="ru">"<i>Match Game</i>"</h3><br>
-               <a href="round3rules.html"><H2 class="ru">Rules</h2></a></div>
+               <a href="round1/round-1-rules.html"><H2 class="ru">Rules</h2></a></div>
           
     </div>
 
@@ -66,13 +66,13 @@ if(isset($_GET['filter'])){
 
 <div class="small-4 cell round"> <a href="index.php?filter=Four"><h1 style="margin-top:20px;"><b><span>Round 4</span></b>
 </h1></a><Br><h3 class="ru">"<i>Name that tune!</i>"</h3><br>
-               <a href="round4rules.html"><H2 class="ru">Rules</h2></a></div>
+               <a href="round1/round-1-rules.html"><H2 class="ru">Rules</h2></a></div>
 <div class="small-4 cell round"><a href="index.php?filter=JeopardyCategoryImages"><h1 style="margin-top:20px;"><b><span>Jeopardy</span></b>
 </h1></a><Br><h3 class="ru">"<i>Categories</i>"</h3><br>
                <a href="round5rules.html"><H2 class="ru">Rules</h2></a></div>
 <div class="small-4 cell round"> <a href="index.php?filter=Final"><h1 style="margin-top:20px;"><b><span>Final</span></b>
 </h1></a><Br><h3 class="ru">"<i>Winner winner<Br>chicken dinner</i>"</h3><br>
-               <a href="round6rules.html"><H2 class="ru">Rules</h2></a></div>
+               <a href="round1/round-1-rules.html"><H2 class="ru">Rules</h2></a></div>
 
 </div>
 

@@ -131,47 +131,61 @@ if(isset($_GET['id'])){
 
 <!--name that tune-->
 <?php if($row['q_songanswer']):?>
-<div class="auto cell round" style="padding:2%;width:85%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_songanswer'];?></h3></div>
+<div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_songanswer'];?></h3></div>
             <?php endif; ?>
 
 
  <!--jeopardy  Question Type 1 - Open Ended Question + Answer-->
  <?php if($row['q_jepa1']):?>
-            <?php echo $row['q_jepa1'];?>
+ <div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_jepa1'];?></h3></div>
             <?php endif; ?>
 
  <!--jeopardy  Question Type 2 - Question/Hint + Song clip + Answer-->
  <?php if($row['q_jepa2']):?>
-            <?php echo $row['q_jepa2'];?><Br>
+ <div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_jepa2'];?></h3></div>
             <?php endif; ?>
 
 
    <!--jeopardy  Question Type 3 - Question/Hint + Image/Gif + Answer-->
    <?php if($row['q_jepa3']):?>
-            <?php echo $row['q_jepa3'];?><Br>
+   <div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_jepa3'];?></h3> <?php if($row['q_jepimg']):?>
+   <img src="images/<?php echo $row['q_jepimg']; ?>">
+   </div>
+            <?php endif; ?>
             <?php endif; ?>
 
 
  <!--final  Open Ended Question + Answer-->
 <?php if($row['q_fqa']):?>
-            <?php echo $row['q_fqa'];?><Br>
+<div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fqa'];?></h3></div>
             <?php endif; ?>
 
  <!--final type 2  Multiple Options + Video + Answer-->
-  <?php if($row['q_fvid']):?>
-<video width="320" height="240" controls>
-  <source src="images/<?php echo $row['q_fvid']; ?>.mp4" type="video/mp4">
-</video><br>
-<?php endif; ?>
+ <?php if($row['q_fanswer']):?>
 
-<?php if($row['q_fanswer']):?>
-            <?php echo $row['q_fanswer'];?><Br>
-            <?php endif; ?>
+
+<?php if($row['q_fvid']):?>
+
+<div class="grid-x grid-margin-x"style="margin-left:8%;margin-right:8%;">
+<div class="small-4 cell"><?php if($row['q_fanswer']):?>
+<div class="auto cell roundq" style="padding:2%;border-radius:5px;margin-top:5%;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_fanswer'];?></h3></div><?php endif; ?>
+
+</div>
+<div class="small-8 cell" >
+
+<div class="flex-video">
+<iframe src="images/<?php echo $row['q_fvid']; ?>.mp4" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+</div>
+</div>
+<?php endif; ?><?php endif; ?>
 
 
    <!--final Type 3 - Audio + Question/hint + answer -->
    <?php if($row['q_faanswer']):?>
-            <?php echo $row['q_faanswer'];?><Br>
+   <div class="auto cell roundq" style="padding:2%;width:70%;border-radius:5px;margin-bottom:5%;"><h3 class="ru wow fadeIn"><?php echo $row['q_faanswer'];?></h3></div>
             <?php endif; ?>
 
 
