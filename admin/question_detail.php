@@ -74,7 +74,7 @@
     $fanswer = trim($_POST['fanswer']);
     $fvid = trim($_POST['fvid']);
     $faq = trim($_POST['faq']);
-    $faudio = trim($_FILES['faudio']);
+    $faudio = $_FILES['faudio'];
     $faanswer = trim($_POST['faanswer']);
     $clipquestion = trim($_POST['clipquestion']);
     $mainq = trim($_POST['mainq']);
@@ -168,7 +168,7 @@
 
 
 	<?php if($row = $update_set->fetch(PDO::FETCH_ASSOC)):?>
-<form  method="post"  class="md-form" style="color: #757575;">
+<form  method="post" enctype="multipart/form-data" class="md-form" style="color: #757575;">
 
 <b>Question Title <i>(shown on question list)</i></b><br>
 <input type="text" name="title"  value="<?php echo $row['q_title'];?>" id="title" class="form-control"><br>

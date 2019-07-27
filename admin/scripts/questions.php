@@ -137,34 +137,6 @@ function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, 
           $edit_cat = $_GET['update_id'];
         }
 
-        $target_path2 = '../images/' . $song['name'];
-        !move_uploaded_file($song['tmp_name'], $target_path2); 
-
-        $target_path3 = '../images/' . $jepsong['name'];
-        !move_uploaded_file($jepsong['tmp_name'], $target_path3); 
-
-        $target_path4 = '../images/' . $jepimg['name'];
-        !move_uploaded_file($jepimg['tmp_name'], $target_path4); 
-
-        
-
-        $target_path5 = '../images/' . $faudio['name'];
-        !move_uploaded_file($faudio['tmp_name'], $target_path5); 
-
-        $target_path6 = '../images/' . $jept1['name'];
-        !move_uploaded_file($jept1['tmp_name'], $target_path6); 
-
-        $target_path7 = '../images/' . $jept2['name'];
-        !move_uploaded_file($jept2['tmp_name'], $target_path7); 
-
-        $target_path8 = '../images/' . $jept3['name'];
-        !move_uploaded_file($jept3['tmp_name'], $target_path8); 
-
-        $target_path9 = '../images/' . $jept4['name'];
-        !move_uploaded_file($jept4['tmp_name'], $target_path9); 
-
-        $target_path10 = '../images/' . $jept5['name'];
-        !move_uploaded_file($jept5['tmp_name'], $target_path10); 
 
         
             $query = "UPDATE tbl_questions SET q_title = :title, q_question = :question, q_answer = :answer, q_op1 = :op1, q_op2 = :op2, q_op3 = :op3, q_op4 = :op4, q_op5 = :op5, q_clipanswer = :clipanswer, q_vid = :vid, q_mq1 = :mq1, q_mq2 = :mq2, q_mq3 = :mq3, q_mq4 = :mq4, q_mq5 = :mq5, q_ma1 = :ma1, q_ma2 = :ma2, q_ma3 = :ma3, q_ma4 = :ma4, q_ma5 = :ma5, q_mia1 = :mia1, q_mia2 = :mia2, q_mia3 = :mia3, q_mia4 = :mia4, q_mia5 = :mia5, q_mia6 = :mia6, q_mia7 = :mia7, q_songhint = :songhint, q_song = :song, q_songanswer = :songanswer, q_jepcat = :jepcat, q_jepq1 = :jepq1, q_jepa1 = :jepa1, q_jepq2 = :jepq2, q_jepa2 = :jepa2, q_jepsong = :jepsong, q_jepq3 = :jepq3, q_jepa3 = :jepa3, q_jepimg = :jepimg, q_fq = :fq, q_fqa = :fqa, q_fop1 = :fop1, q_fop2 = :fop2, q_fop3 = :fop3, q_fop4 = :fop4, q_fop5 = :fop5, q_fanswer = :fanswer, q_fvid = :fvid, q_faq = :faq, q_faudio = :faudio, q_faanswer = :faanswer, q_clipquestion = :clipquestion, q_mainq = :mainq, q_finalq = :finalq, q_jept1 = :jept1, q_jept2 = :jept2, q_jept3 = :jept3, q_jept4 = :jept4, q_jept5 = :jept5 WHERE q_id = :question_id";
@@ -221,7 +193,7 @@ function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, 
                 ':fanswer'      => $fanswer,
                 ':fvid'      => $fvid,
                 ':faq'      => $faq,
-                ':faudio'       => $faudio,
+                ':faudio'       => $faudio['name'],
                 ':faanswer'      => $faanswer,
                 ':clipquestion'    => $clipquestion,
                 ':mainq'    => $mainq,
@@ -234,7 +206,11 @@ function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, 
 
                 ':question_id' => $edit_cat,
             )
+
+            
             );
+            $target_path15 = '../images/' . $faudio['name'];
+        !move_uploaded_file($faudio['tmp_name'], $target_path15); 
 
         
 
