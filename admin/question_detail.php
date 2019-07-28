@@ -86,12 +86,12 @@
     $jept5 = trim($_FILES['jept5']);
     $category = trim($_POST['catList']);
     
-    
-  
 
 		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $jept2, $jept3, $jept4, $jept5, $category);
-		$message = $result;
-	}
+    $message = $result;
+  }
+
+
 ?>
 
 
@@ -446,7 +446,7 @@ Please delete your category image and then reupload your file on the Add Questio
 <div class="file-field">
     <div class="btn btn-primary float-center ">
         <span>mp3 clip</span><br>
-        <input type="file" name="faudio" id="faudio" value="<?php echo $row['q_faudio'];?>">
+        <input type="file" name="faudio" required id="faudio" value="<?php echo $row['q_faudio'];?>">
     </div>
 </div>
 
