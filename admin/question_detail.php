@@ -24,46 +24,50 @@
 	$cat_tbl            = 'tbl_category';
 	$product_categories = getAll($cat_tbl);
 
-	if(isset($_POST['update_prod'])){
-    $title   = trim($_POST['title']);
-    $question  	= trim($_POST['question']);
+	if(isset($_REQUEST['update_prod'])){
+   
+		$title = trim($_POST['title']);
+		$question = trim($_POST['question']);
     $answer = trim($_POST['answer']);
-    $op1 = trim($_POST['op1']);
-    $op2 = trim($_POST['op2']);
-    $op3 = trim($_POST['op3']);
-    $op4 = trim($_POST['op4']);
-    $op5 = trim($_POST['op5']);
-    $clipanswer = trim($_POST['clipanswer']);
-    $vid = trim($_POST['vid']);
-    $mq1 = trim($_POST['mq1']);
-    $mq2 = trim($_POST['mq2']);
-    $mq3 = trim($_POST['mq3']);
-    $mq4 = trim($_POST['mq4']);
-    $mq5 = trim($_POST['mq5']);
-    $ma1 = trim($_POST['ma1']);
-    $ma2 = trim($_POST['ma2']);
-    $ma3 = trim($_POST['ma3']);
-    $ma4 = trim($_POST['ma4']);
-    $ma5 = trim($_POST['ma5']);
-    $mia1 = trim($_POST['mia1']);
-    $mia2 = trim($_POST['mia2']);
-    $mia3 = trim($_POST['mia3']);
-    $mia4 = trim($_POST['mia4']);
-    $mia5 = trim($_POST['mia5']);
-    $mia6 = trim($_POST['mia6']);
-    $mia7 = trim($_POST['mia7']);
-    $songhint = trim($_POST['songhint']);
-    $song = trim($_FILES['song']);
-    $songanswer = trim($_POST['songanswer']);
-    $jepcat = trim($_POST['jepcat']);
-    $jepq1 = trim($_POST['jepq1']);
+		$op1  	= trim($_POST['op1']);
+		$op2  	= trim($_POST['op2']);
+		$op3  	= trim($_POST['op3']);
+		$op4  	= trim($_POST['op4']);
+		$op5  	= trim($_POST['op5']);
+		$clipanswer  	= trim($_POST['clipanswer']);
+		$vid  	= trim($_POST['vid']);
+		$mq1  	= trim($_POST['mq1']);
+		$mq2  	= trim($_POST['mq2']);
+		$mq3  	= trim($_POST['mq3']);
+		$mq4  	= trim($_POST['mq4']);
+		$mq5  	= trim($_POST['mq5']);
+		$ma1  	= trim($_POST['ma1']);
+		$ma2  	= trim($_POST['ma2']);
+		$ma3  	= trim($_POST['ma3']);
+		$ma4  	= trim($_POST['ma4']);
+		$ma5  	= trim($_POST['ma5']);
+    $mia1  	= trim($_POST['mia1']);
+		$mia2  	= trim($_POST['mia2']);
+		$mia3  	= trim($_POST['mia3']);
+		$mia4  	= trim($_POST['mia4']);
+		$mia5  	= trim($_POST['mia5']);
+    $mia6  	= trim($_POST['mia6']);
+		$mia7  	= trim($_POST['mia7']);
+    $songhint  	= trim($_POST['songhint']);
+
+
+		$songanswer  	= trim($_POST['songanswer']);
+		$jepcat  	= trim($_POST['jepcat']);
+		$jepq1  	= trim($_POST['jepq1']);
     $jepa1 = trim($_POST['jepa1']);
     $jepq2 = trim($_POST['jepq2']);
     $jepa2 = trim($_POST['jepa2']);
-    $jepsong = trim($_FILES['jepsong']);
+
+
     $jepq3 = trim($_POST['jepq3']);
     $jepa3 = trim($_POST['jepa3']);
-    $jepimg = trim($_POST['jepimg']);
+
+
     $fq = trim($_POST['fq']);
     $fqa = trim($_POST['fqa']);
     $fop1 = trim($_POST['fop1']);
@@ -74,24 +78,23 @@
     $fanswer = trim($_POST['fanswer']);
     $fvid = trim($_POST['fvid']);
     $faq = trim($_POST['faq']);
-    $faudio = $_FILES['faudio'];
+
+
     $faanswer = trim($_POST['faanswer']);
     $clipquestion = trim($_POST['clipquestion']);
     $mainq = trim($_POST['mainq']);
     $finalq = trim($_POST['finalq']);
-    $jept1 = trim($_FILES['jept1']);
-    $jept2 = trim($_FILES['jept2']);
-    $jept3 = trim($_FILES['jept3']);
-    $jept4 = trim($_FILES['jept4']);
-    $jept5 = trim($_FILES['jept5']);
+
+   
+
     $category = trim($_POST['catList']);
     
+    
+  
 
-		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint, $song, $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2, $jepsong, $jepq3, $jepa3, $jepimg, $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faudio, $faanswer, $clipquestion, $mainq, $finalq, $jept1, $jept2, $jept3, $jept4, $jept5, $category);
-    $message = $result;
-  }
-
-
+		$result = editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, $clipanswer, $vid, $mq1, $mq2, $mq3, $mq4, $mq5, $ma1, $ma2, $ma3, $ma4, $ma5, $mia1, $mia2, $mia3, $mia4, $mia5, $mia6, $mia7, $songhint,  $songanswer, $jepcat, $jepq1, $jepa1, $jepq2, $jepa2,  $jepq3, $jepa3,  $fq, $fqa, $fop1, $fop2, $fop3, $fop4, $fop5, $fanswer, $fvid, $faq, $faanswer, $clipquestion, $mainq, $finalq, $category);
+		$message = $result;
+	}
 ?>
 
 
@@ -168,7 +171,7 @@
 
 
 	<?php if($row = $update_set->fetch(PDO::FETCH_ASSOC)):?>
-<form  method="post" enctype="multipart/form-data" class="md-form" style="color: #757575;">
+<form  method="post"  class="md-form" style="color: #757575;">
 
 <b>Question Title <i>(shown on question list)</i></b><br>
 <input type="text" name="title"  value="<?php echo $row['q_title'];?>" id="title" class="form-control"><br>
@@ -291,9 +294,16 @@
 <b>Song hint or question</b><br>
 <input type="text" id="songhint" name="songhint" class="form-control" value="<?php echo $row['q_songhint'];?>"><br>
 
-
-      <span>mp3 </span><br>
-      <input type="text" name="song" id="song" value="<?php echo $row['q_song'];?>">
+<b>Song</b><br>
+<div class="file-field">
+    <div class="btn btn-light float-center ">
+        <span>Current uploaded media: <?php echo $row['q_song'];?><br><?php if($row['q_song']):?>
+            <audio controls>
+  <source src="../images/<?php echo $row['q_song']; ?>" type="audio/mpeg">
+</audio><br>
+            <?php endif; ?><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
+    </div>
+</div> 
   <br>
 <b>Answer</b><br>
 <input type="text" id="songanswer" name="songanswer" class="form-control" value="<?php echo $row['q_songanswer'];?>">
@@ -324,13 +334,16 @@
 <b>Jeopardy answer</b><Br>
 <input type="text" id="jepa2" name="jepa2" class="form-control" value="<?php echo $row['q_jepa2'];?>"> <br>
 
-<b>Jeopardy song clip</b><br>
+<b>Jeopardy Song Clip</b><br>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>mp3 </span><br>
-        <input type="file" name="jepsong" id="jepsong" value="<?php echo $row['q_jepsong'];?>">
+    <div class="btn btn-light float-center ">
+        <span>Current uploaded media: <?php echo $row['q_jepsong'];?><br><?php if($row['q_jepsong']):?>
+            <audio controls>
+  <source src="../images/<?php echo $row['q_jepsong']; ?>" type="audio/mpeg">
+</audio><br>
+            <?php endif; ?><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
-</div>
+</div> 
 <?php endif; ?>
 
 
@@ -343,11 +356,10 @@
 <b>Jeopardy answer</b><br>
 <input type="text" id="jepa3" name="jepa3" class="form-control" value="<?php echo $row['q_jepa3'];?>"> <br>
 
-<b>Jeopardy image/gif</b><br>
+<b>Jeopardy Image/Gif</b><br>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>image </span><br>
-        <input type="file" name="jepimg" id="jepimg" value="<?php echo $row['q_jepimg'];?>"> <img src="../images/<?php echo $row['q_jepimg'];?>">
+    <div class="btn btn-light float-center">
+        <span>Current uploaded media: <?php echo $row['q_jepimg'];?><br><img src="../images/<?php echo $row['q_jepimg'];?>"><br><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
 </div> 
 <?php endif; ?>
@@ -355,7 +367,11 @@
 <?php if($row['q_jept1']):?>
 
 <b>Jeopardy category 1 image</b><br>
-Please delete your category image and then reupload your file on the Add Questions page.  
+<div class="file-field">
+    <div class="btn btn-light float-center">
+        <span>Current uploaded media: <?php echo $row['q_jept1'];?><br><img src="../images/<?php echo $row['q_jept1'];?>"><br><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
+    </div>
+</div>   
 <?php endif; ?>
 
 
@@ -364,9 +380,8 @@ Please delete your category image and then reupload your file on the Add Questio
 
 <b>Jeopardy category 2 image</b><br>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>image </span><br>
-        <input type="file" name="jept2" id="jept2" value="<?php echo $row['q_jept2'];?>"> <img src="../images/<?php echo $row['q_jept2'];?>">
+    <div class="btn btn-light float-center">
+        <span>Current uploaded media: <?php echo $row['q_jept2'];?><br><img src="../images/<?php echo $row['q_jept2'];?>"><br><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
 </div> 
 <?php endif; ?>
@@ -375,9 +390,8 @@ Please delete your category image and then reupload your file on the Add Questio
 
 <b>Jeopardy category 3 image</b><br>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>image </span><br>
-        <input type="file" name="jept3" id="jept3" value="<?php echo $row['q_jept3'];?>"> <img src="../images/<?php echo $row['q_jept3'];?>">
+    <div class="btn btn-light float-center">
+        <span>Current uploaded media: <?php echo $row['q_jept3'];?><br><img src="../images/<?php echo $row['q_jept3'];?>"><br><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
 </div> 
 <?php endif; ?>
@@ -386,9 +400,8 @@ Please delete your category image and then reupload your file on the Add Questio
 
 <b>Jeopardy category 4 image</b><br>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>image </span><br>
-        <input type="file" name="jept4" id="jept4" value="<?php echo $row['q_jept4'];?>"> <img src="../images/<?php echo $row['q_jept4'];?>">
+    <div class="btn btn-light float-center">
+        <span>Current uploaded media: <?php echo $row['q_jept4'];?><br><img src="../images/<?php echo $row['q_jept4'];?>"><br><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
 </div> 
 <?php endif; ?>
@@ -397,9 +410,8 @@ Please delete your category image and then reupload your file on the Add Questio
 
 <b>Jeopardy category 5 image</b><br>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>image </span><br>
-        <input type="file" name="jept5" id="jept5" value="<?php echo $row['q_jept5'];?>"> <img src="../images/<?php echo $row['q_jept5'];?>">
+    <div class="btn btn-light float-center">
+        <span>Current uploaded media: <?php echo $row['q_jept5'];?><br><img src="../images/<?php echo $row['q_jept5'];?>"><br><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
 </div> 
 <?php endif; ?>
@@ -443,12 +455,16 @@ Please delete your category image and then reupload your file on the Add Questio
 <b>open ended answer</b><br>
 <input type="text" id="faanswer" name="faanswer" class="form-control" value="<?php echo $row['q_faanswer'];?>"> <br>
 
+<b>Audio</b>
 <div class="file-field">
-    <div class="btn btn-primary float-center ">
-        <span>mp3 clip</span><br>
-        <input type="file" name="faudio" required id="faudio" value="<?php echo $row['q_faudio'];?>">
+    <div class="btn btn-light float-center ">
+        <span>Current uploaded media: <?php echo $row['q_faudio'];?><br><?php if($row['q_faudio']):?>
+            <audio controls>
+  <source src="../images/<?php echo $row['q_faudio']; ?>" type="audio/mpeg">
+</audio><br>
+            <?php endif; ?><i style="font-family:arial;text-transform:none;">You cannot edit your media. If you need to reupload your media please delete this question and reinsert it on the Add Questions page.</i></span>
     </div>
-</div>
+</div> 
 
 <?php endif; ?>
 
@@ -457,7 +473,7 @@ Please delete your category image and then reupload your file on the Add Questio
 
 
 
-<button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="update_prod" value="Update">Submit</button>
+<button class="btn btn-info" type="submit" name="update_prod" value="Update">Submit</button>
 
 </form>
 <?php endif; ?>

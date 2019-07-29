@@ -7,7 +7,7 @@ Planned Features/to-do:
 - ~filter by category on Jeopardy round list~
 - ~allow user to upload an image for each round of Jeopardy~
 - add 2 min timer to Match game
-- allow user to edit **all** question entries in database (those with media files not currently working)
+- allow user to edit **all** question entries in database, including those with media files 
 - removal of 'remember place on page' script as it doesn't work well with the ui/ux
 - polish back-end/admin ui/ux
 - Instructional usage document for Admin  

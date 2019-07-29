@@ -74,7 +74,7 @@ body {
 .mainContainer{
 	
 		
-		background: url("http://localhost:8888/tylerTrivia/images/fanb.png") center center ; 
+		background: url("../images/fanb.png") center center ; 
 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -89,7 +89,7 @@ body {
 
 /*rules page*/
 .rulesContainer{
-	background: url("http://localhost:8888/tylerTrivia/images/fanb.png") center center fixed; 
+	background: url("../images/fanb.png") center center fixed; 
 background-repeat:repeat-y;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -104,7 +104,7 @@ background-repeat:repeat-y;
 /*game menu*/
 
 .rounds{
-  background: url("http://localhost:8888/tylerTrivia/images/fanb.png") center center fixed; 
+  background: url("../images/fanb.png") center center fixed; 
   -webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
