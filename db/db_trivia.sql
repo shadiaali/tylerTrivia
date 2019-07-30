@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jul 22, 2019 at 06:02 AM
+-- Generation Time: Jul 30, 2019 at 04:39 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -40,7 +40,7 @@ INSERT INTO `tbl_category` (`cat_id`, `cat_name`) VALUES
 (2, 'Two'),
 (3, 'Three'),
 (4, 'Four'),
-(5, 'JeopardyCategoryImages'),
+(5, 'JeopardyCategories'),
 (6, 'Final'),
 (7, 'JeopardyCategory1'),
 (8, 'JeopardyCategory2'),
@@ -125,16 +125,13 @@ INSERT INTO `tbl_questions` (`q_id`, `q_question`, `q_answer`, `q_title`, `q_op1
 (253, 'Which organ is well developed in some herbivores but only vestigial in humans?', 'The Appendix', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (254, '', '', 'Question #14', 'The Matrix', 'Bill and Ted\'s Bogus Journey', 'The Matrix', 'Always be my Maybe', 'John Wick', 'Always be my Maybe', 'alwaysbemymaybe', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Name this film:', '', '', '', '', '', '', ''),
 (255, '', '', 'Question #1', '', '', '', '', '', '', '', 'Titanium', 'Potassium', 'Mercury', 'Floride', 'Lead', 'Ti', 'K', 'Hg', 'F', 'Pb', 'Hg', 'F', 'K', 'Pb', 'Ti', 'Fr', 'Ta', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Match the element with its periodic symbol', '', '', '', '', '', ''),
-(265, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'This song was remixed in 2019 and became a smash hit among the Red Dead Redemption crowd:', 'tr.mp3', 'Old Town Road', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (266, '', '', 'Jeopardy Category Images', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'animalkingdom.jpg', 'rugby.jpg', 'sitcomthemesongs.jpg', 'Oscars.jpg', 'nametool.jpg'),
-(267, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Animal Kingdom', 'Where is the heart of a shrimp located:  Head, Body, or the Tail.', 'Head', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(267, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Animal Kingdom', 'Where is the heart of a shrimp located:  Head, Body, or the Tail', 'Head', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (268, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Rugby', '', '', '', '', '', 'What is this commonly known as in a game of Rugby?', 'Scrum', 'scrum.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (269, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Sitcom Theme Songs', '', '', 'This show ran from 2013 to present', 'Brooklyn Nine Nine', 'tr.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(270, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Oscar Best Picture', '', '', '', '', '', '2003 Rene Zellweger and Richard Gere', 'Chicago', 'rene.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (271, '', '', 'Question #1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Name that Tool', '', '', '', '', '', 'What is this dentist\'s tool called?', 'A scaler', 'scaler.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(272, '', '', '1: Mr. Misty ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Which fast food company introduced the Mr. Misty slush drink in 1961?', 'Dairy Queen', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(273, '', '', '2: Keanu Reeves', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'The Matrix', 'It\'s not a movie, it\'s a clip of his life.', 'Always be my Maybe', '', '', 'Always be my maybe', 'alwaysbemymaybe', '', '', '', '', '', 'What is the name of this movie starring Keanu?', '', '', '', '', ''),
-(274, '', '', '3: Cowboys', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Who does the protagonist of Old Town Road cheat on?', 'tr.mp3', 'His baby.', '', '', '', '', '', '', '', '');
+(272, '', '', '1: Mr. Misty', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '8Which fast food company introduced the Mr. Misty slush drink in 1961?', 'Dairy Queen', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(273, '', '', '2: Keanu Reeves', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'The Matrix', 'It\'s not a movie, it\'s a clip of his life.', 'Always be my Maybe', '', '', 'Always be my maybe', 'alwaysbemymaybe', '', '', '', '', '', 'What is the name of this movie starring Keanu?', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -181,7 +178,17 @@ INSERT INTO `tbl_question_category` (`pc_id`, `q_id`, `cat_id`) VALUES
 (245, 271, 11),
 (246, 272, 6),
 (247, 273, 6),
-(248, 274, 6);
+(248, 274, 6),
+(249, 275, 1),
+(250, 276, 6),
+(251, 277, 6),
+(252, 278, 6),
+(253, 279, 6),
+(254, 280, 4),
+(255, 281, 4),
+(256, 282, 4),
+(257, 283, 6),
+(258, 284, 1);
 
 -- --------------------------------------------------------
 
@@ -246,13 +253,13 @@ ALTER TABLE `tbl_category`
 -- AUTO_INCREMENT for table `tbl_questions`
 --
 ALTER TABLE `tbl_questions`
-  MODIFY `q_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=275;
+  MODIFY `q_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=285;
 
 --
 -- AUTO_INCREMENT for table `tbl_question_category`
 --
 ALTER TABLE `tbl_question_category`
-  MODIFY `pc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=249;
+  MODIFY `pc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
