@@ -26,36 +26,7 @@
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
   <!-- css -->
-  <link href="../css/style.css" rel="stylesheet">
-  <style type="text/css">
-    html,
-    body,
-    header,
-    .carousel {
-      height: 60vh;
-    }
-
-    @media (max-width: 740px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-  </style>
+  
 </head>
 
 <body>
@@ -66,7 +37,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="../index.php">
-        tylerTrivia
+        <img src="../images/fsu-blk.png">
       </a>
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -96,31 +67,32 @@
 
   <!--Main layout-->
   <main>
-    <div class="container">
+    <div class="container ">
 
+  <form class="jumbotron text-center info-color white-text mx-2 mb-5 text-center md-form md-bg form-lg p-5" action="admin_login.php" method="post">
 
+    <p class="h4 mb-4">Sign in</p>
 
-	<?php if(!empty($message)):?>
-		<p><?php echo $message;?></p>
-	<?php endif;?>
-	<form action="admin_login.php" method="post">
-		<label>Username:
-			<input type="text" name="username" placeholder="Admin" value="" required>
-		</label>
-		<br>
-		<label>Password:
-			<input type="password" name="password" placeholder="password" required>
-		</label>
-		<br>
-		<button type="submit">Submit</button>
-	</form>
+    
+    <input type="text" name="username" class="form-control mb-4" placeholder="Admin">
 
+    <!-- Password -->
+    <input type="password" name="password" class="form-control mb-4" placeholder="password">
 
+    <div class="d-flex justify-content-around">
+        <div>
+          
+
+    <!-- Sign in button -->
+    <button class="btn btn-red btn-block my-4" type="submit">Sign in</button>
+
+   
+</form>
+<!-- Default form login -->
 
 
 	
 
-<a href="../admin"><button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect">Back</button></a>
 
 </div>
   </main>

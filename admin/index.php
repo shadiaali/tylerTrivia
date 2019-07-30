@@ -20,36 +20,7 @@
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
   <!-- css -->
-  <link href="./css/style.css" rel="stylesheet">
-  <style type="text/css">
-    html,
-    body,
-    header,
-    .carousel {
-      height: 60vh;
-    }
-
-    @media (max-width: 740px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-  </style>
+  
 </head>
 
 <body>
@@ -60,7 +31,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="../index.php">
-        <strong>tylerTrivia</strong>
+      <img src="../images/fsu-blk.png">
       </a>
 
       <!-- Collapse -->
@@ -99,7 +70,7 @@
 
 <br><br>
 	<!-- Jumbotron -->
-<div class="jumbotron text-center red darken-2 white-text mx-2 mb-5">
+<div class="jumbotron text-center info-color white-text mx-2 mb-5">
 
 <!-- Title -->
 <h2 class="card-title h1">Hey there, <?php echo $_SESSION['user_name'];?></h2>
@@ -112,8 +83,8 @@
 <hr class="my-4 rgba-white-light">
 
 <div class="pt-2">
-<a href="admin_addquestion.php"> <button type="button" class="btn btn-white">Add Questions <i class="fas fa-plus ml-1"></i></button></a>
-<a href="admin_editquestion.php?filter=One"><button type="button" class="btn btn-white">Edit or Delete Questions <i class="fas fa-minus ml-1"></i></button></a>
+<a href="admin_addquestion.php"> <button type="button" class="btn btn-red">Add Questions <i class="fas fa-plus ml-1"></i></button></a>
+<a href="admin_editquestion.php?filter=One"><button type="button" class="btn btn-blue">Edit or Delete Questions <i class="fas fa-minus ml-1"></i></button></a>
 </div>
 
 </div>

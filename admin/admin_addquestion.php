@@ -94,37 +94,7 @@ if (isset($_POST['submit'])) {
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
-  <!-- css -->
-  <link href="../css/style.css" rel="stylesheet">
-  <style type="text/css">
-    html,
-    body,
-    header,
-    .carousel {
-      height: 60vh;
-    }
-
-    @media (max-width: 740px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-  </style>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.js" integrity="sha256-lcAjyA3+DTAwTFgkSHiZUGH4eAGmbapda/TyUSvg5vk=" crossorigin="anonymous"></script>
 
   <script>
@@ -231,7 +201,7 @@ $(document).ready(function() {
 <form  action="admin_addquestion.php" method="post" enctype="multipart/form-data"  style="color: #757575;">
 <br>
 
-<Select class="questionselector">
+<Select class="questionselector custom-select custom-select-lg mb-3">
    <option value="none" disabled selected>Select a Question Type</option>
 
    <option value="one">Round One: Mixed Bag Questions</option>
@@ -250,7 +220,7 @@ $(document).ready(function() {
 
 
 
-<select name="catList" id="catlist" class="mdb-select md-form mb-4 initialized" >
+<select name="catList" id="catlist" class=" custom-select custom-select-lg mb-3 mdb-select md-form mb-4 initialized" >
         <option value="">Insert into a Round...</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
 <option value="<?php echo $product_category['cat_id']; ?>">

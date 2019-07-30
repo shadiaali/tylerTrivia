@@ -113,36 +113,7 @@
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
   <!-- css -->
-  <link href="../css/app.css" rel="stylesheet">
-  <style type="text/css">
-    html,
-    body,
-    header,
-    .carousel {
-      height: 60vh;
-    }
-
-    @media (max-width: 740px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 100vh;
-      }
-    }
-
-  </style>
+  
 </head>
 
 <body>
@@ -177,7 +148,7 @@
 <input type="text" name="title"  value="<?php echo $row['q_title'];?>" id="title" class="form-control"><br>
 
 <b>Insert into what round?</b><i style="color:#cc0000">(If not changing round, leave blank)</i><br>
-<select name="catList" id="catlist select" class="mdb-select md-form mb-4 initialized" >
+<select name="catList" id="catlist select" class="custom-select custom-select-lg mb-3 mdb-select md-form mb-4 initialized" >
         <option value="" disabled selected>Product Category</option>
         <?php while ($product_category = $product_categories->fetch(PDO::FETCH_ASSOC)): ?>
 <option value="<?php echo $product_category['cat_id']; ?>">
