@@ -99,7 +99,7 @@
 
 <br><br>
 	<!-- Jumbotron -->
-<div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
+<div class="jumbotron text-center red darken-2 white-text mx-2 mb-5">
 
 <!-- Title -->
 <h2 class="card-title h1">Hey there, <?php echo $_SESSION['user_name'];?></h2>
@@ -112,8 +112,8 @@
 <hr class="my-4 rgba-white-light">
 
 <div class="pt-2">
-<a href="admin_addquestion.php"> <button type="button" class="btn btn-outline-white">Add Questions <i class="fas fa-cart-plus ml-1"></i></button></a>
-<a href="admin_editquestion.php?filter=One"><button type="button" class="btn btn-outline-white">Edit or Delete Questions <i class="fas fa-edit ml-1"></i></button></a>
+<a href="admin_addquestion.php"> <button type="button" class="btn btn-white">Add Questions <i class="fas fa-plus ml-1"></i></button></a>
+<a href="admin_editquestion.php?filter=One"><button type="button" class="btn btn-white">Edit or Delete Questions <i class="fas fa-minus ml-1"></i></button></a>
 </div>
 
 </div>

@@ -220,12 +220,14 @@ function editQuestion($title, $question, $answer, $op1, $op2, $op3, $op4, $op5, 
 
         header("Location:admin_editquestion.php");
 
+
     } catch (Exception $e) {
         $error = $e->getMessage();
         return $error;
     }
 
     header("Location:admin_editquestion.php");
+
 }            
 
 function deleteProduct($id){

@@ -83,6 +83,9 @@ if(isset($_GET['id'])){
 <!--match game -->
 
 <?php if($row['q_mainq']):?>
+
+
+
 <div class="auto cell round" style="background:transparent;border-radius:5px;"><h3 class="ru wow fadeIn"><?php echo $row['q_mainq'];?></h3></div>
             <?php endif; ?>
 <br>

@@ -74,49 +74,49 @@ if(isset($_GET['filter'])){
 
     <div class="btn-group" role="group" aria-label="order by category">
     <a href="admin_editquestion.php?filter=One">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 1: Mixed Bag</button></a>
 
     <a href="admin_editquestion.php?filter=Two">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 2: Have You Seen the Scene?</button></a>
 
     <a href="admin_editquestion.php?filter=Three">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 3: Match Game</button></a>
 
     <a href="admin_editquestion.php?filter=Four">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 4: Name that Tune</button></a>
 
     <a href="admin_editquestion.php?filter=Final">
-    <button type="button" class="btn btn-block btn-red btn-sm m-0">
+    <button type="button" class="btn btn-block btn-info btn-sm m-0">
     Round 6: Final Questions</button></a>
   </div>
 
   <div class="btn-group" role="group" aria-label="order by category row 2">
-    <a href="admin_editquestion.php?filter=JeopardyCategoryImages">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <a href="admin_editquestion.php?filter=JeopardyCategories">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 5: Jeopardy Category Images</button></a>
 
     <a href="admin_editquestion.php?filter=JeopardyCategory1">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 5: Jeopardy Category 1</button></a>
     
     <a href="admin_editquestion.php?filter=JeopardyCategory2">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 5: Jeopardy Category 2</button></a>
 
     <a href="admin_editquestion.php?filter=JeopardyCategory3">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 5: Jeopardy Category 3</button></a>
 
     <a href="admin_editquestion.php?filter=JeopardyCategory4">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 5: Jeopardy Category 4</button></a>
 
     <a href="admin_editquestion.php?filter=JeopardyCategory5">
-    <button type="button" class="btn btn-red btn-sm m-0">
+    <button type="button" class="btn btn-info btn-sm m-0">
     Round 5: Jeopardy Category 5</button></a>
 
   </div>
@@ -234,16 +234,15 @@ if(isset($_GET['filter'])){
         
         </td>
         
-				<td class="wow fadeIn">
-        <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategoryImages') !== false)): ?>
+        <td class="wow fadeIn"><a href="question_detail.php?update_id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></a></td>
+				
+       
         <td class="wow fadeIn"><a href="scripts/caller.php?caller_id=erase&id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-red btn-sm m-0">Delete</button></a></td>
 
-        <?php else: ?>
-        <a href="question_detail.php?update_id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-indigo btn-sm m-0">Edit</button></a>
       
-      </td>
-				<td class="wow fadeIn"><a href="scripts/caller.php?caller_id=erase&id=<?php echo $row['q_id']; ?>"><button type="button" class="btn btn-red btn-sm m-0">Delete</button></a></td>
-        <?php endif; ?>
+      
+				
+        
 
         
 

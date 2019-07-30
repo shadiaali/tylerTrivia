@@ -58,7 +58,7 @@ if(isset($_GET['filter'])){
               </div>
              <div class="small-4 cell round"> <a href="index.php?filter=Three"><h1 style="margin-top:20px;"><b><span>Round 3</span></b>
 </h1></a><Br><h3 class="ru">"<i>Match Game</i>"</h3><br>
-               <a href="round1/round-1-rules.html"><H2 class="ru">Rules</h2></a></div>
+               <a href="round3rules.html"><H2 class="ru">Rules</h2></a></div>
           
     </div>
 
@@ -66,13 +66,12 @@ if(isset($_GET['filter'])){
 
 <div class="small-4 cell round"> <a href="index.php?filter=Four"><h1 style="margin-top:20px;"><b><span>Round 4</span></b>
 </h1></a><Br><h3 class="ru">"<i>Name that tune!</i>"</h3><br>
-               <a href="round1/round-1-rules.html"><H2 class="ru">Rules</h2></a></div>
-<div class="small-4 cell round"><a href="index.php?filter=JeopardyCategoryImages"><h1 style="margin-top:20px;"><b><span>Jeopardy</span></b>
-</h1></a><Br><h3 class="ru">"<i>Categories</i>"</h3><br>
-               <a href="round5rules.html"><H2 class="ru">Rules</h2></a></div>
+               <a href="round4rules.html"><H2 class="ru">Rules</h2></a></div>
+<div class="small-4 cell round"><a href="index.php?filter=JeopardyCategories"><h1 style="margin-top:20px;"><b><span>Jeopardy</span></b>
+</h1></a><Br><h3 class="ru">"<i>Categories</i>"</h3></div>
 <div class="small-4 cell round"> <a href="index.php?filter=Final"><h1 style="margin-top:20px;"><b><span>Final</span></b>
 </h1></a><Br><h3 class="ru">"<i>Winner winner<Br>chicken dinner</i>"</h3><br>
-               <a href="round1/round-1-rules.html"><H2 class="ru">Rules</h2></a></div>
+               <a href="round6rules.html"><H2 class="ru">Rules</h2></a></div>
 
 </div>
 
@@ -92,7 +91,7 @@ if(isset($_GET['filter'])){
 
 
 
-<?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategoryImages') !== false)): ?>
+<?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategories') !== false)): ?>
 
 
 <div class="grid-x grid-margin-x grid-margin-y" style="margin-right:0.5%;margin-left:0.5%;margin-top:1%;"> 
@@ -194,8 +193,13 @@ if(isset($_GET['filter'])){
 
             <?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory5') !== false)):?>
  <div data-wow-duration="1.2s" class="wow fadeIn small-12 cell" style="background-color:transparent;margin-top:0.5%;margin-bottom:2%;">
-                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 5</span></b></div>
+                <b><span style="font: 4vw Rubik Mono One;letter-spacing: -2px;color: #fff;text-shadow: 0 0px 0px, 0 0 2px, 0 0 1em #fff,  0 0 0.1em #fff, 0 10px 3px #000;">Jeopardy: Category 5</span></b>
+                
+</div>
+                
+                 
             <?php endif; ?>
+           
 
 
  <?php while($row = $results->fetch(PDO::FETCH_ASSOC)):?>
@@ -222,10 +226,19 @@ if(isset($_GET['filter'])){
 </div><br>
 <?php endwhile;?>   <?php endif; ?>
 
-
+<?php if((strpos($_SERVER['REQUEST_URI'],'JeopardyCategory') !== false)):?>
+            <button class="warning button small wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"
+                        onclick="goBack()">
+                        <h3>Back to Categories</h3>
+                    </button>
+            <?php endif; ?>
 
 </div>
-
+<script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
 <script>
               new WOW().init();
               </script>

@@ -157,20 +157,20 @@
 <br><br>
    
 
+<?php if($row = $update_set->fetch(PDO::FETCH_ASSOC)):?>
 
 <div class="card">
 <?php if (!empty($message)): ?>
         <p><?php echo $message; ?></p>
     <?php endif; ?>
-<h5 class="card-header mdb-color white-text text-center py-4">
+<h1 class="card-header info-color white-text text-center py-4"><div style="text-align:right"><a href="scripts/caller.php?caller_id=erase&id=<?php echo $row['q_id']; ?>"><button class="btn btn-red btn-sm">Delete Question</button></a></div>
     <strong>Edit a Question</strong>
-</h5>
+</h1>
 
-<div class="card-body px-lg-5 pt-0">
+<div class="md-form md-bg form-lg card-body px-lg-5 pt-0">
 
 
 
-	<?php if($row = $update_set->fetch(PDO::FETCH_ASSOC)):?>
 <form  method="post"  class="md-form" style="color: #757575;">
 
 <b>Question Title <i>(shown on question list)</i></b><br>
@@ -473,12 +473,13 @@
 
 
 
-<button class="btn btn-info" type="submit" name="update_prod" value="Update">Submit</button>
+<button class="btn btn-red" type="submit" name="update_prod" value="Update">Submit Edit</button>
 
 </form>
 <?php endif; ?>
 
 </div>
+
 </div>
 
 

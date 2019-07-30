@@ -222,13 +222,13 @@ $(document).ready(function() {
     <?php if (!empty($message)): ?>
         <p><?php echo $message; ?></p>
     <?php endif; ?>
-<h5 class="card-header mdb-color white-text text-center py-4">
+<h5 class="card-header info-color white-text text-center py-4">
     <strong>Add a Question</strong>
 </h5>
 
-<div class="card-body px-lg-5 pt-0">
+<div class="md-form md-bg form-lg card-body px-lg-5 pt-0">
 
-<form  action="admin_addquestion.php" method="post" enctype="multipart/form-data" class="md-form" style="color: #757575;">
+<form  action="admin_addquestion.php" method="post" enctype="multipart/form-data"  style="color: #757575;">
 <br>
 
 <Select class="questionselector">
@@ -262,17 +262,17 @@ $(document).ready(function() {
 
 
 
-    <input type="text" name="title"  id="title" class="form-control" placeholder="Title/round number of Question (shows on question round list)">
+    <input type="text" name="title"  id="title" class="form-control form-control-lg" placeholder="Title/round number of Question (shows on question round list)">
 <br>
  
 
 
 <div  class="one rounds" style="display:none">
 
-<input type="text" name="question"  id="question" class="form-control" placeholder="question">
+<input type="text" name="question" id="question" class="form-control form-control-lg" placeholder="question">
 
 
-<input type="text" id="answer" name="answer" class="form-control" placeholder="answer">
+<input type="text" id="answer" name="answer" class="form-control form-control-lg" placeholder="answer">
 
 
   </div>
@@ -282,41 +282,41 @@ $(document).ready(function() {
   <input type="text" id="clipquestion" name="clipquestion" class="form-control" placeholder="question">
   
   <br><i>Options will only show if they're filled in.</i><br>
-  <input type="text" id="op1" name="op1" class="form-control" placeholder="Option 1">
-  <input type="text" id="op2" name="op2" class="form-control" placeholder="Option 2">
-  <input type="text" id="op3" name="op3" class="form-control" placeholder="Option 3">
-  <input type="text" id="op4" name="op4" class="form-control" placeholder="Option 4">
-  <input type="text" id="op5" name="op5" class="form-control" placeholder="Option 5">
+  <input type="text" id="op1" name="op1" class="form-control form-control-lg" placeholder="Option 1">
+  <input type="text" id="op2" name="op2" class="form-control form-control-lg" placeholder="Option 2">
+  <input type="text" id="op3" name="op3" class="form-control form-control-lg" placeholder="Option 3">
+  <input type="text" id="op4" name="op4" class="form-control form-control-lg" placeholder="Option 4">
+  <input type="text" id="op5" name="op5" class="form-control form-control-lg" placeholder="Option 5">
 
-  <input type="text" id="clipanswer" name="clipanswer" class="form-control" placeholder="Answer">
+  <input type="text" id="clipanswer" name="clipanswer" class="form-control form-control-lg" placeholder="Answer">
 
-  <input type="text" id="vid" name="vid" class="form-control" placeholder="MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4">
+  <input type="text" id="vid" name="vid" class="form-control form-control-lg" placeholder="MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4">
 
 
   </div>
 
   
   <div  class="three rounds" style="display:none">
-  <input type="text" id="mainq" name="mainq" class="form-control" placeholder="main question/instructions">
-  <input type="text" id="mq1" name="mq1" class="form-control" placeholder="question 1">
-  <input type="text" id="mq2" name="mq2" class="form-control" placeholder="question 2">
-  <input type="text" id="mq3" name="mq3" class="form-control" placeholder="question 3">
-  <input type="text" id="mq4" name="mq4" class="form-control" placeholder="question 4">
-  <input type="text" id="mq5" name="mq5" class="form-control" placeholder="question 5">
+  <input type="text" id="mainq" name="mainq" class="form-control form-control-lg" placeholder="main question/instructions">
+  <input type="text" id="mq1" name="mq1" class="form-control form-control-lg" placeholder="question 1">
+  <input type="text" id="mq2" name="mq2" class="form-control form-control-lg" placeholder="question 2">
+  <input type="text" id="mq3" name="mq3" class="form-control form-control-lg" placeholder="question 3">
+  <input type="text" id="mq4" name="mq4" class="form-control form-control-lg" placeholder="question 4">
+  <input type="text" id="mq5" name="mq5" class="form-control form-control-lg" placeholder="question 5">
   <br><br>
-  <input type="text" id="ma1" name="ma1" class="form-control" placeholder="correct answer/choice/match for 1">
-  <input type="text" id="ma2" name="ma2" class="form-control" placeholder="correct answer/choice/match for 2">
-  <input type="text" id="ma3" name="ma3" class="form-control" placeholder="correct answer/choice/match for 3">
-  <input type="text" id="ma4" name="ma4" class="form-control" placeholder="correct answer/choice/match for 4">
-  <input type="text" id="ma5" name="ma5" class="form-control" placeholder="correct answer/choice/match for 5">
+  <input type="text" id="ma1" name="ma1" class="form-control form-control-lg" placeholder="correct answer/choice/match for 1">
+  <input type="text" id="ma2" name="ma2" class="form-control form-control-lg" placeholder="correct answer/choice/match for 2">
+  <input type="text" id="ma3" name="ma3" class="form-control form-control-lg" placeholder="correct answer/choice/match for 3">
+  <input type="text" id="ma4" name="ma4" class="form-control form-control-lg" placeholder="correct answer/choice/match for 4">
+  <input type="text" id="ma5" name="ma5" class="form-control form-control-lg" placeholder="correct answer/choice/match for 5">
   <br>
-  <input type="text" id="mia1" name="mia1" class="form-control" placeholder="incorrect answer/choice/match for 1">
-  <input type="text" id="mia2" name="mia2" class="form-control" placeholder="incorrect answer/choice/match for 2">
-  <input type="text" id="mia3" name="mia3" class="form-control" placeholder="incorrect answer/choice/match for 3">
-  <input type="text" id="mia4" name="mia4" class="form-control" placeholder="incorrect answer/choice/match for 4">
-  <input type="text" id="mia5" name="mia5" class="form-control" placeholder="incorrect answer/choice/match for 5">
-  <input type="text" id="mia6" name="mia6" class="form-control" placeholder="another incorrect answer/choice/match to throw them off">
-  <input type="text" id="mia7" name="mia7" class="form-control" placeholder="another incorrect answer/choice/match to throw them off">
+  <input type="text" id="mia1" name="mia1" class="form-control form-control-lg" placeholder="incorrect answer/choice/match for 1">
+  <input type="text" id="mia2" name="mia2" class="form-control form-control-lg" placeholder="incorrect answer/choice/match for 2">
+  <input type="text" id="mia3" name="mia3" class="form-control form-control-lg" placeholder="incorrect answer/choice/match for 3">
+  <input type="text" id="mia4" name="mia4" class="form-control form-control-lg" placeholder="incorrect answer/choice/match for 4">
+  <input type="text" id="mia5" name="mia5" class="form-control form-control-lg" placeholder="incorrect answer/choice/match for 5">
+  <input type="text" id="mia6" name="mia6" class="form-control form-control-lg" placeholder="another incorrect answer/choice/match to throw them off">
+  <input type="text" id="mia7" name="mia7" class="form-control form-control-lg" placeholder="another incorrect answer/choice/match to throw them off">
   
 
 
@@ -324,7 +324,7 @@ $(document).ready(function() {
 
   <div class="four rounds" style="display:none">
 
-  <input type="text" id="songhint" name="songhint" class="form-control" placeholder="Song question/hint">
+  <input type="text" id="songhint" name="songhint" class="form-control form-control-lg" placeholder="Song question/hint">
 
   <div class="file-field">
     <div class="btn btn-primary float-center ">
@@ -333,7 +333,7 @@ $(document).ready(function() {
     </div>
 </div>
 
-<input type="text" id="songanswer" name="songanswer" class="form-control" placeholder="song answer">
+<input type="text" id="songanswer" name="songanswer" class="form-control form-control-lg" placeholder="song answer">
 
   </div>
 
@@ -376,23 +376,23 @@ $(document).ready(function() {
 
   <div class="seven eight nine ten eleven rounds" style="display:none">
   
-  <input type="text" id="jepcat" name="jepcat" class="form-control" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
+  <input type="text" id="jepcat" name="jepcat" class="form-control form-control-lg" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
 
   <input type="radio" name="qs"  value="1"/> Question Type 1 - Open Ended Question + Answer<br>
 <input type="radio" name="qs"  value="2"/> Question Type 2 - Question/Hint + Song clip + Answer <br>
 <input type="radio" name="qs" value="3"/> Question Type 3 - Question/Hint + Image/Gif + Answer
 
  <div id="Qs1" class="desc" style="display: none;">
- <input type="text" id="jepq1" name="jepq1" class="form-control" placeholder="Jeopardy question one">
+ <input type="text" id="jepq1" name="jepq1" class="form-control form-control-lg" placeholder="Jeopardy question one">
 
-<input type="text" id="jepa1" name="jepa1" class="form-control" placeholder="Jeopardy answer one">
+<input type="text" id="jepa1" name="jepa1" class="form-control form-control-lg" placeholder="Jeopardy answer one">
 </div>
 
 
 <div id="Qs2" class="desc" style="display: none;">
-<input type="text" id="jepq2" name="jepq2" class="form-control" placeholder="Jeopardy question one">
+<input type="text" id="jepq2" name="jepq2" class="form-control form-control-lg" placeholder="Jeopardy question one">
 
-<input type="text" id="jepa2" name="jepa2" class="form-control" placeholder="Jeopardy answer one"> 
+<input type="text" id="jepa2" name="jepa2" class="form-control form-control-lg" placeholder="Jeopardy answer one"> 
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
@@ -404,9 +404,9 @@ $(document).ready(function() {
 
 
 <div id="Qs3" class="desc" style="display: none;">
-<input type="text" id="jepq3" name="jepq3" class="form-control" placeholder="Jeopardy question one">
+<input type="text" id="jepq3" name="jepq3" class="form-control form-control-lg" placeholder="Jeopardy question one">
 
-<input type="text" id="jepa3" name="jepa3" class="form-control" placeholder="Jeopardy answer one"> 
+<input type="text" id="jepa3" name="jepa3" class="form-control form-control-lg" placeholder="Jeopardy answer one"> 
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
@@ -425,31 +425,31 @@ $(document).ready(function() {
 
 
 <div id="Q1s1" class="desc1" style="display: none;">
-<input type="text" id="fq" name="fq" class="form-control" placeholder="question one">
+<input type="text" id="fq" name="fq" class="form-control form-control-lg" placeholder="question one">
 
-<input type="text" id="fqa" name="fqa" class="form-control" placeholder="answer one">
+<input type="text" id="fqa" name="fqa" class="form-control form-control-lg" placeholder="answer one">
 </div>
 
 <div id="Q1s2" class="desc1" style="display: none;">
 <br><i>Options will only show if they're filled in.</i><br>
-<input type="text" id="finalq" name="finalq" class="form-control" placeholder="multiple choice overall title/question/instructions">
+<input type="text" id="finalq" name="finalq" class="form-control form-control-lg" placeholder="multiple choice overall title/question/instructions">
 <br>
-  <input type="text" id="fop1" name="fop1" class="form-control" placeholder="Option 1">
-  <input type="text" id="fop2" name="fop2" class="form-control" placeholder="Option 2">
-  <input type="text" id="fop3" name="fop3" class="form-control" placeholder="Option 3">
-  <input type="text" id="fop4" name="fop4" class="form-control" placeholder="Option 4">
-  <input type="text" id="fop5" name="fop5" class="form-control" placeholder="Option 5">
+  <input type="text" id="fop1" name="fop1" class="form-control form-control-lg" placeholder="Option 1">
+  <input type="text" id="fop2" name="fop2" class="form-control form-control-lg" placeholder="Option 2">
+  <input type="text" id="fop3" name="fop3" class="form-control form-control-lg" placeholder="Option 3">
+  <input type="text" id="fop4" name="fop4" class="form-control form-control-lg" placeholder="Option 4">
+  <input type="text" id="fop5" name="fop5" class="form-control form-control-lg" placeholder="Option 5">
 
-  <input type="text" id="fanswer" name="fanswer" class="form-control" placeholder="Answer">
+  <input type="text" id="fanswer" name="fanswer" class="form-control form-control-lg" placeholder="Answer">
 
-  <input type="text" id="fvid" name="fvid" class="form-control" placeholder="MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4">
+  <input type="text" id="fvid" name="fvid" class="form-control form-control-lg" placeholder="MP4 file name. Do not add extension. Eg, CORRECT: GoodWillHunting | INCORRECT: GoodWillHunting.mp4">
 
 </div>
 
 <div id="Q1s3" class="desc1" style="display: none;">
-<input type="text" id="faq" name="faq" class="form-control" placeholder="question">
+<input type="text" id="faq" name="faq" class="form-control form-control-lg" placeholder="question">
 
-<input type="text" id="faanswer" name="faanswer" class="form-control" placeholder="answer"> 
+<input type="text" id="faanswer" name="faanswer" class="form-control form-control-lg" placeholder="answer"> 
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
@@ -465,7 +465,7 @@ $(document).ready(function() {
 
 
 
-<button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="submit">Submit</button>
+<button class="btn btn-red  btn-block z-depth-0 my-4 waves-effect" type="submit" name="submit">Submit</button>
 
 </form>
 </div>

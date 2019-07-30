@@ -18,7 +18,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Product Details</title>
+  <title>tylerTrivia</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -66,7 +66,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="../index.php">
-        <img src="../assets/pubLogo.png" style="height:100px;margin-right:10px;">
+        tylerTrivia
       </a>
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
