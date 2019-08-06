@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>timer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One&display=swap" rel="stylesheet"> 
+    
+    <script src="https://kit.fontawesome.com/2ce5f1a851.js"></script>
+    </head>
+    <body style="text-align:center;background-color:transparent;">
+            <audio id="sound1" autostart="0" src="buzzer.mp3" autoplay>
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
+              </audio>
+               
+
+               <button id="play" class="button1 warning button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s"
+               onclick="document.getElementById('sound1').play()">
+               <strong class="ru wow fadeIn">Start Timer</strong>
+           </button>
+
+               <div class="round ru wow fadeIn" id='seconds-counter'> </div>
+
+        <script src="timer.js" async defer></script>
+       
+    <script>
+                  new WOW().init();
+                  </script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

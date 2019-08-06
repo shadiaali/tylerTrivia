@@ -85,6 +85,11 @@ if(isset($_GET['id'])){
 <?php if($row['q_mainq']):?>
 
 
+<div class="auto cell round" style="background:transparent;border-radius:5px;">
+<iframe frameborder="0"  src="timer.html">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+</div>
 
 <div class="auto cell round" style="background:transparent;border-radius:5px;"><h3 class="ru wow fadeIn"><?php echo $row['q_mainq'];?></h3></div>
             <?php endif; ?>
