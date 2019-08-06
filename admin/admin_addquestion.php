@@ -193,7 +193,7 @@ $(document).ready(function() {
         <p><?php echo $message; ?></p>
     <?php endif; ?>
 <h5 class="card-header info-color white-text text-center py-4">
-    <strong>Add a Question</strong>
+    <strong>Add a Question</strong><br><i style="font-size:12px;">Do <span style="color:#cc0000">NOT</span> use autofill/autocomplete to fill fields.</i>
 </h5>
 
 <div class="md-form md-bg form-lg card-body px-lg-5 pt-0">

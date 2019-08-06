@@ -87,6 +87,9 @@
 <a href="admin_editquestion.php?filter=One"><button type="button" class="btn btn-blue">Edit or Delete Questions <i class="fas fa-minus ml-1"></i></button></a>
 </div>
 
+<a href="guide.html"><button type="button" class="btn btn-secondary">User Guide <i class="fas fa-info-circle ml-1"></i></button></a>
+</div>
+
 </div>
 <!-- Jumbotron -->
 
