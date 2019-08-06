@@ -62,7 +62,8 @@ if(isset($_GET['filter'])){
   </style>
 </head>
 
-<body>
+<body style="background-color: #ffffff;
+background-image: url('https://www.transparenttextures.com/patterns/gplay.png');">
 
   <Br><Br>
 
@@ -70,7 +71,7 @@ if(isset($_GET['filter'])){
 
   <!--Main layout-->
   <main>
-    <div class="container" style="text-align:center;">
+    <div class="container" style="text-align:center;background-color:#ffffff;">
 
     <div class="btn-group" role="group" aria-label="order by category">
     <a href="admin_editquestion.php?filter=One">

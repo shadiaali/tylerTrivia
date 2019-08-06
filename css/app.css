@@ -89,6 +89,16 @@ html {
 
 }
 
+.adminContainer{
+	background-color:black;	
+  background: url("../images/fbng.png") center center ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:repeat-y;
+
+}
 
 /*rules page*/
 .rulesContainer{

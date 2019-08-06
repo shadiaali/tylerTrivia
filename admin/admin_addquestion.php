@@ -174,7 +174,8 @@ $(document).ready(function() {
     
 </head>
 
-<body>
+<body style="background-color: #ffffff;
+background-image: url('https://www.transparenttextures.com/patterns/gplay.png');">
 
   
   <Br><Br>

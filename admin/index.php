@@ -23,7 +23,8 @@
   
 </head>
 
-<body>
+<body style="background-color: #ffffff;
+background-image: url('https://www.transparenttextures.com/patterns/gplay.png');">
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
@@ -66,7 +67,7 @@
 <Br><Br><Br><Br><Br><Br>
   <!--Main layout-->
   <main>
-    <div class="container">
+    <div class="container" >
 
 <br><br>
 	<!-- Jumbotron -->
