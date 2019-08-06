@@ -234,10 +234,13 @@ $(document).ready(function() {
 
     <input type="text" name="title"  id="title" class="form-control form-control-lg" placeholder="Title/round number of Question (shows on question round list)">
 <br>
- 
+<hr class="text-info">
 
 
 <div  class="one rounds" style="display:none">
+<h2 class="text-info text-center">Round One: Mixed Bag</h2>
+<h4 class="text-info text-center">Question Type Form</h4>
+
 
 <input type="text" name="question" id="question" class="form-control form-control-lg" placeholder="question">
 
@@ -249,6 +252,9 @@ $(document).ready(function() {
 <br>
   
   <div class="two rounds" style="display:none">
+  <h2 class="text-info text-center">Round Two: Have you seen the scene?</h2>
+<h4 class="text-info text-center">Question Type Form</h4>
+
   <input type="text" id="clipquestion" name="clipquestion" class="form-control" placeholder="question">
   
   <br><i>Options will only show if they're filled in.</i><br>
@@ -267,6 +273,8 @@ $(document).ready(function() {
 
   
   <div  class="three rounds" style="display:none">
+  <h2 class="text-info text-center">Round Three: Match Game</h2>
+<h4 class="text-info text-center">Question Type Form</h4>
   <input type="text" id="mainq" name="mainq" class="form-control form-control-lg" placeholder="main question/instructions">
   <input type="text" id="mq1" name="mq1" class="form-control form-control-lg" placeholder="question 1">
   <input type="text" id="mq2" name="mq2" class="form-control form-control-lg" placeholder="question 2">
@@ -293,6 +301,8 @@ $(document).ready(function() {
   </div>
 
   <div class="four rounds" style="display:none">
+  <h2 class="text-info text-center">Round Four: Name that Tune</h2>
+<h4 class="text-info text-center">Question Type Form</h4>
 
   <input type="text" id="songhint" name="songhint" class="form-control form-control-lg" placeholder="Song question/hint">
 
@@ -308,43 +318,48 @@ $(document).ready(function() {
   </div>
 
   <div class="five rounds" style="display:none">
+  <h2 class="text-info text-center">Jeopardy Category Images</h2>
+<h4 class="text-info text-center">Batch Image Upload Form</h4>
+
   <div class="file-field">
     <div class="btn btn-primary float-center ">
-        <span>image </span><br>
+        <span>Category #1 Image </span><br>
         <input type="file" name="jept1" id="jept1">
     </div>
 </div>
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
-        <span>image 2</span><br>
+        <span>Category #2 Image</span><br>
         <input type="file" name="jept2" id="jept2">
     </div>
 </div>
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
-        <span>image 3</span><br>
+        <span>Category #3 Image</span><br>
         <input type="file" name="jept3" id="jept3">
     </div>
 </div>
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
-        <span>image 4</span><br>
+        <span>Category #4 Image</span><br>
         <input type="file" name="jept4" id="jept4">
     </div>
 </div>
 
 <div class="file-field">
     <div class="btn btn-primary float-center ">
-        <span>image 5</span><br>
+        <span>Category #5 Image</span><br>
         <input type="file" name="jept5" id="jept5">
     </div>
 </div>
 </div>
 
   <div class="seven eight nine ten eleven rounds" style="display:none">
+  <h2 class="text-info text-center">Round Five: Jeopardy</h2>
+<h4 class="text-info text-center">Question Form</h4>
   
   <input type="text" id="jepcat" name="jepcat" class="form-control form-control-lg" placeholder="Jeopardy category name (eg, Animal Kingdom) Will show on question list.">
 
@@ -388,6 +403,8 @@ $(document).ready(function() {
   </div>
 
   <div class="six rounds" style="display:none">
+  <h2 class="text-info text-center">Round Six: Final Questions</h2>
+<h4 class="text-info text-center">Question Form</h4>
 
   <input type="radio" name="q1s" value="1"/> Type 1 - Open Ended Question + Answer<br>
   <input type="radio" name="q1s" value="2"/> Type 2 - Multiple Options + Video + Answer<br>

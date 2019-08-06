@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>User Guide</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
+  <!-- css -->
+  
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav id="top" class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="../index.php">
+      <img src="../images/fsu-blk.png" style="height:50px;">
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto nav">
+                    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Adding Questions Guide
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <h4 class="dropdown-header"><b>Anatomy of the 'Add Questions' form</b></h4>
+                            <a class="dropdown-item" href="#box1">Round Question Type</a>
+                        <a class="dropdown-item" href="#box2">Insert into Round</a>
+                        <a class="dropdown-item" href="#box3">Question Title</a>
+                        <div class="dropdown-divider"></div>
+                        <h4 class="dropdown-header"><b>Question Types Guide</b></h4>
+                        <a class="dropdown-item" href="#mixedBag">Round One: Mixed Bag Questions</a>
+                        <a class="dropdown-item" href="#seenScene">Round Two: Have you seen the scene? Questions</a>
+                        <a class="dropdown-item" href="#matchGame">Round Three: Match Game Questions</a>
+                        <a class="dropdown-item" href="#nameTune">Round Four: Name that Tune Questions</a>
+                        <a class="dropdown-item" href="#jepCat">Category Images for Jeopardy</a>
+                        <a class="dropdown-item" href="#jeopardy">Round Five: Jeopardy Questions</a>
+                        <a class="dropdown-item" href="#final">Round Six: Final Round Questions</a>
+
+
+                      </div>
+                    </li>
+                    
+
+                   
+                  </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons ml-auto">
+         
+          
+
+
+          <li class="nav-item">
+            <a href="scripts/caller.php?caller_id=logout" class="nav-link border border-light rounded waves-effect">
+              <i class="far fa-id-badge mr-2"></i>Logout
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  
+<Br><Br><Br><Br><Br><Br>
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+<br><br>
+	<!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5">
+
+
+<!-- Title -->
+<h1 class="card-title h1 white-text">Anatomy of the 'Add Questions' form</h1><br>
+<div style="background-color:white;">
+
+<hr>
+<!-- Subtitle -->
+<p class="my-4 h1" id="box1">Box 1: Choosing the type of round question </p>
+<p class="my-4 h4">You must choose the correct round question type to bring up the proper form. Each round corresponds to a different type of question.</p>
+<p class="my-4"><ul style="list-style:none;">
+    <li><b>Round One: Mixed Bag Questions</b> <br> <i>1 open ended question + 1 answer</i></li><br>
+    <li><b>Round Two: Have you Seen the Scene? Questions</b> <br> <i>1 question/hint + 5 answer/choice options + 1 correct answer + 1 mp4 video clip</i></li><br>
+    <li><b>Round Three: Match Game Questions</b> <br> <i>1 question/hint/instruction + 5 questions/options + 5 correct answers/choices/matches + 7 incorrect answers/choices/matches</i></li><br>
+    <li><b>Round Four: Name that Tune Questions</b> <br> <i>1 question/hint + 1 mp3 audio + 1 answer</i></li><br>
+    <li><b>Category Images for Jeopardy</b> <br> <i>an image for each jeopardy category</i></li><br>
+    <li><b>Round Five: Jeopardy Questions (categories 1-5)</b> <br> <i>[Question type 1: open ended question + answer] <br>or <br>[question type 2: Question/Hint + Song clip + Answer] <br>or<br> [question type 3: Question/Hint + Image/Gif + Answer]</i></li><br>
+    <li><b>Final Round: Questions</b> <br> <i>[Type 1 - Open Ended Question + Answer] <br>or<br> [ Type 2 - Multiple Options + Video + Answer] <br>or<br> [Type 3 - Audio + Question/hint + answer ] </i></li>
+
+
+
+
+
+
+</ul></p>
+
+<img src="../images/help/r1-1.png" style="width:100%;">
+</div>
+<br>
+
+<!-- Title -->
+<div style="background-color:white;">
+
+<hr>
+<!-- Subtitle -->
+<p class="my-4 h1" id="box2">Box 2: Insert into Round</p>
+<p class="my-4 h4">Based on the type of round question you chose in the first select box, the second box will auto-fill with the matching round your question will be inserted into. </p>
+<p class="my-4 h4">This option is what will separate your questions into the proper rounds. Any type of question can be inserted into any round; it is not limited to the option that is auto-chosen. For instance, you could choose option 1: Round 1: Mixed Bag for a question and then insert that question into a round that was not Round One by choosing a different option in this box (box 2).</p>
+<img src="../images/help/r1-2.png" style="width:100%;">
+</div>
+
+<br>
+<!-- Title -->
+<div style="background-color:white;">
+
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1" id="box3">Box 3: Question Title.</p>
+        <img src="../images/help/r1-3.png" style="width:100%;"><br>
+
+        <p class="my-4 h4">Give your question a title. This will show on the main questions list and will be seen by the users/viewers. It can be anything you want - e.g, 'Question 1' or '1: Keanu Reeves'</p>
+        <img src="../images/help/r1-4.png" style="width:100%;">
+        </div>
+
+        
+
+</div>
+<!-- Jumbotron -->
+
+
+<!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5" id="mixedBag">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Round One: Mixed Bag Questions</h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1">Open ended question + answer</p>
+        <p class="my-4 h4">This question type is for an open ended question and answer.</p>
+        <img src="../images/help/r1-5.png" style="width:100%;">
+        </div>
+       
+        <div style="background-color:white;">
+                <hr>
+                <!-- Subtitle -->
+                <p class="my-4 h4">Enter your question and answer, and hit submit.</p>
+                <img src="../images/help/r1-6.png" style="width:100%;">
+                </div>
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                        <img src="../images/help/r1-7.png" style="width:100%;">
+                        </div>
+
+                        <div style="background-color:white;">
+                                <hr>
+                                <!-- Subtitle -->
+                                <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the round you inserted it into, with the title you gave it.</p>
+                                <img src="../images/help/r1-8.png" style="width:100%;">
+                                </div>
+                
+        
+        </div>
+        <!-- Jumbotron -->
+
+
+        <!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5" id="seenScene">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Round Two: Have you seen the scene? Questions</h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1">1 question/hint + 5 answer/choice options + 1 correct answer + 1 mp4 video clip
+            </p>
+        <p class="my-4 h4">This question type is for a question or hint, five answers/choice options, one correct answer, and one video clip.</p>
+        <img src="../images/help/r1-9.png" style="width:100%;">
+        </div>
+       
+        <div style="background-color:white;">
+                <hr>
+                <!-- Subtitle -->
+                <p class="my-4 h4">Enter your question or hint, your 5 answers/choices, 1 correct answer, the name of your mp4 clip (should have been uploaded to the images folder via FTP) and then hit submit.</p>
+                <img src="../images/help/r1-10.png" style="width:100%;">
+                </div>
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                        <img src="../images/help/r1-11.png" style="width:100%;">
+                        </div>
+
+                        <div style="background-color:white;">
+                                <hr>
+                                <!-- Subtitle -->
+                                <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the round you inserted it into, with the title you gave it.</p>
+                                <img src="../images/help/r1-12.png" style="width:100%;">
+                                </div>
+                
+        
+        </div>
+        <!-- Jumbotron -->
+
+<!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5" id="matchGame">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Round Three: Match Game Questions</h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1">1 question/hint/instruction + 5 questions/options + 5 correct answers/choices/matches + 7 incorrect answers/choices/matches
+
+            </p>
+        <p class="my-4 h4">This question type is for a question or hint, five questions/options, five correct answers/matches,  and seven incorrect answers/choices/matches.</p>
+        <img src="../images/help/r1-13.png" style="width:100%;">
+        </div>
+       
+        <div style="background-color:white;">
+                <hr>
+                <!-- Subtitle -->
+                <p class="my-4 h4">Enter your question or hint, your 5 questions/options, 5 correct answers/matches, 7 incorrect answers/choices/matches and then hit submit.</p>
+                <img src="../images/help/r1-14.png" style="width:100%;">
+                </div>
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                        <img src="../images/help/r1-15.png" style="width:100%;">
+                        </div>
+
+                        <div style="background-color:white;">
+                                <hr>
+                                <!-- Subtitle -->
+                                <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the round you inserted it into, with the title you gave it.</p>
+                                <img src="../images/help/r1-16.png" style="width:100%;">
+                                </div>
+                
+        
+        </div>
+        <!-- Jumbotron -->
+
+
+        <!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5" id="nameTune">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Round Four: Name that Tune Questions</h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1">1 question/hint + 1 mp3 audio + 1 answer</p>
+        <p class="my-4 h4">This question type is for a question or hint, mp3 audio file, and 1 answer.</p>
+        <img src="../images/help/r1-17.png" style="width:100%;">
+        </div>
+       
+        <div style="background-color:white;">
+                <hr>
+                <!-- Subtitle -->
+                <p class="my-4 h4">Enter your question or hint, upload your .mp3 audio file (around 30 sec is a good length), add your answer, and hit submit.</p>
+                <img src="../images/help/r1-18.png" style="width:100%;">
+                </div>
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                        <img src="../images/help/r1-19.png" style="width:100%;">
+                        </div>
+
+                        <div style="background-color:white;">
+                                <hr>
+                                <!-- Subtitle -->
+                                <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the round you inserted it into, with the title you gave it.</p>
+                                <img src="../images/help/r1-20.png" style="width:100%;">
+                                </div>
+                
+        
+        </div>
+        <!-- Jumbotron -->
+
+
+         <!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5" id="jepCat">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Category Images for Jeopardy</h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1">5 Images or gifs - one for each category of Jeopardy</p>
+        <p class="my-4 h4">This question type is for batch uploading 5 category images or gifs for Jeopardy.</p>
+        <img src="../images/help/r1-21.png" style="width:100%;">
+        </div>
+       
+        <div style="background-color:white;">
+                <hr>
+                <!-- Subtitle -->
+                <p class="my-4 h4">Each upload box corresponds to a Jeopardy category. You can upload either images (jpg, jpeg,png) or gifs (gif). <b>Do not upload more than one batch of images. You should delete your first batch of category images before uploading a new one.</b></p>
+                <img src="../images/help/r1-22.png" style="width:100%;">
+                </div>
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4">Your category images will appear on the Jeopardy category page.</p>
+                        <img src="../images/help/r1-23.png" style="width:100%;">
+                        </div>
+
+                
+        
+        </div>
+        <!-- Jumbotron -->
+
+
+ <!-- Jumbotron -->
+ <div class="jumbotron info-color text-center text-info mx-2 mb-5" id="jeopardy">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Round Five: Jeopardy Questions (categories 1-5) 
+            </h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1"><span style="background-color:rgb(184, 241, 255)">[Question type 1: open ended question + answer]</span>
+                or 
+                <span style="background-color:rgb(255, 236, 184)">[question type 2: Question/Hint + Song clip + Answer] </span>
+                or
+                <span style="background-color:rgb(255, 184, 184)">[question type 3: Question/Hint + Image/Gif + Answer]</span></p>
+        <p class="my-4 h4">You must first choose a Category of Jeopardy to insert your question into. The corresponding round will be auto-chosen for you. </p>
+        <img src="../images/help/r1-24.png" style="width:100%;">
+
+        </div>
+       
+        <div style="background-color:white;">
+                <hr>
+                <!-- Subtitle -->
+                <p class="my-4 h4">For the Jeopardy type question, you are able to choose from 3 different question types. </p>
+                <img src="../images/help/r1-25.png" style="width:100%;">
+                </div>
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4"><span style="background-color:rgb(184, 241, 255)">[Question type 1: open ended question + answer]</span></p>
+                        <img src="../images/help/r1-26.png" style="width:100%;">
+                        </div>
+
+                        <div style="background-color:white;">
+                                <hr>
+                                <!-- Subtitle -->
+                                <p class="my-4 h4">Your question will appear on the 'Questions' page, under the Jeopardy Category round you inserted it into, with the title you gave it.</p>
+                                <img src="../images/help/r1-27.png" style="width:100%;">
+                                </div>      
+                                
+                                <div style="background-color:white;">
+                                        <hr>
+                                        <!-- Subtitle -->
+                                        <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the Jeopardy category round you inserted it into, with the title you gave it.</p>
+                                        <img src="../images/help/r1-28.png" style="width:100%;">
+                                        </div>    
+
+
+
+                                        <div style="background-color:white;">
+                                                <hr>
+                                                <!-- Subtitle -->
+                                                <p class="my-4 h4"><span style="background-color:rgb(255, 236, 184)">[question type 2: Question/Hint + Song clip + Answer] </span></p>
+                                                <img src="../images/help/r1-29.png" style="width:100%;">
+                                                </div>
+                        
+                                                <div style="background-color:white;">
+                                                        <hr>
+                                                        <!-- Subtitle -->
+                                                        <p class="my-4 h4">Your question will appear on the 'Questions' page, under the Jeopardy Category round you inserted it into, with the title you gave it.</p>
+                                                        <img src="../images/help/r1-30.png" style="width:100%;">
+                                                        </div>      
+                                                        
+                                                        <div style="background-color:white;">
+                                                                <hr>
+                                                                <!-- Subtitle -->
+                                                                <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the Jeopardy category round you inserted it into, with the title you gave it.</p>
+                                                                <img src="../images/help/r1-31.png" style="width:100%;">
+                                                                </div>                                     
+
+                
+ 
+
+                                                                <div style="background-color:white;">
+                                                                        <hr>
+                                                                        <!-- Subtitle -->
+                                                                        <p class="my-4 h4"><span style="background-color:rgb(255, 184, 184)">[question type 3: Question/Hint + Image/Gif + Answer]</span></p>
+                                                                        <img src="../images/help/r1-32.png" style="width:100%;">
+                                                                        </div>
+                                                
+                                                                        <div style="background-color:white;">
+                                                                                <hr>
+                                                                                <!-- Subtitle -->
+                                                                                <p class="my-4 h4">Your question will appear on the 'Questions' page, under the Jeopardy Category round you inserted it into, with the title you gave it.</p>
+                                                                                <img src="../images/help/r1-33.png" style="width:100%;">
+                                                                                </div>      
+                                                                                
+                                                                                <div style="background-color:white;">
+                                                                                        <hr>
+                                                                                        <!-- Subtitle -->
+                                                                                        <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the Jeopardy category round you inserted it into, with the title you gave it.</p>
+                                                                                        <img src="../images/help/r1-34.png" style="width:100%;">
+                                                                                        </div>                                     
+                        
+                                        
+                                
+                                                                
+
+
+
+
+        </div>
+        <!-- Jumbotron -->
+
+
+
+
+<!-- Jumbotron -->
+<div class="jumbotron info-color text-center text-info mx-2 mb-5" id="final">
+
+
+        <!-- Title -->
+        <h1 class="card-title h1 white-text">Final Round (question types 1-3) 
+            </h1><br>
+
+        <div style="background-color:white;">
+        <hr>
+        <!-- Subtitle -->
+        <p class="my-4 h1"><span style="background-color:rgb(184, 241, 255)">[Type 1 - Open Ended Question + Answer] </span>
+                or 
+                <span style="background-color:rgb(255, 236, 184)">[ Type 2 - Multiple Options + Video + Answer]  </span>
+                or
+                <span style="background-color:rgb(255, 184, 184)">[Type 3 - Audio + Question/hint + answer ]</span></p>
+        <p class="my-4 h4">For the Final round, you are able to choose from 3 different types of questions. </p>
+        <img src="../images/help/r1-35.png" style="width:100%;">
+
+        </div>
+       
+       
+
+                <div style="background-color:white;">
+                        <hr>
+                        <!-- Subtitle -->
+                        <p class="my-4 h4"><span style="background-color:rgb(184, 241, 255)">[Type 1 - Open Ended Question + Answer]</span></p>
+                        <img src="../images/help/r1-36.png" style="width:100%;">
+                        </div>
+
+                        <div style="background-color:white;">
+                                <hr>
+                                <!-- Subtitle -->
+                                <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                                <img src="../images/help/r1-37.png" style="width:100%;">
+                                </div>      
+                                
+                                <div style="background-color:white;">
+                                        <hr>
+                                        <!-- Subtitle -->
+                                        <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the round you inserted it into, with the title you gave it.</p>
+                                        <img src="../images/help/r1-38.png" style="width:100%;">
+                                        </div>    
+
+
+
+                                        <div style="background-color:white;">
+                                                <hr>
+                                                <!-- Subtitle -->
+                                                <p class="my-4 h4"><span style="background-color:rgb(255, 236, 184)">[ Type 2 - Multiple Options + Video + Answer]</span></p>
+                                                <img src="../images/help/r1-39.png" style="width:100%;">
+                                                </div>
+                        
+                                                <div style="background-color:white;">
+                                                        <hr>
+                                                        <!-- Subtitle -->
+                                                        <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                                                        <img src="../images/help/r1-40.png" style="width:100%;">
+                                                        </div>      
+                                                        
+                                                        <div style="background-color:white;">
+                                                                <hr>
+                                                                <!-- Subtitle -->
+                                                                <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the round you inserted it into, with the title you gave it.</p>
+                                                                <img src="../images/help/r1-41.png" style="width:100%;">
+                                                                </div>                                     
+
+                
+ 
+
+                                                                <div style="background-color:white;">
+                                                                        <hr>
+                                                                        <!-- Subtitle -->
+                                                                        <p class="my-4 h4"><span style="background-color:rgb(255, 184, 184)">[Type 3 - Audio + Question/hint + answer ]</span></p>
+                                                                        <img src="../images/help/r1-42.png" style="width:100%;">
+                                                                        </div>
+                                                
+                                                                        <div style="background-color:white;">
+                                                                                <hr>
+                                                                                <!-- Subtitle -->
+                                                                                <p class="my-4 h4">Your question will appear on the 'Questions' page, under the round you inserted it into, with the title you gave it.</p>
+                                                                                <img src="../images/help/r1-43.png" style="width:100%;">
+                                                                                </div>      
+                                                                                
+                                                                                <div style="background-color:white;">
+                                                                                        <hr>
+                                                                                        <!-- Subtitle -->
+                                                                                        <p class="my-4 h4">Your answer will appear on the 'Answers' page, under the  round you inserted it into, with the title you gave it.</p>
+                                                                                        <img src="../images/help/r1-44.png" style="width:100%;">
+                                                                                        </div>                                     
+                        
+                                        
+                                
+                                                                
+
+
+
+
+        </div>
+        <!-- Jumbotron -->
+       
+
+
+	</div>
+  </main>
+  <!--Main layout-->
+
+  
+  <!-- SCRIPTS -->
+  
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+</body>
+
+</html>

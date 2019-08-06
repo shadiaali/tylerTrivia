@@ -12,6 +12,9 @@ body {
 	
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .wow {
   visibility: hidden;
